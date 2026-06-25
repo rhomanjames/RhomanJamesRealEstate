@@ -1,0 +1,38 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0D0D0D"/>
+  <!-- Border frame -->
+  <rect x="32" y="32" width="1136" height="566" fill="none" stroke="rgba(184,151,106,0.4)" stroke-width="1"/>
+  <!-- Corner accents -->
+  <polyline points="52,52 82,52 82,52" fill="none" stroke="#B8976A" stroke-width="1"/>
+  <line x1="52" y1="52" x2="52" y2="82" stroke="#B8976A" stroke-width="1"/>
+  <line x1="52" y1="52" x2="82" y2="52" stroke="#B8976A" stroke-width="1"/>
+  <line x1="1148" y1="52" x2="1118" y2="52" stroke="#B8976A" stroke-width="1"/>
+  <line x1="1148" y1="52" x2="1148" y2="82" stroke="#B8976A" stroke-width="1"/>
+  <line x1="52" y1="578" x2="52" y2="548" stroke="#B8976A" stroke-width="1"/>
+  <line x1="52" y1="578" x2="82" y2="578" stroke="#B8976A" stroke-width="1"/>
+  <line x1="1148" y1="578" x2="1118" y2="578" stroke="#B8976A" stroke-width="1"/>
+  <line x1="1148" y1="578" x2="1148" y2="548" stroke="#B8976A" stroke-width="1"/>
+  <!-- Top line accent -->
+  <line x1="600" y1="32" x2="600" y2="92" stroke="url(#goldGrad)" stroke-width="1"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="#B8976A"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(184,151,106,0.08)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="600" cy="315" rx="480" ry="300" fill="url(#glow)"/>
+  <!-- Eyebrow -->
+  <text x="600" y="230" font-family="Georgia, serif" font-size="14" letter-spacing="6" fill="#B8976A" text-anchor="middle" text-transform="uppercase">ELIZABETHTOWN, KENTUCKY</text>
+  <!-- Name -->
+  <text x="600" y="320" font-family="Georgia, serif" font-size="72" font-weight="300" fill="white" text-anchor="middle" letter-spacing="8">RHOMAN JAMES</text>
+  <!-- Gold line -->
+  <line x1="570" y1="348" x2="630" y2="348" stroke="#B8976A" stroke-width="1"/>
+  <!-- Tagline -->
+  <text x="600" y="390" font-family="Georgia, serif" font-size="20" fill="#888880" text-anchor="middle" letter-spacing="2">Real Estate · Elizabethtown, KY</text>
+  <!-- URL -->
+  <text x="600" y="560" font-family="Georgia, serif" font-size="14" letter-spacing="3" fill="#666660" text-anchor="middle">RHOMANJAMES.COM</text>
+</svg>

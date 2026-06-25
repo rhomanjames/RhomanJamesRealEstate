@@ -1,0 +1,15 @@
+/* TEAM */
+Agent: Rhoman James
+Contact: RhomanMJames [at] gmail [dot] com
+Location: Elizabethtown, Kentucky, USA
+
+/* SITE */
+Last update: 2025-01
+Language: English
+Doctype: HTML5
+IDE: VS Code
+Standards: HTML5, CSS3, WAI-ARIA
+Components: Next.js 14, React, TypeScript, Tailwind CSS
+
+/* THANKS */
+Built with care for the Elizabethtown, KY community.

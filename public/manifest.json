@@ -1,0 +1,47 @@
+{
+  "name": "Rhoman James Real Estate",
+  "short_name": "Rhoman James RE",
+  "description": "Elizabethtown KY real estate resource — buying, selling, and investment in Hardin County.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#0D0D0D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "lifestyle"],
+  "lang": "en-US",
+  "scope": "/",
+  "shortcuts": [
+    {
+      "name": "Mortgage Calculator",
+      "short_name": "Calculator",
+      "url": "/tools/mortgage-calculator",
+      "description": "Calculate your monthly mortgage payment"
+    },
+    {
+      "name": "Contact Rhoman",
+      "short_name": "Contact",
+      "url": "/#contact",
+      "description": "Get in touch with Rhoman James"
+    },
+    {
+      "name": "Neighborhood Guides",
+      "short_name": "Neighborhoods",
+      "url": "/neighborhoods",
+      "description": "Explore Elizabethtown area communities"
+    }
+  ]
+}
