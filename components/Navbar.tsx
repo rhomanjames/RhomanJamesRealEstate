@@ -3,12 +3,12 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 
 const serviceLinks = [
-  { href: "/services/buying-a-home",        label: "Buying a Home" },
-  { href: "/services/selling-your-home",    label: "Selling Your Home" },
-  { href: "/services/market-analysis",      label: "Market Analysis" },
-  { href: "/services/first-time-buyers",    label: "First-Time Buyers" },
-  { href: "/services/relocation",           label: "Relocation" },
-  { href: "/services/investment-properties",label: "Investment Properties" },
+  { href: "/services/buying-a-home",         label: "Buying a Home" },
+  { href: "/services/selling-your-home",     label: "Selling Your Home" },
+  { href: "/services/market-analysis",       label: "Market Analysis" },
+  { href: "/services/first-time-buyers",     label: "First-Time Buyers" },
+  { href: "/services/relocation",            label: "Relocation" },
+  { href: "/services/investment-properties", label: "Investment Properties" },
 ];
 
 const neighborhoodLinks = [
@@ -21,27 +21,35 @@ const neighborhoodLinks = [
 ];
 
 const toolLinks = [
-  { href: "/tools/mortgage-calculator",    label: "Mortgage Calculator" },
+  { href: "/tools/mortgage-calculator",     label: "Mortgage Calculator" },
   { href: "/tools/affordability-calculator",label: "Affordability Calculator" },
-  { href: "/tools/va-loan-calculator",     label: "VA Loan Calculator" },
-  { href: "/tools/rent-vs-buy",            label: "Rent vs. Buy" },
-  { href: "/tools/closing-cost-estimator", label: "Closing Cost Estimator" },
-  { href: "/tools/net-proceeds",           label: "Home Sale Net Proceeds" },
-  { href: "/tools/down-payment-planner",   label: "Down Payment Planner" },
-  { href: "/tools/investment-roi",         label: "Investment ROI" },
-  { href: "/tools/property-tax-estimator", label: "Property Tax Estimator" },
-  { href: "/tools/khc-estimator",          label: "KHC DPA Estimator" },
+  { href: "/tools/va-loan-calculator",      label: "VA Loan Calculator" },
+  { href: "/tools/rent-vs-buy",             label: "Rent vs. Buy" },
+  { href: "/tools/closing-cost-estimator",  label: "Closing Cost Estimator" },
+  { href: "/tools/net-proceeds",            label: "Home Sale Net Proceeds" },
+  { href: "/tools/down-payment-planner",    label: "Down Payment Planner" },
+  { href: "/tools/investment-roi",          label: "Investment ROI" },
+  { href: "/tools/property-tax-estimator",  label: "Property Tax Estimator" },
+  { href: "/tools/khc-estimator",           label: "KHC DPA Estimator" },
 ];
 
-type DropKey = "services" | "neighborhoods" | "tools" | null;
+const courseLinks = [
+  { href: "/course",              label: "Kentucky Home Buyers Course",      tag: "Buyers" },
+  { href: "/sellers-course",      label: "Kentucky Home Sellers Course",     tag: "Sellers" },
+  { href: "/fort-knox-course",    label: "Fort Knox PCS Bootcamp",           tag: "Military" },
+  { href: "/first-time-bootcamp", label: "First-Time Homebuyer Bootcamp",    tag: "First-Time" },
+  { href: "/investor-course",     label: "Kentucky Investor Course",         tag: "Investors" },
+];
+
+type DropKey = "services" | "neighborhoods" | "tools" | "courses" | null;
 
 export default function Navbar() {
-  const [scrolled, setScrolled]   = useState(false);
-  const [menuOpen, setMenuOpen]   = useState(false);
-  const [openDrop, setOpenDrop]   = useState<DropKey>(null);
-  const pathname                   = usePathname();
-  const isHome                     = pathname === "/";
-  const navRef                     = useRef<HTMLElement>(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [openDrop, setOpenDrop] = useState<DropKey>(null);
+  const pathname = usePathname();
+  const isHome   = pathname === "/";
+  const navRef   = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -117,6 +125,13 @@ export default function Navbar() {
         .drop-menu a:hover { color: var(--gold); background: rgba(184,151,106,0.05); }
         .drop-divider { border-top: 1px solid rgba(184,151,106,0.12); margin: 0.2rem 0; }
         .drop-menu .view-all { color: var(--gold); font-size: 0.65rem; }
+        .course-tag {
+          display: inline-block; margin-left: 0.5rem;
+          font-size: 0.52rem; letter-spacing: 0.12em;
+          padding: 0.1rem 0.35rem;
+          border: 1px solid rgba(184,151,106,0.3);
+          color: var(--gold); vertical-align: middle;
+        }
         .nav-mobile-dropdown {
           position: absolute; top: 100%; left: 0; right: 0;
           background: var(--dark2);
@@ -176,6 +191,24 @@ export default function Navbar() {
             )}
           </li>
 
+          {/* Free Courses */}
+          <li className="drop-wrapper">
+            <button className={`drop-btn${openDrop === "courses" ? " open" : ""}`} onClick={() => toggle("courses")} aria-expanded={openDrop === "courses"} aria-haspopup="true">
+              Free Courses <span className={`drop-chevron${openDrop === "courses" ? " open" : ""}`}>▼</span>
+            </button>
+            {openDrop === "courses" && (
+              <div className="drop-menu" role="menu" style={{ minWidth: 260 }}>
+                <div className="drop-menu-header">Free Self-Paced Courses</div>
+                {courseLinks.map(l => (
+                  <a key={l.href} href={l.href} role="menuitem" onClick={() => setOpenDrop(null)}>
+                    {l.label}
+                    <span className="course-tag">{l.tag}</span>
+                  </a>
+                ))}
+              </div>
+            )}
+          </li>
+
           {/* Tools */}
           <li className="drop-wrapper">
             <button className={`drop-btn${openDrop === "tools" ? " open" : ""}`} onClick={() => toggle("tools")} aria-expanded={openDrop === "tools"} aria-haspopup="true">
@@ -191,7 +224,6 @@ export default function Navbar() {
           </li>
 
           <li><a href="/moving-to-elizabethtown-ky" className="nav-link" style={{ fontSize: "0.72rem" }}>Moving Guide</a></li>
-          <li><a href="/course" className="nav-link" style={{ fontSize: "0.72rem" }}>Free Course</a></li>
           <li><a href="/faq" className="nav-link" style={{ fontSize: "0.72rem" }}>FAQ</a></li>
           <li><a href={sectionHref("#contact")} className="nav-link" style={{ fontSize: "0.72rem" }}>Contact</a></li>
         </ul>
@@ -215,6 +247,9 @@ export default function Navbar() {
             <div className="mobile-section-label">Neighborhoods</div>
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--gold)" }}>All Guides →</a>
+
+            <div className="mobile-section-label">Free Courses</div>
+            {courseLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
 
             <div className="mobile-section-label">Free Tools</div>
             {toolLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
