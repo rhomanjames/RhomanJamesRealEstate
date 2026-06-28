@@ -45,7 +45,7 @@ Some sellers benefit from marketing the home to agents before it hits the MLS. T
               "I will verify my listing appears on Zillow within 24-48 hours of going active",
               "I know to verify all searchable fields are correctly completed",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How to prepare for and manage showings",
@@ -72,7 +72,7 @@ Your agent should request feedback. Take it seriously — it is real-time market
               "I understand I should leave the home for every showing",
               "I have a plan for my pets during showings",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Open houses — when they help and when they do not",
@@ -99,7 +99,7 @@ Open houses are primarily a marketing tool for agents. Calibrate your expectatio
               "I know to secure valuables before any open house",
               "I have realistic expectations about what open houses produce",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "How buyers are finding homes in Elizabethtown right now",
@@ -118,7 +118,7 @@ Facebook listing shares and Instagram videos generate meaningful reach for uniqu
               "I know the first 48 hours of listing are most important",
               "I have asked my agent about Fort Knox and military community marketing",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "What to do when your home is not getting showings",

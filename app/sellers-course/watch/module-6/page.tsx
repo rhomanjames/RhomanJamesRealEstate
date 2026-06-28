@@ -46,7 +46,7 @@ Excluding commissions, seller closing costs typically run 1.5-2.5%. With commiss
               "I will review the settlement statement before closing day",
               "I know to flag any discrepancy to the closing attorney immediately",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How to calculate your exact net proceeds",
@@ -69,7 +69,7 @@ Use the Net Proceeds Calculator at rhomanjames.com/tools/net-proceeds to model y
               "I know my minimum acceptable net proceeds and corresponding minimum sale price",
               "I will recalculate net proceeds for every offer before responding",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "What happens at a Kentucky attorney closing as the seller",
@@ -92,7 +92,7 @@ Net proceeds are typically disbursed by wire transfer within 24 hours of closing
               "I have confirmed closing logistics — time, location, whether I sign separately",
               "I have my bank routing and account number ready",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "What to leave, what to take, and what to hand over at closing",

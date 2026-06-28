@@ -48,7 +48,7 @@ Full kitchen remodel, swimming pools, and major bathroom renovations rarely reco
               "I have estimated the cost of paint, carpet, and curb appeal",
               "I understand major renovations rarely recover full cost in resale",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How to stage your home without hiring a professional",
@@ -71,7 +71,7 @@ Help buyers imagine themselves in the space. Remove family photos, personal coll
               "I have cleared kitchen counters completely",
               "I have addressed pet or smoke odors honestly",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Decluttering and depersonalizing — what buyers need to see",
@@ -94,7 +94,7 @@ A few well-chosen neutral decorative items that create warmth. Fresh flowers in 
               "I have arranged or will arrange a storage unit",
               "I have decluttered closets and cabinets buyers will open",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Professional photography — why it matters and what to expect",
@@ -117,7 +117,7 @@ For relocating buyers — including Fort Knox military families who cannot visit
               "I will have my home in full condition before the photographer arrives",
               "I have discussed video tour options with my agent",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "What sellers must disclose in Kentucky",

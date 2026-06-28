@@ -50,7 +50,7 @@ Sometimes life circumstances determine your timeline. The good news is that well
               "I understand how Fort Knox rotation affects local demand year-round",
               "I have a general sense of my timeline and whether it is flexible",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "Running your equity calculation — what you actually own",
@@ -73,7 +73,7 @@ Estimated sale price minus payoff minus commissions minus closing costs minus co
               "I know all liens and mortgages against the property",
               "I have estimated my net proceeds using rhomanjames.com/tools/net-proceeds",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "The true cost of selling a home in Kentucky",
@@ -100,7 +100,7 @@ All-in, selling costs in Kentucky typically run 7% to 9% of the sale price. Buil
               "I understand that commissions are paid from proceeds at closing",
               "I have accounted for prorated property taxes in my calculation",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Buy first or sell first — how to handle the transition",

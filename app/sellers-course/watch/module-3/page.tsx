@@ -46,7 +46,7 @@ A price range — not a single number — within which your home should realisti
               "I know that a CMA produces a price range, not one exact number",
               "I will ask my agent to walk me through their CMA methodology",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "Why overpricing costs you money in Elizabethtown",
@@ -71,7 +71,7 @@ Price based on comps. Price slightly below the top of your range. A correctly pr
               "I know price reductions after sitting often result in less than correct initial pricing",
               "I will price based on what comps support, not what I would like",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Pricing psychology — what buyers think when they see your number",
@@ -94,7 +94,7 @@ For financed buyers, the appraisal is the objective check on price. If your pric
               "I have calculated price per square foot and compared it to comps",
               "I understand price must be supportable at appraisal",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "How to respond when the market tells you something",
@@ -113,7 +113,7 @@ If you have had 10+ showings with no offers within 21 days, a price reduction is
               "I understand the difference between a price problem and a property-specific challenge",
               "I have committed to a price review if I receive no offers within 21 days",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "Understanding list price vs. sale price in Hardin County",

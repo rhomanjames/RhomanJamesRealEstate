@@ -42,7 +42,7 @@ A $280,000 offer with $8,000 in concessions nets you $272,000. A $272,000 clean 
               "I know to check the pre-approval letter and financing type",
               "I understand how concessions reduce my actual net proceeds",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "Should you accept a VA loan offer on your home",
@@ -64,7 +64,7 @@ Declining VA offers reflexively means declining a significant portion of the mos
               "I understand what VA Minimum Property Requirements actually require",
               "I will not decline VA offers reflexively without evaluating the full picture",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "How to handle multiple offers as a seller in Kentucky",
@@ -87,7 +87,7 @@ Create a net proceeds calculation for each offer. The highest price is not alway
               "I know highest and best by a deadline is the most common response",
               "I will create a net proceeds comparison for every offer",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Negotiating inspection repairs — what to fix and what to decline",
@@ -114,7 +114,7 @@ Both parties benefit from completing the transaction. Approach the negotiation a
               "I know offering a credit is often better than making repairs myself",
               "I understand both parties benefit from completing the transaction",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "Seller concessions — when to offer them and how much",
