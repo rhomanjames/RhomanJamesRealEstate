@@ -46,7 +46,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "Tenant screening for Elizabethtown rental properties",
@@ -69,7 +69,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Maintenance budgeting — what to expect in year one",
@@ -92,7 +92,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Kentucky landlord-tenant law — what every investor must know",

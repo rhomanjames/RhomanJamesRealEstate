@@ -54,7 +54,7 @@ With pre-approval in hand and community preferences identified, begin active pro
               "I have begun gathering my pre-approval documentation",
               "I have confirmed my gate and workplace on post to guide neighborhood selection",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How to buy a Fort Knox home remotely before you arrive",
@@ -85,7 +85,7 @@ Offers and contracts are signed electronically. Kentucky allows remote closings 
               "I understand that live video walkthroughs should include street context, not just interior",
               "I know that Kentucky allows remote closings via mobile notary or RON",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Video walkthroughs — how to evaluate a home you have not visited",
@@ -112,7 +112,7 @@ A video walkthrough, however thorough, does not substitute for a licensed home i
               "I know to ask what concerns the agent about any home I am seriously considering",
               "I understand that I should still schedule a home inspection even for remote purchases",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "How to choose a gate and pick your neighborhood around it",
@@ -141,7 +141,7 @@ Then overlay your other priorities — budget, school zone, lifestyle — on top
               "I have asked my agent to map commute times from each community to my specific gate",
               "I understand the annual time cost of commute time differences between communities",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "PCS closing timeline — what is realistic and how to hit it",

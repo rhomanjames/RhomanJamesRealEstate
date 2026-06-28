@@ -46,7 +46,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How much money do you actually need to buy in Elizabethtown",
@@ -69,7 +69,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Credit score basics — what you need and how to improve it fast",
@@ -92,7 +92,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Your first-time buyer readiness checklist",

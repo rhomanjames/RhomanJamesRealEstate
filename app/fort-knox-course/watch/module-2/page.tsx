@@ -58,7 +58,7 @@ Pay off your loan early without penalty.`,
               "I have calculated what no PMI saves me per month on my target price range",
               "I understand that the VA loan is assumable by future buyers",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "The VA funding fee — what you pay and when you are exempt",
@@ -85,7 +85,7 @@ Surviving spouses of veterans who died in service or from a service-connected di
               "I understand the funding fee can be financed into the loan",
               "I know to verify my exemption status before closing, not after",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "How to get your Certificate of Eligibility in Kentucky",
@@ -112,7 +112,7 @@ A VA-experienced lender can explain what your remaining entitlement means for yo
               "I have my DD-214 (if separated) or access to my Statement of Service (if active duty)",
               "I understand what reduced entitlement means and that a good lender can help navigate it",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "VA loan vs. conventional near Fort Knox — running the real numbers",
@@ -145,7 +145,7 @@ $13,500 in down payment preserved + $12,600 in PMI avoided + $9,000 in rate savi
               "I understand the combined advantage of no down payment, no PMI, and lower rate",
               "I know the VA funding fee is typically far less than the conventional down payment requirement",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "Using your VA loan benefit more than once across duty stations",

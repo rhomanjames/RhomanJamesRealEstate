@@ -46,7 +46,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "The appraisal — what it is and what happens if it comes in low",
@@ -69,7 +69,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "First-time buyer closing costs in Kentucky — what to budget",
@@ -92,7 +92,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "Closing day — what to bring and what to expect",

@@ -50,7 +50,7 @@ BAH rates change annually. Your mortgage payment is fixed. If BAH increases (whi
               "I understand that BAH is tax-free, increasing its effective value",
               "I know that my mortgage payment is fixed while BAH can change annually",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How to structure a VA loan so your mortgage equals your BAH",
@@ -75,7 +75,7 @@ In a higher rate environment, the monthly P&I on target home prices may slightly
               "I have used the VA Loan Calculator at rhomanjames.com to model my specific payment",
               "I understand that a small gap between payment and BAH may still make sense financially",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "The wealth difference between renting and buying on BAH",
@@ -103,7 +103,7 @@ At the next duty station, the Fort Knox property is kept as a rental generating 
               "I understand the portfolio effect of buying at each duty station",
               "I have used my BAH and target home price to model whether the math works for me",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "What happens to your mortgage when BAH rates change",

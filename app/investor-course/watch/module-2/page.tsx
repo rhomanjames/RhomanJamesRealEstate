@@ -46,7 +46,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "Cap rate explained — what is good in the Hardin County market",
@@ -69,7 +69,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Cash-on-cash return — the investor's real performance metric",
@@ -92,7 +92,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "The 1% rule — does it work in Elizabethtown right now",
@@ -115,7 +115,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-4",
             title: "How to estimate rental income for any Hardin County property",

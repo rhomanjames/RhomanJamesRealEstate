@@ -46,7 +46,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "The investor case for Hardin County — price points and cash flow potential",
@@ -69,7 +69,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Single family vs. multi-family investing near Fort Knox",
@@ -92,7 +92,7 @@ After completing this lesson, check off the items in the checklist below and mov
               "I have noted any questions I want to discuss with my agent or lender",
               "I am ready to move to the next lesson",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "What cap rates actually look like in the Elizabethtown rental market",

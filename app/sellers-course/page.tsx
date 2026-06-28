@@ -35,7 +35,7 @@ const schema = {
 export default function CoursePage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={ __html: JSON.stringify(schema) } />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <Navbar />
       <CourseLandingClient />
       <Footer />

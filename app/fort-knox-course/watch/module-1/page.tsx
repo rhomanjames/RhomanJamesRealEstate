@@ -50,7 +50,7 @@ Convenience, community, and the simplicity of having maintenance handled. These 
               "I know that VA loans allow zero down payment and no PMI",
               "I have estimated what my total monthly payment would look like relative to my BAH",
             ],
-          }
+          },
           {
             id: "lesson-1",
             title: "How long is the Fort Knox on-post housing waitlist",
@@ -77,7 +77,7 @@ Contact the Fort Knox Family Housing office directly or speak with your gaining 
               "I understand that waiting for on-post housing often means paying rent in the interim",
               "I know that buying off-post from day one often produces a better financial outcome",
             ],
-          }
+          },
           {
             id: "lesson-2",
             title: "Why buying near Fort Knox builds wealth renting never will",
@@ -104,7 +104,7 @@ Elizabethtown's market, stabilized by Fort Knox, offers consistent appreciation 
               "I know that equity accumulates through both principal paydown and appreciation",
               "I understand how military families can build portfolios across duty stations",
             ],
-          }
+          },
           {
             id: "lesson-3",
             title: "How to choose between Elizabethtown, Radcliff, and Vine Grove",
