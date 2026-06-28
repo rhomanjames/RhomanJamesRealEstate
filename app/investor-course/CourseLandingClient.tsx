@@ -34,9 +34,8 @@ export default function CourseLandingClient() {
         </div>
         <div style={{ maxWidth:480,margin:"0 auto",background:"var(--dark2)",border:"1px solid rgba(184,151,106,0.25)",padding:"2.5rem" }}>
           <p style={{ fontSize:"0.72rem",letterSpacing:"0.2em",textTransform:"uppercase",color:"var(--gold)",marginBottom:"1rem" }}>Start Learning Free</p>
-          <form action="https://formspree.io/f/mykqjbjw" method="POST" style={{ display:"flex",flexDirection:"column",gap:"1rem" }}>
+          <form onSubmit={async (e) => { e.preventDefault(); const form = e.currentTarget; const data = new FormData(form); try { await fetch("https://formspree.io/f/mykqjbjw", { method: "POST", body: data, headers: { Accept: "application/json" } }); } catch(err) {} window.location.href = "/investor-course/watch"; }} style={{ display:"flex",flexDirection:"column",gap:"1rem" }}>
             <input type="hidden" name="_subject" value="Course Sign-Up: Kentucky Real Estate Investor Course" />
-            <input type="hidden" name="_next" value="https://rhomanjames.com/investor-course/watch" />
             <div style={{ display:"flex",flexDirection:"column",gap:"0.35rem" }}>
               <label htmlFor="name" style={{ fontSize:"0.65rem",letterSpacing:"0.2em",textTransform:"uppercase",color:"var(--muted2)",textAlign:"left" }}>Your Name</label>
               <input className="form-input" type="text" id="name" name="name" required placeholder="Jane Smith" autoComplete="name" />
