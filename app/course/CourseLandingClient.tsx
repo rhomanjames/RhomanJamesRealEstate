@@ -46,7 +46,7 @@ export default function CourseLandingClient() {
         {/* Form */}
         <div style={{ maxWidth: 480, margin: "0 auto", background: "var(--dark2)", border: "1px solid rgba(184,151,106,0.25)", padding: "2.5rem" }}>
           <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem" }}>Start Learning Free</p>
-          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+          <form action="https://formspree.io/f/maqgjlon" method="POST" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
             <input type="hidden" name="_subject" value="New Kentucky Home Buyers Course Sign-Up" />
             <input type="hidden" name="_next" value="https://rhomanjames.com/course/watch" />
             <div style={{ display: "flex", flexDirection: "column", gap: "0.35rem" }}>
