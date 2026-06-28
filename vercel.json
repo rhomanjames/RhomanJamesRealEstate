@@ -1,11 +1,5 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "out",
-  "framework": "nextjs",
-  "functions": {},
-  "build": {
-    "env": {
-      "NEXT_PRIVATE_STANDALONE": "false"
-    }
-  }
+  "framework": "nextjs"
 }
