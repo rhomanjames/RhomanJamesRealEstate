@@ -191,6 +191,7 @@ export default function Navbar() {
           </li>
 
           <li><a href="/moving-to-elizabethtown-ky" className="nav-link" style={{ fontSize: "0.72rem" }}>Moving Guide</a></li>
+          <li><a href="/course" className="nav-link" style={{ fontSize: "0.72rem" }}>Free Course</a></li>
           <li><a href="/faq" className="nav-link" style={{ fontSize: "0.72rem" }}>FAQ</a></li>
           <li><a href={sectionHref("#contact")} className="nav-link" style={{ fontSize: "0.72rem" }}>Contact</a></li>
         </ul>

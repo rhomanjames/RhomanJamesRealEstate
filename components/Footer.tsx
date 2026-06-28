@@ -4,6 +4,7 @@ const links = [
   { href: "/neighborhoods", label: "Neighborhoods" },
   { href: "/tools",         label: "Tools" },
   { href: "/moving-to-elizabethtown-ky", label: "Moving Guide" },
+  { href: "/course", label: "Free Course" },
   { href: "/faq",           label: "FAQ" },
   { href: "/#contact",      label: "Contact" },
 ];
