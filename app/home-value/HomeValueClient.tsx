@@ -72,7 +72,7 @@ export default function HomeValueClient() {
     const form = e.currentTarget;
     const data = new FormData(form);
     try {
-      await fetch("https://formspree.io/f/YOUR_FORM_ID", { method: "POST", body: data, headers: { Accept: "application/json" } });
+      await fetch("https://formspree.io/f/xpqglyoz", { method: "POST", body: data, headers: { Accept: "application/json" } });
     } catch {}
     setSubmitted(true);
   };
