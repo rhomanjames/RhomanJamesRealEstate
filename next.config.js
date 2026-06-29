@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  staticPageGenerationTimeout: 180,
+  staticPageGenerationTimeout: 300,
   experimental: {
     workerThreads: false,
     cpus: 1,
