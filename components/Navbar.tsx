@@ -161,8 +161,7 @@ export default function Navbar() {
         <a href="/" className="nav-logo-link">Rhoman <span>James</span></a>
 
         <ul className="nav-desktop">
-          <li><a href="/about" className="nav-link" style={{ fontSize: "0.72rem" }}>About</a></li>
-          
+<li><a href={sectionHref("#about")} style={{display:"none"}} className="nav-link" style={{ fontSize: "0.72rem" }}>About</a></li>          
 
           {/* Services */}
           <li className="drop-wrapper">
