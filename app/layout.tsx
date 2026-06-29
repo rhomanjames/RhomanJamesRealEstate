@@ -27,6 +27,14 @@ export const metadata: Metadata = {
     description: "Local real estate resource for buyers and sellers across Hardin County, Kentucky.",
     images: ["/og-default.svg"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon.ico" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   robots: {
     index: true,
     follow: true,
