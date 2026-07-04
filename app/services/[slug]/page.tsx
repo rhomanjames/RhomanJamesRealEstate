@@ -81,7 +81,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             paddingBottom: "6rem",
             paddingLeft: "3rem",
             paddingRight: "3rem",
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             position: "relative",
           }}
         >
@@ -90,7 +90,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             style={{
               position: "absolute",
               inset: 0,
-              background: "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(184,151,106,0.06) 0%, transparent 70%)",
+              background: "var(--bg-soft)",
               pointerEvents: "none",
             }}
           />
@@ -113,10 +113,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </a>
             <div
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "5rem",
-                fontWeight: 300,
-                color: "rgba(184,151,106,0.1)",
+                fontWeight: 700,
+                color: "var(--border)",
                 lineHeight: 1,
                 marginBottom: "0.5rem",
               }}
@@ -126,10 +126,10 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </div>
             <h1
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.05,
                 marginBottom: "0.75rem",
               }}
@@ -138,16 +138,16 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             </h1>
             <p
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "1.3rem",
                 fontStyle: "italic",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "2rem",
               }}
             >
               {s.tagline}
             </p>
-            <div aria-hidden="true" style={{ width: "3rem", height: "1px", background: "var(--gold)", marginBottom: "2rem" }} />
+            <div aria-hidden="true" style={{ width: "3rem", height: "1px", background: "var(--blue)", marginBottom: "2rem" }} />
             <p style={{ fontSize: "1.05rem", color: "var(--muted)", lineHeight: 1.9, maxWidth: "54rem" }}>
               {s.heroSubtitle}
             </p>
@@ -155,24 +155,24 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Intro */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
-            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", display: "block", marginBottom: "1rem" }}>
+            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem" }}>
               Overview
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "2rem",
                 lineHeight: 1.2,
               }}
             >
               What {s.title.toLowerCase()} looks like with Rhoman James
             </h2>
-            <div aria-hidden="true" style={{ width: "3rem", height: "1px", background: "var(--gold)", marginBottom: "2.5rem" }} />
+            <div aria-hidden="true" style={{ width: "3rem", height: "1px", background: "var(--blue)", marginBottom: "2.5rem" }} />
             {s.intro.map((para, i) => (
               <p key={i} style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.95, marginBottom: "1.5rem" }}>
                 {para}
@@ -182,17 +182,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Steps */}
-        <section style={{ background: "var(--dark)", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
-            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", display: "block", marginBottom: "1rem" }}>
+            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem" }}>
               The Process
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "3rem",
                 lineHeight: 1.2,
               }}
@@ -218,20 +218,20 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                       width: 10,
                       height: 10,
                       borderRadius: "50%",
-                      background: "var(--gold)",
+                      background: "var(--blue)",
                       flexShrink: 0,
                       marginTop: "0.4rem",
                     }} />
                     {i < s.steps.length - 1 && (
-                      <div style={{ width: 1, flex: 1, background: "rgba(184,151,106,0.2)", marginTop: "0.5rem" }} />
+                      <div style={{ width: 1, flex: 1, background: "var(--border)", marginTop: "0.5rem" }} />
                     )}
                   </div>
                   <div style={{ paddingBottom: "1rem" }}>
                     <h3
                       style={{
-                        fontFamily: "'Cormorant Garamond', Georgia, serif",
+                        fontFamily: "'Inter', system-ui, sans-serif",
                         fontSize: "1.2rem",
-                        color: "white",
+                        color: "var(--text)",
                         fontWeight: 400,
                         marginBottom: "0.5rem",
                       }}
@@ -249,17 +249,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Benefits */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", display: "block", marginBottom: "1rem", textAlign: "center" }}>
+            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem", textAlign: "center" }}>
               Why it matters
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "3.5rem",
                 lineHeight: 1.2,
                 textAlign: "center",
@@ -276,7 +276,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
             >
               {s.benefits.map((b) => (
                 <article key={b.title} className="service-card" style={{ padding: "2rem" }}>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", color: "white", marginBottom: "0.75rem", fontWeight: 400 }}>
+                  <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.2rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400 }}>
                     {b.title}
                   </h3>
                   <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8 }}>
@@ -289,17 +289,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* FAQs */}
-        <section style={{ background: "var(--dark3)", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
-            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", display: "block", marginBottom: "1rem" }}>
+            <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem" }}>
               Common questions
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "2.5rem",
                 lineHeight: 1.2,
               }}
@@ -310,12 +310,12 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <div
                 key={i}
                 style={{
-                  borderTop: "1px solid rgba(184,151,106,0.15)",
+                  borderTop: "1px solid var(--border)",
                   padding: "2rem 0",
-                  ...(i === s.faqs.length - 1 ? { borderBottom: "1px solid rgba(184,151,106,0.15)" } : {}),
+                  ...(i === s.faqs.length - 1 ? { borderBottom: "1px solid var(--border)" } : {}),
                 }}
               >
-                <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", fontWeight: 400, color: "white", marginBottom: "0.75rem", lineHeight: 1.3 }}>
+                <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.2rem", fontWeight: 400, color: "var(--text)", marginBottom: "0.75rem", lineHeight: 1.3 }}>
                   {faq.question}
                 </h3>
                 <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.9 }}>
@@ -327,9 +327,9 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Browse other services */}
-        <section style={{ background: "var(--dark)", padding: "5rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "5rem 3rem" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.5rem", textAlign: "center" }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1.5rem", textAlign: "center" }}>
               Explore other services
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", justifyContent: "center" }}>
@@ -341,8 +341,8 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                     fontSize: "0.75rem",
                     letterSpacing: "0.15em",
                     textTransform: "uppercase",
-                    color: "var(--gold)",
-                    border: "1px solid rgba(184,151,106,0.3)",
+                    color: "var(--blue)",
+                    border: "1px solid var(--border)", borderRadius: "16px",
                     padding: "0.65rem 1.5rem",
                     textDecoration: "none",
                   }}
@@ -355,17 +355,17 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* CTA */}
-        <section style={{ background: "var(--dark2)", padding: "7rem 3rem", textAlign: "center", borderTop: "1px solid rgba(184,151,106,0.12)" }}>
+        <section style={{ background: "white", padding: "7rem 3rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.72rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1.5rem" }}>
+            <p style={{ fontSize: "0.72rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1.5rem" }}>
               {s.cta}
             </p>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.2,
                 marginBottom: "1.5rem",
               }}

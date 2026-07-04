@@ -58,7 +58,7 @@ export default function MovingGuideClient() {
   };
 
   return (
-    <main style={{ background: "var(--dark)", minHeight: "100vh" }}>
+    <main style={{ background: "var(--bg-soft)", minHeight: "100vh" }}>
       <style>{`
         .guide-wrap {
           display: grid;
@@ -75,19 +75,19 @@ export default function MovingGuideClient() {
           height: calc(100vh - 7rem);
           overflow-y: auto;
           padding: 2rem 0 2rem 0;
-          border-right: 1px solid rgba(184,151,106,0.12);
+          border-right: 1px solid var(--border);
           scrollbar-width: thin;
-          scrollbar-color: rgba(184,151,106,0.3) transparent;
+          scrollbar-color: var(--border) transparent;
         }
         .toc-sidebar::-webkit-scrollbar { width: 4px; }
-        .toc-sidebar::-webkit-scrollbar-thumb { background: rgba(184,151,106,0.3); border-radius: 2px; }
+        .toc-sidebar::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
         .toc-title {
           font-size: 0.6rem;
           letter-spacing: 0.3em;
           text-transform: uppercase;
-          color: var(--gold);
+          color: var(--blue);
           padding: 0 1.5rem 1rem;
-          border-bottom: 1px solid rgba(184,151,106,0.1);
+          border-bottom: 1px solid var(--border);
           margin-bottom: 0.75rem;
         }
         .toc-item {
@@ -104,11 +104,11 @@ export default function MovingGuideClient() {
           border-left: 2px solid transparent;
           line-height: 1.4;
         }
-        .toc-item:hover { color: var(--off-white); background: rgba(184,151,106,0.04); }
+        .toc-item:hover { color: var(--text); background: var(--border); }
         .toc-item.active {
-          color: var(--gold);
-          border-left-color: var(--gold);
-          background: rgba(184,151,106,0.06);
+          color: var(--blue);
+          border-left-color: var(--blue);
+          background: var(--border);
           font-weight: 500;
         }
         .guide-content {
@@ -123,22 +123,22 @@ export default function MovingGuideClient() {
           font-size: 0.62rem;
           letter-spacing: 0.35em;
           text-transform: uppercase;
-          color: var(--gold);
+          color: var(--blue);
           display: block;
           margin-bottom: 0.6rem;
         }
         .chapter-title {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Inter', system-ui, sans-serif;
           font-size: clamp(1.8rem, 3.5vw, 2.6rem);
           font-weight: 300;
-          color: white;
+          color: var(--text);
           line-height: 1.15;
           margin-bottom: 1rem;
         }
         .chapter-divider {
           width: 3rem;
           height: 1px;
-          background: var(--gold);
+          background: var(--blue);
           margin-bottom: 1.75rem;
         }
         .guide-p {
@@ -148,10 +148,10 @@ export default function MovingGuideClient() {
           margin-bottom: 1.25rem;
         }
         .guide-h2 {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Inter', system-ui, sans-serif;
           font-size: 1.5rem;
           font-weight: 400;
-          color: white;
+          color: var(--text);
           margin: 2.5rem 0 0.75rem;
           line-height: 1.2;
         }
@@ -160,17 +160,17 @@ export default function MovingGuideClient() {
           font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          color: var(--gold);
+          color: var(--blue);
           margin: 1.75rem 0 0.5rem;
         }
         .callout {
-          background: var(--dark3);
-          border-left: 3px solid var(--gold);
+          background: var(--bg-soft);
+          border-left: 3px solid var(--blue);
           padding: 1.25rem 1.5rem;
           margin: 1.75rem 0;
           border-radius: 0 2px 2px 0;
         }
-        .callout p { margin-bottom: 0; color: var(--off-white); font-size: 0.92rem; line-height: 1.8; }
+        .callout p { margin-bottom: 0; color: var(--text); font-size: 0.92rem; line-height: 1.8; }
         .stat-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -178,16 +178,16 @@ export default function MovingGuideClient() {
           margin: 1.75rem 0;
         }
         .stat-box {
-          background: var(--dark3);
-          border: 1px solid rgba(184,151,106,0.15);
+          background: var(--bg-soft);
+          border: 1px solid var(--border);
           padding: 1.25rem;
           text-align: center;
         }
         .stat-num {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Inter', system-ui, sans-serif;
           font-size: 2rem;
           font-weight: 300;
-          color: var(--gold);
+          color: var(--blue);
           line-height: 1;
           margin-bottom: 0.3rem;
         }
@@ -204,24 +204,24 @@ export default function MovingGuideClient() {
           font-size: 0.88rem;
         }
         .compare-table th {
-          background: var(--dark3);
-          color: var(--gold);
+          background: var(--bg-soft);
+          color: var(--blue);
           font-size: 0.65rem;
           letter-spacing: 0.2em;
           text-transform: uppercase;
           padding: 0.85rem 1rem;
           text-align: left;
-          border-bottom: 1px solid rgba(184,151,106,0.2);
+          border-bottom: 1px solid var(--border);
         }
         .compare-table td {
           padding: 0.85rem 1rem;
           color: #C8C4BC;
-          border-bottom: 1px solid rgba(184,151,106,0.08);
+          border-bottom: 1px solid var(--border);
           vertical-align: top;
           line-height: 1.6;
         }
         .compare-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
-        .compare-table td:first-child { color: var(--off-white); font-weight: 500; }
+        .compare-table td:first-child { color: var(--text); font-weight: 500; }
         .pro-con-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -229,13 +229,13 @@ export default function MovingGuideClient() {
           margin: 1.75rem 0;
         }
         .pro-box {
-          background: rgba(184,151,106,0.06);
-          border: 1px solid rgba(184,151,106,0.2);
+          background: var(--border);
+          border: 1px solid var(--border);
           padding: 1.5rem;
         }
         .con-box {
           background: rgba(255,255,255,0.02);
-          border: 1px solid rgba(184,151,106,0.1);
+          border: 1px solid var(--border);
           padding: 1.5rem;
         }
         .pro-con-title {
@@ -244,7 +244,7 @@ export default function MovingGuideClient() {
           text-transform: uppercase;
           margin-bottom: 1rem;
         }
-        .pro-con-title.pro { color: var(--gold); }
+        .pro-con-title.pro { color: var(--blue); }
         .pro-con-title.con { color: var(--muted); }
         .guide-li {
           font-size: 0.93rem;
@@ -258,34 +258,34 @@ export default function MovingGuideClient() {
           content: '▶';
           position: absolute;
           left: 0;
-          color: var(--gold);
+          color: var(--blue);
           font-size: 0.5rem;
           top: 0.45rem;
         }
         .neighborhood-card {
-          background: var(--dark3);
-          border: 1px solid rgba(184,151,106,0.12);
+          background: var(--bg-soft);
+          border: 1px solid var(--border);
           padding: 1.5rem;
           margin-bottom: 1.25rem;
           transition: border-color 0.2s;
         }
-        .neighborhood-card:hover { border-color: rgba(184,151,106,0.3); }
+        .neighborhood-card:hover { border-color: var(--border); }
         .neighborhood-name {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Inter', system-ui, sans-serif;
           font-size: 1.3rem;
-          color: white;
+          color: var(--text);
           margin-bottom: 0.25rem;
         }
         .neighborhood-meta {
           font-size: 0.68rem;
           letter-spacing: 0.15em;
           text-transform: uppercase;
-          color: var(--gold);
+          color: var(--blue);
           margin-bottom: 0.85rem;
         }
         .cta-box {
-          background: var(--dark2);
-          border: 1px solid rgba(184,151,106,0.25);
+          background: white;
+          border: 1px solid var(--border);
           padding: 2.5rem;
           text-align: center;
           margin: 3rem 0;
@@ -296,8 +296,8 @@ export default function MovingGuideClient() {
           bottom: 1.5rem;
           right: 1.5rem;
           z-index: 90;
-          background: var(--gold);
-          color: var(--dark);
+          background: var(--blue);
+          color: var(--text);
           border: none;
           padding: 0.85rem 1.25rem;
           font-size: 0.72rem;
@@ -305,15 +305,15 @@ export default function MovingGuideClient() {
           text-transform: uppercase;
           cursor: pointer;
           font-family: 'Jost', system-ui, sans-serif;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+          box-shadow: 0 1px 2px rgba(11,15,25,0.03);
         }
         .mobile-toc-drawer {
           display: none;
           position: fixed;
           bottom: 0; left: 0; right: 0;
           z-index: 89;
-          background: var(--dark2);
-          border-top: 2px solid var(--gold);
+          background: white;
+          border-top: 2px solid var(--blue);
           padding: 1.5rem;
           max-height: 60vh;
           overflow-y: auto;
@@ -334,17 +334,16 @@ export default function MovingGuideClient() {
 
       {/* Hero */}
       <section style={{
-        background: "var(--dark)",
+        background: "var(--bg-soft)",
         padding: "3rem 1.5rem 4rem",
         position: "relative",
         overflow: "hidden",
       }}>
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(184,151,106,0.06) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
-          <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem" }}>
+                <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
+          <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>
             The Complete Relocation Guide · Updated 2025
           </p>
-          <h1 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2.2rem, 5vw, 4rem)", fontWeight: 300, color: "white", lineHeight: 1.1, marginBottom: "1.25rem", maxWidth: 700 }}>
+          <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.2rem, 5vw, 4rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem", maxWidth: 700 }}>
             Moving to Elizabethtown, Kentucky
           </h1>
           <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: 600, marginBottom: "2rem" }}>
@@ -352,7 +351,7 @@ export default function MovingGuideClient() {
           </p>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted2)", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <span style={{ color: "var(--gold)" }}>✍</span> Rhoman James, Elizabethtown Real Estate Professional
+              <span style={{ color: "var(--blue)" }}>✍</span> Rhoman James, Elizabethtown Real Estate Professional
             </div>
             <div style={{ fontSize: "0.7rem", color: "var(--muted2)" }}>·</div>
             <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted2)" }}>
@@ -378,10 +377,10 @@ export default function MovingGuideClient() {
               {label}
             </button>
           ))}
-          <div style={{ borderTop: "1px solid rgba(184,151,106,0.12)", margin: "1.25rem 1.5rem 0", paddingTop: "1.25rem" }}>
-            <a href="/faq" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", textDecoration: "none", display: "block", marginBottom: "0.6rem" }}>→ Real Estate FAQ</a>
-            <a href="/neighborhoods" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", textDecoration: "none", display: "block", marginBottom: "0.6rem" }}>→ Neighborhood Guides</a>
-            <a href="/tools/mortgage-calculator" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", textDecoration: "none", display: "block" }}>→ Mortgage Calculator</a>
+          <div style={{ borderTop: "1px solid var(--border)", margin: "1.25rem 1.5rem 0", paddingTop: "1.25rem" }}>
+            <a href="/faq" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)", textDecoration: "none", display: "block", marginBottom: "0.6rem" }}>→ Real Estate FAQ</a>
+            <a href="/neighborhoods" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)", textDecoration: "none", display: "block", marginBottom: "0.6rem" }}>→ Neighborhood Guides</a>
+            <a href="/tools/mortgage-calculator" style={{ fontSize: "0.72rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--blue)", textDecoration: "none", display: "block" }}>→ Mortgage Calculator</a>
           </div>
         </aside>
 
@@ -486,10 +485,10 @@ export default function MovingGuideClient() {
                 Elizabethtown proper is the county seat and the commercial, medical, and cultural hub of Hardin County. It has the broadest selection of housing, the most school options, and the greatest density of restaurants, retail, and services. If you are coming from a suburb of a major city and want the most comparable experience to what you are leaving, Elizabethtown proper is where to look.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Helmwood Hills</strong> is one of the most established and sought-after neighborhoods — mature trees, larger lots, well-maintained homes, and proximity to shopping. The areas around <strong style={{ color: "var(--off-white)" }}>Freeman Lake</strong> offer scenic settings with trail and park access. Newer subdivisions on the south and east sides of town deliver modern, open floor plans with energy-efficient construction at more accessible price points. The I-65 corridor areas near the Ring Road provide maximum retail access.
+                <strong style={{ color: "var(--text)" }}>Helmwood Hills</strong> is one of the most established and sought-after neighborhoods — mature trees, larger lots, well-maintained homes, and proximity to shopping. The areas around <strong style={{ color: "var(--text)" }}>Freeman Lake</strong> offer scenic settings with trail and park access. Newer subdivisions on the south and east sides of town deliver modern, open floor plans with energy-efficient construction at more accessible price points. The I-65 corridor areas near the Ring Road provide maximum retail access.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Best for:</strong> Families who prioritize school choice, retirees who want services nearby, professionals who value walkability and amenity access, buyers with larger budgets.
+                <strong style={{ color: "var(--text)" }}>Best for:</strong> Families who prioritize school choice, retirees who want services nearby, professionals who value walkability and amenity access, buyers with larger budgets.
               </p>
             </div>
 
@@ -503,7 +502,7 @@ export default function MovingGuideClient() {
                 Radcliff offers some of the best value in Hardin County — comparable homes consistently come in at a lower price point than Elizabethtown proper, without sacrificing access to Hardin County Schools, Fort Knox, or the amenities of the broader region. Investors find it particularly appealing for rental properties, as military family demand keeps vacancy low and tenant pools deep.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Best for:</strong> Active duty military and veterans, VA loan buyers maximizing their dollar, investors seeking cash-flow-positive rentals, buyers who prioritize commute to Fort Knox over Elizabethtown amenities.
+                <strong style={{ color: "var(--text)" }}>Best for:</strong> Active duty military and veterans, VA loan buyers maximizing their dollar, investors seeking cash-flow-positive rentals, buyers who prioritize commute to Fort Knox over Elizabethtown amenities.
               </p>
             </div>
 
@@ -517,7 +516,7 @@ export default function MovingGuideClient() {
                 Vine Grove sits roughly 15 minutes from both Elizabethtown's commercial district and Fort Knox's main gate, making it practical for buyers who commute to either location. The tradeoff is fewer local dining and retail options — most shopping trips require the drive to Elizabethtown.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Best for:</strong> First-time buyers stretching their budget, families who prioritize quiet residential streets, buyers who want small-town character without paying Elizabethtown prices.
+                <strong style={{ color: "var(--text)" }}>Best for:</strong> First-time buyers stretching their budget, families who prioritize quiet residential streets, buyers who want small-town character without paying Elizabethtown prices.
               </p>
             </div>
 
@@ -531,7 +530,7 @@ export default function MovingGuideClient() {
                 Some Rineyville properties fall within USDA Rural Development loan eligibility zones — meaning qualified buyers may access zero-down-payment financing. Verify by address before assuming eligibility, as USDA maps are updated periodically.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Best for:</strong> Buyers who consciously value space and privacy over urban convenience, hobby farmers, horse owners, remote workers who want the full rural Kentucky experience.
+                <strong style={{ color: "var(--text)" }}>Best for:</strong> Buyers who consciously value space and privacy over urban convenience, hobby farmers, horse owners, remote workers who want the full rural Kentucky experience.
               </p>
             </div>
 
@@ -545,7 +544,7 @@ export default function MovingGuideClient() {
                 For buyers, Hodgenville offers maximum affordability — some of the lowest home prices in the region — combined with authentic small-town Kentucky character and a historic downtown square that feels genuinely unspoiled. The tradeoff is distance from Elizabethtown's amenities and a more limited local job market, which is why it disproportionately attracts remote workers and retirees.
               </p>
               <p className="guide-p" style={{ marginBottom: 0, marginTop: "0.75rem" }}>
-                <strong style={{ color: "var(--off-white)" }}>Best for:</strong> Remote workers who want maximum home value per dollar, retirees seeking affordable historic small-town life, buyers who find Elizabethtown prices above their budget.
+                <strong style={{ color: "var(--text)" }}>Best for:</strong> Remote workers who want maximum home value per dollar, retirees seeking affordable historic small-town life, buyers who find Elizabethtown prices above their budget.
               </p>
             </div>
 
@@ -656,10 +655,10 @@ export default function MovingGuideClient() {
             </p>
 
             <div className="cta-box">
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>Free Tool</p>
-              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", color: "white", marginBottom: "0.75rem" }}>See what you can afford in Elizabethtown</p>
+              <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Free Tool</p>
+              <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", color: "var(--text)", marginBottom: "0.75rem" }}>See what you can afford in Elizabethtown</p>
               <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "1.25rem" }}>Use the free mortgage calculator to estimate your monthly payment based on current rates.</p>
-              <a href="/tools/mortgage-calculator" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--gold)", color: "var(--dark)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+              <a href="/tools/mortgage-calculator" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
                 Open Calculator →
               </a>
             </div>
@@ -679,12 +678,12 @@ export default function MovingGuideClient() {
               Hardin County Schools is the primary public school district serving most of Hardin County — including Radcliff, Vine Grove, Rineyville, and unincorporated areas. The district consistently performs above the Kentucky state average on assessment measures and serves a large, diverse student population that reflects the county's military community.
             </p>
             <p className="guide-p">
-              High schools in the Hardin County district include <strong style={{ color: "var(--off-white)" }}>North Hardin High School</strong> (serves northern Hardin County, including much of Radcliff), <strong style={{ color: "var(--off-white)" }}>Central Hardin High School</strong> (serves central and western areas including Vine Grove), and <strong style={{ color: "var(--off-white)" }}>John Hardin High School</strong> (serves eastern Hardin County). Each school has distinct programs, athletics, and culture — and proximity to a particular high school can be a meaningful factor in neighborhood selection for families with older children.
+              High schools in the Hardin County district include <strong style={{ color: "var(--text)" }}>North Hardin High School</strong> (serves northern Hardin County, including much of Radcliff), <strong style={{ color: "var(--text)" }}>Central Hardin High School</strong> (serves central and western areas including Vine Grove), and <strong style={{ color: "var(--text)" }}>John Hardin High School</strong> (serves eastern Hardin County). Each school has distinct programs, athletics, and culture — and proximity to a particular high school can be a meaningful factor in neighborhood selection for families with older children.
             </p>
 
             <h3 className="guide-h3">Elizabethtown Independent Schools</h3>
             <p className="guide-p">
-              Elizabethtown Independent Schools is a separate, smaller district serving the city of Elizabethtown proper. Smaller districts often develop a tighter community feel — students are more likely to know each other and teachers across grade levels. <strong style={{ color: "var(--off-white)" }}>Elizabethtown High School</strong> is the primary secondary institution and has a strong community following for athletics and academics.
+              Elizabethtown Independent Schools is a separate, smaller district serving the city of Elizabethtown proper. Smaller districts often develop a tighter community feel — students are more likely to know each other and teachers across grade levels. <strong style={{ color: "var(--text)" }}>Elizabethtown High School</strong> is the primary secondary institution and has a strong community following for athletics and academics.
             </p>
             <p className="guide-p">
               The key distinction: your child will attend either Hardin County Schools or Elizabethtown Independent Schools depending on your specific home address — not based on which city name your address uses. Addresses within the city limits of Elizabethtown typically fall under Elizabethtown Independent, while surrounding areas fall under Hardin County Schools. I verify school zone for every home my buyers consider — there is no point falling in love with a house and then discovering the school assignment does not match your plans.
@@ -692,12 +691,12 @@ export default function MovingGuideClient() {
 
             <h3 className="guide-h3">Private Schools</h3>
             <p className="guide-p">
-              <strong style={{ color: "var(--off-white)" }}>St. James Catholic School</strong> is the primary private K-8 option in Elizabethtown, with a long history in the community and a faith-based educational environment. Several smaller faith-based and alternative options exist in the broader region for families with specific educational philosophies.
+              <strong style={{ color: "var(--text)" }}>St. James Catholic School</strong> is the primary private K-8 option in Elizabethtown, with a long history in the community and a faith-based educational environment. Several smaller faith-based and alternative options exist in the broader region for families with specific educational philosophies.
             </p>
 
             <h3 className="guide-h3">Higher Education</h3>
             <p className="guide-p">
-              <strong style={{ color: "var(--off-white)" }}>Elizabethtown Community and Technical College (ECTC)</strong> is the region's primary higher education institution — a Kentucky Community and Technical College System (KCTCS) school offering associate degrees, workforce certifications, and transfer pathways to four-year universities. ECTC serves a large enrollment and is a significant local employer. Western Kentucky University and the University of Louisville both have distance learning presences in the area, and Campbellsville University is about 40 minutes south.
+              <strong style={{ color: "var(--text)" }}>Elizabethtown Community and Technical College (ECTC)</strong> is the region's primary higher education institution — a Kentucky Community and Technical College System (KCTCS) school offering associate degrees, workforce certifications, and transfer pathways to four-year universities. ECTC serves a large enrollment and is a significant local employer. Western Kentucky University and the University of Louisville both have distance learning presences in the area, and Campbellsville University is about 40 minutes south.
             </p>
 
             <div className="callout">
@@ -726,7 +725,7 @@ export default function MovingGuideClient() {
 
             <h3 className="guide-h3">Healthcare</h3>
             <p className="guide-p">
-              Healthcare is the second-largest employment sector in Hardin County. <strong style={{ color: "var(--off-white)" }}>Hardin Memorial Hospital</strong> and <strong style={{ color: "var(--off-white)" }}>Baptist Health Hardin</strong> together employ several thousand healthcare professionals and support staff. The growing senior population in the region and the medical needs of a large military community create consistent demand for healthcare workers at every level, from entry-level CNA positions to specialty physician roles.
+              Healthcare is the second-largest employment sector in Hardin County. <strong style={{ color: "var(--text)" }}>Hardin Memorial Hospital</strong> and <strong style={{ color: "var(--text)" }}>Baptist Health Hardin</strong> together employ several thousand healthcare professionals and support staff. The growing senior population in the region and the medical needs of a large military community create consistent demand for healthcare workers at every level, from entry-level CNA positions to specialty physician roles.
             </p>
 
             <h3 className="guide-h3">Manufacturing</h3>
@@ -806,13 +805,13 @@ export default function MovingGuideClient() {
 
             <h3 className="guide-h3">Outdoor Recreation</h3>
             <p className="guide-p">
-              <strong style={{ color: "var(--off-white)" }}>Freeman Lake Park</strong> is the centerpiece of Elizabethtown's outdoor life — a beautiful lake with walking and running trails, fishing access, a splash pad and playground for families, open green space for events, and a pavilion system that hosts community gatherings year-round. It is the kind of public amenity that significantly punches above its weight for a city this size.
+              <strong style={{ color: "var(--text)" }}>Freeman Lake Park</strong> is the centerpiece of Elizabethtown's outdoor life — a beautiful lake with walking and running trails, fishing access, a splash pad and playground for families, open green space for events, and a pavilion system that hosts community gatherings year-round. It is the kind of public amenity that significantly punches above its weight for a city this size.
             </p>
             <p className="guide-p">
-              The <strong style={{ color: "var(--off-white)" }}>Elizabethtown Sports Park</strong> is a multi-field complex hosting youth and adult leagues across baseball, softball, soccer, and other sports. It also draws regional tournaments that bring families from across Kentucky and neighboring states. The parks department maintains multiple additional neighborhood parks with courts, playgrounds, and open space throughout the city.
+              The <strong style={{ color: "var(--text)" }}>Elizabethtown Sports Park</strong> is a multi-field complex hosting youth and adult leagues across baseball, softball, soccer, and other sports. It also draws regional tournaments that bring families from across Kentucky and neighboring states. The parks department maintains multiple additional neighborhood parks with courts, playgrounds, and open space throughout the city.
             </p>
             <p className="guide-p">
-              For more extensive outdoor adventure, <strong style={{ color: "var(--off-white)" }}>Mammoth Cave National Park</strong> — one of the longest cave systems in the world — is approximately one hour south, making it an accessible day trip. The Land Between the Lakes National Recreation Area is about 90 minutes west. The Red River Gorge, one of the Southeast's premier rock climbing and hiking destinations, is about 90 minutes northeast.
+              For more extensive outdoor adventure, <strong style={{ color: "var(--text)" }}>Mammoth Cave National Park</strong> — one of the longest cave systems in the world — is approximately one hour south, making it an accessible day trip. The Land Between the Lakes National Recreation Area is about 90 minutes west. The Red River Gorge, one of the Southeast's premier rock climbing and hiking destinations, is about 90 minutes northeast.
             </p>
 
             <h3 className="guide-h3">Dining</h3>
@@ -822,10 +821,10 @@ export default function MovingGuideClient() {
 
             <h3 className="guide-h3">History & Culture</h3>
             <p className="guide-p">
-              The <strong style={{ color: "var(--off-white)" }}>Historic State Theatre</strong> is a downtown Elizabethtown landmark — a restored movie house that shows films and hosts community performances and events. <strong style={{ color: "var(--off-white)" }}>Swope's Cars of Yesteryear Museum</strong> is a beloved local institution showcasing an impressive collection of vintage automobiles.
+              The <strong style={{ color: "var(--text)" }}>Historic State Theatre</strong> is a downtown Elizabethtown landmark — a restored movie house that shows films and hosts community performances and events. <strong style={{ color: "var(--text)" }}>Swope's Cars of Yesteryear Museum</strong> is a beloved local institution showcasing an impressive collection of vintage automobiles.
             </p>
             <p className="guide-p">
-              In nearby Hodgenville (25 miles), the <strong style={{ color: "var(--off-white)" }}>Abraham Lincoln Birthplace National Historical Park</strong> is a genuinely significant historical site — the birthplace and boyhood home of the 16th President, maintained by the National Park Service. It is a meaningful cultural amenity that most E-Town residents underutilize.
+              In nearby Hodgenville (25 miles), the <strong style={{ color: "var(--text)" }}>Abraham Lincoln Birthplace National Historical Park</strong> is a genuinely significant historical site — the birthplace and boyhood home of the 16th President, maintained by the National Park Service. It is a meaningful cultural amenity that most E-Town residents underutilize.
             </p>
 
             <h3 className="guide-h3">Community Events</h3>
@@ -1020,13 +1019,13 @@ export default function MovingGuideClient() {
             </p>
 
             <div className="cta-box">
-              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", color: "white", marginBottom: "0.75rem" }}>
+              <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", color: "var(--text)", marginBottom: "0.75rem" }}>
                 PCS-ing to Fort Knox?
               </p>
               <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "1.25rem" }}>
                 I specialize in military relocations — VA loans, compressed timelines, remote purchases. Call the moment your orders arrive.
               </p>
-              <a href="/services/relocation" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--gold)", color: "var(--dark)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+              <a href="/services/relocation" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
                 Relocation Services →
               </a>
             </div>
@@ -1192,30 +1191,30 @@ export default function MovingGuideClient() {
                 { label: "Real Estate FAQ", href: "/faq", desc: "70+ questions answered" },
                 { label: "All Free Tools", href: "/tools", desc: "10 calculators for buyers & sellers" },
               ].map((l) => (
-                <a key={l.href} href={l.href} style={{ display: "block", padding: "1.25rem", background: "var(--dark3)", border: "1px solid rgba(184,151,106,0.15)", textDecoration: "none", transition: "border-color 0.2s" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(184,151,106,0.4)")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "rgba(184,151,106,0.15)")}>
-                  <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.35rem" }}>{l.label}</div>
+                <a key={l.href} href={l.href} style={{ display: "block", padding: "1.25rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", textDecoration: "none", transition: "border-color 0.2s" }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "var(--border)")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.borderColor = "var(--border)")}>
+                  <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.35rem" }}>{l.label}</div>
                   <div style={{ fontSize: "0.82rem", color: "var(--muted)" }}>{l.desc}</div>
                 </a>
               ))}
             </div>
 
             <div className="cta-box">
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>
+              <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>
                 Ready to talk?
               </p>
-              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.8rem", fontWeight: 300, color: "white", marginBottom: "0.75rem" }}>
+              <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.75rem" }}>
                 Let&apos;s find your home in Elizabethtown
               </p>
               <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1.75rem", maxWidth: 440, margin: "0 auto 1.75rem" }}>
                 Free consultation — no pressure, no obligation. Call, text, or email and I will give you a straight answer about your specific situation.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                <a href="tel:+15022649376" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--gold)", color: "var(--dark)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif", fontWeight: 500 }}>
+                <a href="tel:+15022649376" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif", fontWeight: 500 }}>
                   Call (502) 264-9376
                 </a>
-                <a href="mailto:RhomanMJames@gmail.com" style={{ display: "inline-block", padding: "0.85rem 2.25rem", border: "1px solid rgba(184,151,106,0.5)", color: "var(--gold)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <a href="mailto:RhomanMJames@gmail.com" style={{ display: "inline-block", padding: "0.85rem 2.25rem", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
                   Send an Email
                 </a>
               </div>
@@ -1236,7 +1235,7 @@ export default function MovingGuideClient() {
       </button>
 
       <div className={`mobile-toc-drawer${tocOpen ? " open" : ""}`} aria-hidden={!tocOpen}>
-        <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem" }}>Contents</div>
+        <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Contents</div>
         {chapters.map(({ id, label }) => (
           <button
             key={id}
@@ -1245,8 +1244,8 @@ export default function MovingGuideClient() {
               display: "block", width: "100%", textAlign: "left",
               background: "none", border: "none", cursor: "pointer",
               padding: "0.6rem 0", fontSize: "0.85rem",
-              color: activeId === id ? "var(--gold)" : "var(--muted)",
-              borderBottom: "1px solid rgba(184,151,106,0.08)",
+              color: activeId === id ? "var(--blue)" : "var(--muted)",
+              borderBottom: "1px solid var(--border)",
               fontFamily: "'Jost', system-ui, sans-serif",
             }}
           >

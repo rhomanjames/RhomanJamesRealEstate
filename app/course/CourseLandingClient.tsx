@@ -56,8 +56,7 @@ export default function CourseLandingClient() {
   return (
     <main>
       <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", position: "relative", textAlign: "center" }}>
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 50% 40%, var(--border) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+                <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
         <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>100% Free · Self-Paced · Built for Kentucky · Updated 2026</p>
         <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem" }}>
           The Kentucky<br /><em style={{ fontStyle: "italic", color: "var(--blue)" }}>Home Buyers Course</em>
@@ -154,7 +153,7 @@ export default function CourseLandingClient() {
               { title: "Kentucky Attorney Closings", body: "Kentucky requires a licensed attorney at every real estate closing. Most national courses never mention this. Module 6 explains what this means, what you sign, and how to read your Closing Disclosure before you sit down at the table." },
               { title: "Real Hardin County Data", body: "Not hypothetical examples. Real Elizabethtown price ranges, real Hardin County closing cost estimates, real KHC income limits for 2026, and real commute times from specific neighborhoods to Fort Knox gates." },
             ].map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ width: 24, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -188,7 +187,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", textAlign: "center" }}>Built for Kentucky buyers at every stage</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {audiences.map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.6rem" }}>{item.title}</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
               </div>
@@ -247,7 +246,7 @@ export default function CourseLandingClient() {
 
       <section style={{ background: "var(--bg-soft)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>About Your Instructor</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>

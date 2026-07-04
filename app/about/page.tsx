@@ -81,8 +81,7 @@ export default function AboutPage() {
 
         {/* Hero */}
         <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", position: "relative" }}>
-          <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 30% 50%, var(--border) 0%, transparent 70%)", pointerEvents: "none" }} />
-          <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: "5rem", alignItems: "center" }}>
+                    <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: "5rem", alignItems: "center" }}>
 
             {/* Photo */}
             <div style={{ position: "relative" }}>
@@ -99,7 +98,7 @@ export default function AboutPage() {
 
             {/* Text */}
             <div>
-              <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--blue))", marginBottom: "1.5rem" }} />
+              <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "var(--blue)", marginBottom: "1.5rem" }} />
               <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>
                 Elizabethtown, Kentucky
               </p>
@@ -200,7 +199,7 @@ export default function AboutPage() {
                   link: "Free Home Sellers Course",
                 },
               ].map((item) => (
-                <div key={item.title} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+                <div key={item.title} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                   <div style={{ width: 20, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400, lineHeight: 1.4 }}>{item.title}</h3>
                   <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.25rem" }}>{item.body}</p>
@@ -260,7 +259,7 @@ export default function AboutPage() {
                   detail: "A rigorous Kentucky liberal arts education that built the foundation for understanding people — how they think, what they value, and how they make decisions under pressure.",
                 },
               ].map((ed) => (
-                <div key={ed.school} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+                <div key={ed.school} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                   <p style={{ fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>{ed.degree}</p>
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.3rem", color: "var(--text)", marginBottom: "0.25rem", fontWeight: 400 }}>{ed.school}</h3>
                   <p style={{ fontSize: "0.72rem", color: "var(--muted2)", marginBottom: "1rem", letterSpacing: "0.1em" }}>{ed.location}</p>
@@ -303,7 +302,7 @@ export default function AboutPage() {
         {/* Contact CTA */}
         <section style={{ background: "white", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 580, margin: "0 auto" }}>
-            <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+            <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }}>
               Thinking about buying or selling<br />
               <em style={{ fontStyle: "italic", color: "var(--blue)" }}>in Elizabethtown?</em>

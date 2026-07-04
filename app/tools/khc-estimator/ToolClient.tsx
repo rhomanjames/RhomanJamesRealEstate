@@ -56,7 +56,7 @@ export default function KHCEstimator() {
               <label style={labelStyle}>Loan Type</label>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginTop: "0.5rem" }}>
                 {(["fha", "conventional", "va", "usda"] as const).map((t) => (
-                  <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--gold)" : "rgba(184,151,106,0.2)"}`, background: loanType === t ? "rgba(184,151,106,0.12)" : "transparent", color: loanType === t ? "var(--gold)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                  <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
                     {t.toUpperCase()}
                   </button>
                 ))}
@@ -64,12 +64,12 @@ export default function KHCEstimator() {
             </div>
 
             <div style={{ marginTop: "1.25rem", display: "flex", alignItems: "center", gap: "0.75rem" }}>
-              <input type="checkbox" id="firsttime" checked={firstTime} onChange={e => setFirstTime(e.target.checked)} style={{ accentColor: "var(--gold)", width: 16, height: 16, cursor: "pointer" }} />
+              <input type="checkbox" id="firsttime" checked={firstTime} onChange={e => setFirstTime(e.target.checked)} style={{ accentColor: "var(--blue)", width: 16, height: 16, cursor: "pointer" }} />
               <label htmlFor="firsttime" style={{ ...labelStyle, cursor: "pointer" }}>First-time homebuyer (haven't owned in 3+ years)</label>
             </div>
 
-            <div style={{ marginTop: "1.5rem", padding: "1rem", background: "rgba(184,151,106,0.05)", border: "1px solid rgba(184,151,106,0.15)" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" }}>KHC Hardin County Limits</div>
+            <div style={{ marginTop: "1.5rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" }}>KHC Hardin County Limits</div>
               <div style={{ fontSize: "0.78rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 Income limit: {fmt(hardinIncomeLimit)}<br />
                 Purchase price limit: {fmt(priceLimit)}<br />
@@ -80,9 +80,9 @@ export default function KHCEstimator() {
           </div>
 
           <div className="tool-results">
-            <div style={{ padding: "1.5rem", background: fullyQualifies ? "rgba(184,151,106,0.1)" : mayQualify ? "rgba(255,200,100,0.05)" : "rgba(255,80,80,0.05)", border: `1px solid ${fullyQualifies ? "rgba(184,151,106,0.4)" : mayQualify ? "rgba(255,200,100,0.3)" : "rgba(255,80,80,0.3)"}`, marginBottom: "1.25rem", textAlign: "center" }}>
-              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" }}>KHC DPA Eligibility</div>
-              <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.8rem", fontWeight: 300, color: fullyQualifies ? "var(--gold)" : mayQualify ? "#f0c060" : "#ff8080" }}>
+            <div style={{ padding: "1.5rem", background: fullyQualifies ? "var(--border)" : mayQualify ? "rgba(255,200,100,0.05)" : "rgba(255,80,80,0.05)", border: `1px solid ${fullyQualifies ? "var(--border)" : mayQualify ? "rgba(255,200,100,0.3)" : "rgba(255,80,80,0.3)"}`, marginBottom: "1.25rem", textAlign: "center" }}>
+              <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" }}>KHC DPA Eligibility</div>
+              <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.8rem", fontWeight: 700, color: fullyQualifies ? "var(--blue)" : mayQualify ? "#f0c060" : "#ff8080" }}>
                 {fullyQualifies ? `Likely Eligible — ${fmt(dpaAmount)}` : mayQualify ? "May Qualify — Consult Lender" : "May Not Qualify"}
               </div>
               <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "0.4rem" }}>
@@ -93,23 +93,23 @@ export default function KHCEstimator() {
               </div>
             </div>
 
-            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>Eligibility Check</div>
+            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Eligibility Check</div>
             {[
               { label: "Income within limit", pass: incomeQualifies, detail: `${fmt(income)} vs ${fmt(hardinIncomeLimit)} limit` },
               { label: "Purchase price within limit", pass: priceQualifies, detail: `${fmt(price)} vs ${fmt(priceLimit)} limit` },
               { label: "Credit score qualifies", pass: creditQualifies, detail: `${creditScore} vs 620 minimum` },
               { label: "First-time buyer", pass: firstTime, detail: firstTime ? "Confirmed" : "Required for KHC Regular DPA" },
             ].map((item) => (
-              <div key={item.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.65rem 0", borderBottom: "1px solid rgba(184,151,106,0.08)" }}>
+              <div key={item.label} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0.65rem 0", borderBottom: "1px solid var(--border)" }}>
                 <div>
                   <span style={{ fontSize: "0.8rem", color: "var(--muted)" }}>{item.label}</span>
                   <div style={{ fontSize: "0.65rem", color: "var(--muted2)" }}>{item.detail}</div>
                 </div>
-                <span style={{ fontSize: "1rem", color: item.pass ? "var(--gold)" : "#ff8080" }}>{item.pass ? "✓" : "✗"}</span>
+                <span style={{ fontSize: "1rem", color: item.pass ? "var(--blue)" : "#ff8080" }}>{item.pass ? "✓" : "✗"}</span>
               </div>
             ))}
 
-            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", margin: "1.25rem 0 0.75rem" }}>Your Estimated Payment ({loanType.toUpperCase()})</div>
+            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", margin: "1.25rem 0 0.75rem" }}>Your Estimated Payment ({loanType.toUpperCase()})</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
               <MiniResult label="Min Down Payment" value={fmt(minDown)} />
               <MiniResult label="Out of Pocket (after DPA)" value={fmt(fullyQualifies ? downAfterDPA : minDown)} highlight={fullyQualifies} />
@@ -132,17 +132,17 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
     <div style={{ marginTop: "1.5rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
         <label style={labelStyle}>{label}</label>
-        <span style={{ fontSize: "0.9rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
+        <span style={{ fontSize: "0.9rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{display}</span>
       </div>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--gold)", cursor: "pointer" }} />
+      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--blue)", cursor: "pointer" }} />
     </div>
   );
 }
 function MiniResult({ label, value, highlight }: any) {
   return (
-    <div style={{ padding: "0.75rem", background: highlight ? "rgba(184,151,106,0.08)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "rgba(184,151,106,0.3)" : "rgba(184,151,106,0.1)"}` }}>
+    <div style={{ padding: "0.75rem", background: highlight ? "var(--border)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "var(--border)" : "var(--border)"}` }}>
       <div style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.2rem" }}>{label}</div>
-      <div style={{ fontSize: "0.9rem", color: highlight ? "var(--gold)" : "white", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{value}</div>
+      <div style={{ fontSize: "0.9rem", color: highlight ? "var(--blue)" : "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{value}</div>
     </div>
   );
 }

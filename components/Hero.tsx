@@ -12,7 +12,7 @@ export default function Hero() {
         padding: "8rem 2rem 5rem",
         position: "relative",
         overflow: "hidden",
-        background: "linear-gradient(180deg, #FAFBFF 0%, #FFFFFF 60%)",
+        background: "var(--blue)",
       }}
     >
       <div
@@ -20,8 +20,7 @@ export default function Hero() {
         style={{
           position: "absolute",
           inset: 0,
-          background:
-            "radial-gradient(ellipse 70% 55% at 50% 30%, rgba(79,95,240,0.08) 0%, transparent 70%)",
+          background: "var(--bg-soft)",
           pointerEvents: "none",
         }}
       />

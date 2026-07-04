@@ -108,7 +108,7 @@ export default function Navbar() {
           border-radius: 14px;
           min-width: 210px; padding: 0.6rem 0;
           display: flex; flex-direction: column;
-          box-shadow: 0 16px 40px rgba(11,15,25,0.12); z-index: 200;
+          box-shadow: 0 1px 2px rgba(11,15,25,0.03); z-index: 200;
         }
         .drop-menu-header {
           padding: 0.5rem 1.25rem 0.6rem;
@@ -136,7 +136,7 @@ export default function Navbar() {
           position: absolute; top: 100%; left: 0; right: 0;
           background: white;
           border-bottom: 1px solid var(--border);
-          box-shadow: 0 16px 30px rgba(11,15,25,0.08);
+          box-shadow: 0 1px 2px rgba(11,15,25,0.03);
           padding: 1.25rem 1.75rem 1.75rem;
           display: flex; flex-direction: column; gap: 0.8rem;
           max-height: 80vh; overflow-y: auto;

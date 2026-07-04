@@ -42,7 +42,7 @@ export default function AffordabilityCalculator() {
               <label style={labelStyle}>Loan Term</label>
               <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
                 {[15, 20, 30].map((t) => (
-                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--gold)" : "rgba(184,151,106,0.2)"}`, background: term === t ? "rgba(184,151,106,0.12)" : "transparent", color: term === t ? "var(--gold)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`, background: term === t ? "var(--border)" : "transparent", color: term === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
                     {t}yr
                   </button>
                 ))}
@@ -51,12 +51,12 @@ export default function AffordabilityCalculator() {
           </div>
 
           <div className="tool-results">
-            <div style={{ padding: "1.75rem", background: "rgba(184,151,106,0.06)", border: "1px solid rgba(184,151,106,0.25)", textAlign: "center", marginBottom: "1rem" }}>
+            <div style={{ padding: "1.75rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center", marginBottom: "1rem" }}>
               <div style={resultLabel}>Maximum Home Price</div>
               <div style={resultBig}>{fmt(maxPrice)}</div>
               <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "0.4rem" }}>based on 43% DTI guideline</div>
             </div>
-            <div style={{ padding: "1.75rem", background: "rgba(255,255,255,0.02)", border: "1px solid rgba(184,151,106,0.12)", textAlign: "center", marginBottom: "1rem" }}>
+            <div style={{ padding: "1.75rem", background: "rgba(255,255,255,0.02)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center", marginBottom: "1rem" }}>
               <div style={resultLabel}>Conservative Target</div>
               <div style={{ ...resultBig, fontSize: "2.2rem" }}>{fmt(conservativePrice)}</div>
               <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "0.4rem" }}>comfortable budget with breathing room</div>
@@ -67,9 +67,9 @@ export default function AffordabilityCalculator() {
               <MiniResult label="Max Loan Amount" value={fmt(maxLoan)} />
               <MiniResult label="Monthly Income" value={fmt(monthlyIncome) + "/mo"} />
             </div>
-            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "rgba(184,151,106,0.05)", border: "1px solid rgba(184,151,106,0.15)" }}>
+            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
               <p style={{ fontSize: "0.78rem", color: "var(--muted)", lineHeight: 1.7 }}>
-                <strong style={{ color: "var(--off-white)" }}>Note:</strong> This uses standard 28/43 DTI ratios. FHA loans allow up to 50% DTI in some cases. VA loans have flexible DTI limits. Your actual approval depends on credit score, loan type, and lender guidelines.
+                <strong style={{ color: "var(--text)" }}>Note:</strong> This uses standard 28/43 DTI ratios. FHA loans allow up to 50% DTI in some cases. VA loans have flexible DTI limits. Your actual approval depends on credit score, loan type, and lender guidelines.
               </p>
             </div>
           </div>
@@ -85,21 +85,21 @@ function SliderInput({ label, value, min, max, step, onChange, display, note }: 
     <div style={{ marginTop: "1.5rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.25rem" }}>
         <label style={labelStyle}>{label}</label>
-        <span style={{ fontSize: "0.9rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
+        <span style={{ fontSize: "0.9rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{display}</span>
       </div>
       {note && <div style={{ fontSize: "0.65rem", color: "var(--muted2)", marginBottom: "0.4rem" }}>{note}</div>}
-      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--gold)", cursor: "pointer" }} />
+      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--blue)", cursor: "pointer" }} />
     </div>
   );
 }
 function MiniResult({ label, value }: any) {
   return (
-    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(184,151,106,0.1)" }}>
+    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
       <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.25rem" }}>{label}</div>
-      <div style={{ fontSize: "0.95rem", color: "white", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{value}</div>
+      <div style={{ fontSize: "0.95rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{value}</div>
     </div>
   );
 }
 const labelStyle: React.CSSProperties = { fontSize: "0.68rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)" };
-const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" };
-const resultBig: React.CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "3rem", fontWeight: 300, color: "white", lineHeight: 1 };
+const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" };
+const resultBig: React.CSSProperties = { fontFamily: "'Inter', system-ui, sans-serif", fontSize: "3rem", fontWeight: 700, color: "var(--text)", lineHeight: 1 };

@@ -52,8 +52,7 @@ export default function CourseLandingClient() {
   return (
     <main>
       <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", position: "relative", textAlign: "center" }}>
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 50% 40%, var(--border) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+                <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
         <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>100% Free · Self-Paced · Built for Kentucky · Updated 2026</p>
         <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem" }} dangerouslySetInnerHTML={{ __html: `The Fort Knox<br /><em style="font-style:italic;color:#B8976A">PCS Homebuying Bootcamp</em>` }} />
         <p style={{ fontSize: "1.05rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "42rem", margin: "0 auto 1.25rem" }}>Everything military families need to know about buying a home near Fort Knox, KY — VA loans, BAH strategy, PCS timelines, remote buying, gate proximity, and your exit strategy when you get orders. Six modules built specifically for the Fort Knox market. Completely free.</p>
@@ -151,7 +150,7 @@ export default function CourseLandingClient() {
       { title: "Zero Down VA Loan Deep Dive", body: "Module 2 covers the VA loan in more depth than most lenders explain it — including the funding fee exemption for disabled veterans, how to use VA entitlement more than once, and why assumable VA loans become a selling advantage when you PCS." },
       { title: "Remote Buying Strategy", body: "Many Fort Knox families cannot visit Elizabethtown before their report date. Module 4 covers exactly how to buy remotely — what to ask your agent to show you on video, what cannot be seen on a walkthrough, and how Kentucky handles remote closings." },
       { title: "The Exit Strategy", body: "Most buyers do not think about selling when they buy. Military families need to. Module 6 gives you the sell-vs-rent analysis, property management options from your next duty station, and the VA loan assumption strategy for maximum selling leverage." }].map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ width: 24, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -185,7 +184,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", textAlign: "center" }}>Built for you</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {audiences.map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.6rem" }}>{item.title}</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
               </div>
@@ -243,7 +242,7 @@ export default function CourseLandingClient() {
 
       <section style={{ background: "var(--bg-soft)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>About Your Instructor</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>Rhoman James is a real estate professional based in Elizabethtown, Kentucky, serving buyers and sellers throughout Hardin County including the Fort Knox military community. The Fort Knox PCS Bootcamp was built because military families navigating a PCS housing decision face a specific set of challenges — compressed timelines, remote buying, VA loan complexity, and the need to think about the exit strategy before they close — that generic home buying content never addresses. When your orders arrive and you need to move fast, this course gives you the framework to make a confident decision.</p>

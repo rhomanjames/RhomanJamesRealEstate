@@ -42,7 +42,7 @@ export default function About() {
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: "20px",
-                boxShadow: "0 8px 20px rgba(11,15,25,0.08)",
+                boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
               }}
             >
               <img
@@ -115,7 +115,7 @@ export default function About() {
                     background: "white",
                     borderRadius: "14px",
                     border: "1px solid var(--border)",
-                    boxShadow: "0 1px 3px rgba(11,15,25,0.04)",
+                    boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
                   }}
                 >
                   <div

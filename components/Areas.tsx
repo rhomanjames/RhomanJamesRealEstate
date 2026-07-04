@@ -53,7 +53,7 @@ export default function Areas() {
                 background: "white",
                 borderRadius: "16px",
                 border: "1px solid var(--border)",
-                boxShadow: "0 1px 3px rgba(11,15,25,0.04)",
+                boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
               }}
             >
               <div

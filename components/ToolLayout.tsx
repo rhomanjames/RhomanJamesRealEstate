@@ -26,8 +26,7 @@ export default function ToolLayout({ num, title, description, backHref = "/tools
       <main>
         {/* Hero */}
         <section style={{ paddingTop: "3rem", paddingBottom: "3rem", paddingLeft: "3rem", paddingRight: "3rem", background: "var(--dark)", position: "relative" }}>
-          <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(184,151,106,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
-          <div style={{ maxWidth: 900, position: "relative" }}>
+                    <div style={{ maxWidth: 900, position: "relative" }}>
             <a href={backHref} style={{ fontSize: "0.68rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--muted)", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.4rem", marginBottom: "1.75rem" }}>
               ← All Tools
             </a>

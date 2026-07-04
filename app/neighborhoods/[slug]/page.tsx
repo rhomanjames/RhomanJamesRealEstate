@@ -93,7 +93,7 @@ export default function NeighborhoodPage({
             paddingBottom: "6rem",
             paddingLeft: "3rem",
             paddingRight: "3rem",
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             position: "relative",
           }}
         >
@@ -102,8 +102,7 @@ export default function NeighborhoodPage({
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "radial-gradient(ellipse 60% 50% at 30% 50%, rgba(184,151,106,0.06) 0%, transparent 70%)",
+              background: "var(--bg-soft)",
               pointerEvents: "none",
             }}
           />
@@ -129,7 +128,7 @@ export default function NeighborhoodPage({
                 fontSize: "0.72rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1rem",
               }}
             >
@@ -137,10 +136,10 @@ export default function NeighborhoodPage({
             </p>
             <h1
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(2.8rem, 6vw, 5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.05,
                 marginBottom: "0.5rem",
               }}
@@ -149,10 +148,10 @@ export default function NeighborhoodPage({
             </h1>
             <p
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "1.4rem",
                 fontStyle: "italic",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "2rem",
               }}
             >
@@ -163,7 +162,7 @@ export default function NeighborhoodPage({
               style={{
                 width: "3rem",
                 height: "1px",
-                background: "var(--gold)",
+                background: "var(--blue)",
                 marginBottom: "2rem",
               }}
             />
@@ -183,9 +182,9 @@ export default function NeighborhoodPage({
         {/* Stats strip */}
         <div
           style={{
-            background: "var(--dark3)",
-            borderTop: "1px solid rgba(184,151,106,0.12)",
-            borderBottom: "1px solid rgba(184,151,106,0.12)",
+            background: "var(--bg-soft)",
+            borderTop: "1px solid var(--border)",
+            borderBottom: "1px solid var(--border)",
             padding: "2.5rem 3rem",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
@@ -196,10 +195,10 @@ export default function NeighborhoodPage({
             <div key={s.label} style={{ textAlign: "center" }}>
               <div
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'Inter', system-ui, sans-serif",
                   fontSize: "1.1rem",
                   fontWeight: 400,
-                  color: "white",
+                  color: "var(--text)",
                   lineHeight: 1.3,
                   marginBottom: "0.25rem",
                 }}
@@ -221,14 +220,14 @@ export default function NeighborhoodPage({
         </div>
 
         {/* Overview */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <span
               style={{
                 fontSize: "0.68rem",
                 letterSpacing: "0.35em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 display: "block",
                 marginBottom: "1rem",
               }}
@@ -237,10 +236,10 @@ export default function NeighborhoodPage({
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "2rem",
                 lineHeight: 1.2,
               }}
@@ -252,7 +251,7 @@ export default function NeighborhoodPage({
               style={{
                 width: "3rem",
                 height: "1px",
-                background: "var(--gold)",
+                background: "var(--blue)",
                 marginBottom: "2.5rem",
               }}
             />
@@ -273,14 +272,14 @@ export default function NeighborhoodPage({
         </section>
 
         {/* Pros grid */}
-        <section style={{ background: "var(--dark)", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <span
               style={{
                 fontSize: "0.68rem",
                 letterSpacing: "0.35em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 display: "block",
                 marginBottom: "1rem",
                 textAlign: "center",
@@ -290,10 +289,10 @@ export default function NeighborhoodPage({
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "3.5rem",
                 lineHeight: 1.2,
                 textAlign: "center",
@@ -316,9 +315,9 @@ export default function NeighborhoodPage({
                 >
                   <h3
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "1.2rem",
-                      color: "white",
+                      color: "var(--text)",
                       marginBottom: "0.75rem",
                       fontWeight: 400,
                     }}
@@ -341,7 +340,7 @@ export default function NeighborhoodPage({
         </section>
 
         {/* Who it's for + Real Talk */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div
             style={{
               maxWidth: 1000,
@@ -359,7 +358,7 @@ export default function NeighborhoodPage({
                   fontSize: "0.68rem",
                   letterSpacing: "0.35em",
                   textTransform: "uppercase",
-                  color: "var(--gold)",
+                  color: "var(--blue)",
                   display: "block",
                   marginBottom: "1rem",
                 }}
@@ -368,10 +367,10 @@ export default function NeighborhoodPage({
               </span>
               <h2
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'Inter', system-ui, sans-serif",
                   fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                  fontWeight: 300,
-                  color: "white",
+                  fontWeight: 700,
+                  color: "var(--text)",
                   marginBottom: "1.5rem",
                   lineHeight: 1.2,
                 }}
@@ -383,7 +382,7 @@ export default function NeighborhoodPage({
                 style={{
                   width: "3rem",
                   height: "1px",
-                  background: "var(--gold)",
+                  background: "var(--blue)",
                   marginBottom: "1.5rem",
                 }}
               />
@@ -403,7 +402,7 @@ export default function NeighborhoodPage({
                   fontSize: "0.68rem",
                   letterSpacing: "0.35em",
                   textTransform: "uppercase",
-                  color: "var(--gold)",
+                  color: "var(--blue)",
                   display: "block",
                   marginBottom: "1rem",
                 }}
@@ -412,10 +411,10 @@ export default function NeighborhoodPage({
               </span>
               <h2
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'Inter', system-ui, sans-serif",
                   fontSize: "clamp(1.5rem, 3vw, 2rem)",
-                  fontWeight: 300,
-                  color: "white",
+                  fontWeight: 700,
+                  color: "var(--text)",
                   marginBottom: "1.5rem",
                   lineHeight: 1.2,
                 }}
@@ -427,7 +426,7 @@ export default function NeighborhoodPage({
                 style={{
                   width: "3rem",
                   height: "1px",
-                  background: "var(--gold)",
+                  background: "var(--blue)",
                   marginBottom: "1.5rem",
                 }}
               />
@@ -450,14 +449,14 @@ export default function NeighborhoodPage({
         </section>
 
         {/* FAQs */}
-        <section style={{ background: "var(--dark3)", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <span
               style={{
                 fontSize: "0.68rem",
                 letterSpacing: "0.35em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 display: "block",
                 marginBottom: "1rem",
               }}
@@ -466,10 +465,10 @@ export default function NeighborhoodPage({
             </span>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 marginBottom: "2.5rem",
                 lineHeight: 1.2,
               }}
@@ -481,19 +480,19 @@ export default function NeighborhoodPage({
                 <div
                   key={i}
                   style={{
-                    borderTop: "1px solid rgba(184,151,106,0.15)",
+                    borderTop: "1px solid var(--border)",
                     padding: "2rem 0",
                     ...(i === n.faqs.length - 1
-                      ? { borderBottom: "1px solid rgba(184,151,106,0.15)" }
+                      ? { borderBottom: "1px solid var(--border)" }
                       : {}),
                   }}
                 >
                   <h3
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "1.2rem",
                       fontWeight: 400,
-                      color: "white",
+                      color: "var(--text)",
                       marginBottom: "0.75rem",
                       lineHeight: 1.3,
                     }}
@@ -516,14 +515,14 @@ export default function NeighborhoodPage({
         </section>
 
         {/* Browse other neighborhoods */}
-        <section style={{ background: "var(--dark)", padding: "5rem 3rem" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "5rem 3rem" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <p
               style={{
                 fontSize: "0.68rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1.5rem",
                 textAlign: "center",
               }}
@@ -548,8 +547,8 @@ export default function NeighborhoodPage({
                       fontSize: "0.75rem",
                       letterSpacing: "0.15em",
                       textTransform: "uppercase",
-                      color: "var(--gold)",
-                      border: "1px solid rgba(184,151,106,0.3)",
+                      color: "var(--blue)",
+                      border: "1px solid var(--border)", borderRadius: "16px",
                       padding: "0.65rem 1.5rem",
                       textDecoration: "none",
                       transition: "border-color 0.2s",
@@ -565,10 +564,10 @@ export default function NeighborhoodPage({
         {/* CTA */}
         <section
           style={{
-            background: "var(--dark2)",
+            background: "white",
             padding: "7rem 3rem",
             textAlign: "center",
-            borderTop: "1px solid rgba(184,151,106,0.12)",
+            borderTop: "1px solid var(--border)",
           }}
         >
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -577,7 +576,7 @@ export default function NeighborhoodPage({
                 fontSize: "0.72rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1.5rem",
               }}
             >
@@ -585,10 +584,10 @@ export default function NeighborhoodPage({
             </p>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.2,
                 marginBottom: "1.5rem",
               }}

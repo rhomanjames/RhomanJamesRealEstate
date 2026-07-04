@@ -52,7 +52,7 @@ export default function NeighborhoodsPage() {
             paddingBottom: "6rem",
             paddingLeft: "3rem",
             paddingRight: "3rem",
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             textAlign: "center",
             position: "relative",
           }}
@@ -62,8 +62,7 @@ export default function NeighborhoodsPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(184,151,106,0.07) 0%, transparent 70%)",
+              background: "var(--bg-soft)",
               pointerEvents: "none",
             }}
           />
@@ -72,7 +71,7 @@ export default function NeighborhoodsPage() {
             style={{
               width: 1,
               height: "3rem",
-              background: "linear-gradient(to bottom, transparent, var(--gold))",
+              background: "var(--blue)",
               margin: "0 auto 2rem",
             }}
           />
@@ -81,7 +80,7 @@ export default function NeighborhoodsPage() {
               fontSize: "0.72rem",
               letterSpacing: "0.3em",
               textTransform: "uppercase",
-              color: "var(--gold)",
+              color: "var(--blue)",
               marginBottom: "1rem",
             }}
           >
@@ -89,16 +88,16 @@ export default function NeighborhoodsPage() {
           </p>
           <h1
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontFamily: "'Inter', system-ui, sans-serif",
               fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-              fontWeight: 300,
-              color: "white",
+              fontWeight: 700,
+              color: "var(--text)",
               lineHeight: 1.1,
               marginBottom: "1.5rem",
             }}
           >
             Find your{" "}
-            <em style={{ fontStyle: "italic", color: "var(--gold)" }}>
+            <em style={{ fontStyle: "italic", color: "var(--blue)" }}>
               perfect community
             </em>
           </h1>
@@ -118,7 +117,7 @@ export default function NeighborhoodsPage() {
         </section>
 
         {/* Grid */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div
             style={{
               maxWidth: 1100,
@@ -143,7 +142,7 @@ export default function NeighborhoodsPage() {
                       fontSize: "0.65rem",
                       letterSpacing: "0.3em",
                       textTransform: "uppercase",
-                      color: "var(--gold)",
+                      color: "var(--blue)",
                       marginBottom: "0.75rem",
                     }}
                   >
@@ -151,10 +150,10 @@ export default function NeighborhoodsPage() {
                   </div>
                   <h2
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "1.8rem",
                       fontWeight: 400,
-                      color: "white",
+                      color: "var(--text)",
                       marginBottom: "0.35rem",
                       lineHeight: 1.1,
                     }}
@@ -165,10 +164,10 @@ export default function NeighborhoodsPage() {
                     style={{
                       fontSize: "0.78rem",
                       letterSpacing: "0.1em",
-                      color: "var(--gold)",
+                      color: "var(--blue)",
                       fontStyle: "italic",
                       marginBottom: "1.25rem",
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                     }}
                   >
                     {n.tagline}
@@ -178,7 +177,7 @@ export default function NeighborhoodsPage() {
                     style={{
                       width: "2rem",
                       height: "1px",
-                      background: "rgba(184,151,106,0.4)",
+                      background: "var(--border)",
                       marginBottom: "1.25rem",
                     }}
                   />
@@ -197,7 +196,7 @@ export default function NeighborhoodsPage() {
                       fontSize: "0.72rem",
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "var(--gold)",
+                      color: "var(--blue)",
                       display: "flex",
                       alignItems: "center",
                       gap: "0.5rem",
@@ -215,10 +214,10 @@ export default function NeighborhoodsPage() {
         {/* CTA */}
         <section
           style={{
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             padding: "7rem 3rem",
             textAlign: "center",
-            borderTop: "1px solid rgba(184,151,106,0.12)",
+            borderTop: "1px solid var(--border)",
           }}
         >
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -227,7 +226,7 @@ export default function NeighborhoodsPage() {
                 fontSize: "0.72rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1.5rem",
               }}
             >
@@ -235,10 +234,10 @@ export default function NeighborhoodsPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.2,
                 marginBottom: "1.5rem",
               }}

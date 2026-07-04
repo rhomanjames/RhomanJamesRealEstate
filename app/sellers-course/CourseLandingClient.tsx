@@ -52,8 +52,7 @@ export default function CourseLandingClient() {
   return (
     <main>
       <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", position: "relative", textAlign: "center" }}>
-        <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 70% 60% at 50% 40%, var(--border) 0%, transparent 70%)", pointerEvents: "none" }} />
-        <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+                <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
         <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>100% Free · Self-Paced · Built for Kentucky · Updated 2026</p>
         <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.5rem, 6vw, 4.5rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem" }} dangerouslySetInnerHTML={{ __html: `The Kentucky<br /><em style="font-style:italic;color:#B8976A">Home Sellers Course</em>` }} />
         <p style={{ fontSize: "1.05rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "42rem", margin: "0 auto 1.25rem" }}>Everything you need to know about selling your home in Kentucky — from pricing strategy to closing day. Six modules covering preparation, pricing, marketing, negotiating offers, and walking out of closing with your full net proceeds. No fluff. Completely free.</p>
@@ -141,7 +140,7 @@ export default function CourseLandingClient() {
       { title: "Pricing That Actually Works", body: "Overpricing is the single most common seller mistake in Elizabethtown. Module 3 explains exactly why it backfires, how to price based on what comps actually support, and how to read the market when it tells you something." },
       { title: "VA Loan Offers Explained", body: "Fort Knox drives a significant portion of Elizabethtown buyer demand. Module 5 explains exactly what a VA loan offer means for you as a seller, why the concerns about VA loans are largely outdated, and how to evaluate VA offers against conventional ones." },
       { title: "Kentucky-Specific Disclosures", body: "Kentucky has specific seller disclosure requirements that differ from national standards. Module 2 walks through exactly what you are required to disclose, what happens if you do not, and how to protect yourself legally." }].map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ width: 24, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -175,7 +174,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", textAlign: "center" }}>Built for you</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {audiences.map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
                 <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.6rem" }}>{item.title}</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
               </div>
@@ -230,7 +229,7 @@ export default function CourseLandingClient() {
 
       <section style={{ background: "var(--bg-soft)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto", textAlign: "center" }}>
-          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+          <div aria-hidden="true" style={{ width: 1, height: "3rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>About Your Instructor</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>Rhoman James is a real estate professional based in Elizabethtown, Kentucky, serving buyers and sellers throughout Hardin County. This course was built because sellers who understand the process get better outcomes — better prices, fewer surprises at closing, and fewer deals that fall apart over preventable issues. The knowledge in this course reflects the specific dynamics of the Elizabethtown and Hardin County market, including the Fort Knox military buyer pool that shapes demand here in ways that national real estate advice never accounts for.</p>

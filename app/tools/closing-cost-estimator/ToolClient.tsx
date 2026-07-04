@@ -42,12 +42,12 @@ export default function ClosingCostEstimator() {
 
   const fmt = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
   const lineItem = (label: string, value: number, note?: string) => (
-    <div key={label} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "0.6rem 0", borderBottom: "1px solid rgba(184,151,106,0.08)" }}>
+    <div key={label} style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "0.6rem 0", borderBottom: "1px solid var(--border)" }}>
       <div>
         <span style={{ fontSize: "0.82rem", color: "var(--muted)" }}>{label}</span>
         {note && <span style={{ fontSize: "0.65rem", color: "var(--muted2)", marginLeft: "0.5rem" }}>({note})</span>}
       </div>
-      <span style={{ fontSize: "0.85rem", color: "var(--off-white)", fontFamily: "'Cormorant Garamond', Georgia, serif", flexShrink: 0, marginLeft: "1rem" }}>{fmt(value)}</span>
+      <span style={{ fontSize: "0.85rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif", flexShrink: 0, marginLeft: "1rem" }}>{fmt(value)}</span>
     </div>
   );
 
@@ -60,7 +60,7 @@ export default function ClosingCostEstimator() {
           <div className="tool-inputs">
             <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1.5rem" }}>
               {(["buyer", "seller"] as const).map((r) => (
-                <button key={r} onClick={() => setRole(r)} style={{ flex: 1, padding: "0.75rem", border: `1px solid ${role === r ? "var(--gold)" : "rgba(184,151,106,0.2)"}`, background: role === r ? "rgba(184,151,106,0.12)" : "transparent", color: role === r ? "var(--gold)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <button key={r} onClick={() => setRole(r)} style={{ flex: 1, padding: "0.75rem", border: `1px solid ${role === r ? "var(--blue)" : "var(--border)"}`, background: role === r ? "var(--border)" : "transparent", color: role === r ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
                   {r === "buyer" ? "Buyer" : "Seller"}
                 </button>
               ))}
@@ -72,7 +72,7 @@ export default function ClosingCostEstimator() {
                   <label style={labelStyle}>Loan Type</label>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginTop: "0.5rem" }}>
                     {(["conventional", "fha", "va", "cash"] as const).map((t) => (
-                      <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--gold)" : "rgba(184,151,106,0.2)"}`, background: loanType === t ? "rgba(184,151,106,0.12)" : "transparent", color: loanType === t ? "var(--gold)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                      <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
                         {t === "conventional" ? "Conventional" : t === "fha" ? "FHA" : t === "va" ? "VA" : "Cash"}
                       </button>
                     ))}
@@ -83,7 +83,7 @@ export default function ClosingCostEstimator() {
                 )}
               </>
             )}
-            <div style={{ marginTop: "2rem", padding: "1rem", background: "rgba(184,151,106,0.05)", border: "1px solid rgba(184,151,106,0.15)" }}>
+            <div style={{ marginTop: "2rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
               <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 Estimates based on typical Hardin County, KY closing costs. Actual costs vary by lender, title company, property, and negotiation. Always review your Loan Estimate and Closing Disclosure carefully.
               </p>
@@ -93,12 +93,12 @@ export default function ClosingCostEstimator() {
           <div className="tool-results">
             {role === "buyer" ? (
               <>
-                <div style={{ padding: "1.5rem", background: "rgba(184,151,106,0.06)", border: "1px solid rgba(184,151,106,0.25)", marginBottom: "1.5rem", textAlign: "center" }}>
+                <div style={{ padding: "1.5rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", marginBottom: "1.5rem", textAlign: "center" }}>
                   <div style={resultLabel}>Estimated Buyer Closing Costs</div>
                   <div style={resultBig}>{fmt(totalBuyer)}</div>
                   <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "0.4rem" }}>{((totalBuyer / price) * 100).toFixed(1)}% of purchase price</div>
                 </div>
-                <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>Itemized Breakdown</div>
+                <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Itemized Breakdown</div>
                 {lineItem("Loan Origination (1%)", origination)}
                 {lineItem("Appraisal", appraisal)}
                 {lineItem("Home Inspection", inspection)}
@@ -112,31 +112,31 @@ export default function ClosingCostEstimator() {
                 {lineItem("Escrow Setup", escrowSetup, "taxes & insurance")}
                 {loanType === "va" && lineItem("VA Funding Fee", vaFundingFee, "first use, can be financed")}
                 {loanType === "fha" && lineItem("FHA Upfront MIP", fhaUpfront, "1.75% of loan")}
-                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid rgba(184,151,106,0.3)", marginTop: "0.25rem" }}>
-                  <span style={{ fontSize: "0.82rem", color: "var(--gold)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Total Estimated</span>
-                  <span style={{ fontSize: "1.1rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{fmt(totalBuyer)}</span>
+                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid var(--border)", marginTop: "0.25rem" }}>
+                  <span style={{ fontSize: "0.82rem", color: "var(--blue)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Total Estimated</span>
+                  <span style={{ fontSize: "1.1rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{fmt(totalBuyer)}</span>
                 </div>
               </>
             ) : (
               <>
-                <div style={{ padding: "1.5rem", background: "rgba(184,151,106,0.06)", border: "1px solid rgba(184,151,106,0.25)", marginBottom: "1.5rem", textAlign: "center" }}>
+                <div style={{ padding: "1.5rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", marginBottom: "1.5rem", textAlign: "center" }}>
                   <div style={resultLabel}>Estimated Net Proceeds</div>
                   <div style={resultBig}>{fmt(netProceeds)}</div>
                   <div style={{ fontSize: "0.75rem", color: "var(--muted)", marginTop: "0.4rem" }}>after all closing costs</div>
                 </div>
-                <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>Seller Cost Breakdown</div>
+                <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Seller Cost Breakdown</div>
                 {lineItem("Real Estate Commission", commission, "estimated 5.5%")}
                 {lineItem("KY Deed Transfer Tax", deedTransfer, "$0.50 per $500")}
                 {lineItem("Deed Preparation", deedPrep)}
                 {lineItem("Pro-Rated Property Taxes", proRatedTax, "~3 months")}
                 {lineItem("Owner's Title Insurance", titleInsuranceSeller, "if paid by seller")}
-                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid rgba(184,151,106,0.3)", marginTop: "0.25rem" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid var(--border)", marginTop: "0.25rem" }}>
                   <span style={{ fontSize: "0.82rem", color: "var(--muted)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Total Costs</span>
-                  <span style={{ fontSize: "1.1rem", color: "var(--off-white)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{fmt(totalSeller)}</span>
+                  <span style={{ fontSize: "1.1rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{fmt(totalSeller)}</span>
                 </div>
-                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid rgba(184,151,106,0.3)" }}>
-                  <span style={{ fontSize: "0.82rem", color: "var(--gold)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Net to Seller</span>
-                  <span style={{ fontSize: "1.1rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{fmt(netProceeds)}</span>
+                <div style={{ display: "flex", justifyContent: "space-between", padding: "0.75rem 0", borderTop: "1px solid var(--border)" }}>
+                  <span style={{ fontSize: "0.82rem", color: "var(--blue)", letterSpacing: "0.1em", textTransform: "uppercase" }}>Net to Seller</span>
+                  <span style={{ fontSize: "1.1rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{fmt(netProceeds)}</span>
                 </div>
                 <p style={{ fontSize: "0.72rem", color: "var(--muted2)", marginTop: "1rem", lineHeight: 1.6 }}>Does not include mortgage payoff. Commission is negotiable and varies by transaction.</p>
               </>
@@ -154,12 +154,12 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
     <div style={{ marginTop: "1.5rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
         <label style={labelStyle}>{label}</label>
-        <span style={{ fontSize: "0.9rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
+        <span style={{ fontSize: "0.9rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{display}</span>
       </div>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--gold)", cursor: "pointer" }} />
+      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--blue)", cursor: "pointer" }} />
     </div>
   );
 }
 const labelStyle: React.CSSProperties = { fontSize: "0.68rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)" };
-const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" };
-const resultBig: React.CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "3rem", fontWeight: 300, color: "white", lineHeight: 1 };
+const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" };
+const resultBig: React.CSSProperties = { fontFamily: "'Inter', system-ui, sans-serif", fontSize: "3rem", fontWeight: 700, color: "var(--text)", lineHeight: 1 };

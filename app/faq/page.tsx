@@ -55,7 +55,7 @@ export default function FAQPage() {
             paddingBottom: "5rem",
             paddingLeft: "3rem",
             paddingRight: "3rem",
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             textAlign: "center",
             position: "relative",
           }}
@@ -65,8 +65,7 @@ export default function FAQPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(184,151,106,0.07) 0%, transparent 70%)",
+              background: "var(--bg-soft)",
               pointerEvents: "none",
             }}
           />
@@ -75,7 +74,7 @@ export default function FAQPage() {
             style={{
               width: 1,
               height: "3rem",
-              background: "linear-gradient(to bottom, transparent, var(--gold))",
+              background: "var(--blue)",
               margin: "0 auto 2rem",
             }}
           />
@@ -84,7 +83,7 @@ export default function FAQPage() {
               fontSize: "0.72rem",
               letterSpacing: "0.3em",
               textTransform: "uppercase",
-              color: "var(--gold)",
+              color: "var(--blue)",
               marginBottom: "1rem",
             }}
           >
@@ -92,16 +91,16 @@ export default function FAQPage() {
           </p>
           <h1
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontFamily: "'Inter', system-ui, sans-serif",
               fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-              fontWeight: 300,
-              color: "white",
+              fontWeight: 700,
+              color: "var(--text)",
               lineHeight: 1.1,
               marginBottom: "1.5rem",
             }}
           >
             Your questions,{" "}
-            <em style={{ fontStyle: "italic", color: "var(--gold)" }}>answered</em>
+            <em style={{ fontStyle: "italic", color: "var(--blue)" }}>answered</em>
           </h1>
           <p
             style={{
@@ -139,8 +138,8 @@ export default function FAQPage() {
                   fontSize: "0.68rem",
                   letterSpacing: "0.15em",
                   textTransform: "uppercase",
-                  color: "var(--gold)",
-                  border: "1px solid rgba(184,151,106,0.3)",
+                  color: "var(--blue)",
+                  border: "1px solid var(--border)", borderRadius: "16px",
                   padding: "0.5rem 1.25rem",
                   textDecoration: "none",
                   whiteSpace: "nowrap",
@@ -153,7 +152,7 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Categories */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             {allFaqData.map((cat, i) => (
               <div
@@ -167,7 +166,7 @@ export default function FAQPage() {
                       fontSize: "0.68rem",
                       letterSpacing: "0.35em",
                       textTransform: "uppercase",
-                      color: "var(--gold)",
+                      color: "var(--blue)",
                       marginBottom: "0.75rem",
                     }}
                   >
@@ -175,10 +174,10 @@ export default function FAQPage() {
                   </p>
                   <h2
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "clamp(1.6rem, 3vw, 2.2rem)",
-                      fontWeight: 300,
-                      color: "white",
+                      fontWeight: 700,
+                      color: "var(--text)",
                       lineHeight: 1.2,
                     }}
                   >
@@ -189,7 +188,7 @@ export default function FAQPage() {
                     style={{
                       width: "3rem",
                       height: "1px",
-                      background: "var(--gold)",
+                      background: "var(--blue)",
                       marginTop: "1.25rem",
                     }}
                   />
@@ -203,10 +202,10 @@ export default function FAQPage() {
         {/* CTA */}
         <section
           style={{
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             padding: "7rem 3rem",
             textAlign: "center",
-            borderTop: "1px solid rgba(184,151,106,0.12)",
+            borderTop: "1px solid var(--border)",
           }}
         >
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -215,7 +214,7 @@ export default function FAQPage() {
                 fontSize: "0.72rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1.5rem",
               }}
             >
@@ -223,10 +222,10 @@ export default function FAQPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.2,
                 marginBottom: "1.5rem",
               }}

@@ -52,7 +52,7 @@ export default function ServicesPage() {
             paddingBottom: "6rem",
             paddingLeft: "3rem",
             paddingRight: "3rem",
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             textAlign: "center",
             position: "relative",
           }}
@@ -62,8 +62,7 @@ export default function ServicesPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "radial-gradient(ellipse 70% 50% at 50% 0%, rgba(184,151,106,0.07) 0%, transparent 70%)",
+              background: "var(--bg-soft)",
               pointerEvents: "none",
             }}
           />
@@ -72,7 +71,7 @@ export default function ServicesPage() {
             style={{
               width: 1,
               height: "3rem",
-              background: "linear-gradient(to bottom, transparent, var(--gold))",
+              background: "var(--blue)",
               margin: "0 auto 2rem",
             }}
           />
@@ -81,7 +80,7 @@ export default function ServicesPage() {
               fontSize: "0.72rem",
               letterSpacing: "0.3em",
               textTransform: "uppercase",
-              color: "var(--gold)",
+              color: "var(--blue)",
               marginBottom: "1rem",
             }}
           >
@@ -89,16 +88,16 @@ export default function ServicesPage() {
           </p>
           <h1
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
+              fontFamily: "'Inter', system-ui, sans-serif",
               fontSize: "clamp(2.5rem, 6vw, 4.5rem)",
-              fontWeight: 300,
-              color: "white",
+              fontWeight: 700,
+              color: "var(--text)",
               lineHeight: 1.1,
               marginBottom: "1.5rem",
             }}
           >
             Services built around{" "}
-            <em style={{ fontStyle: "italic", color: "var(--gold)" }}>your goals</em>
+            <em style={{ fontStyle: "italic", color: "var(--blue)" }}>your goals</em>
           </h1>
           <p
             style={{
@@ -116,7 +115,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Service cards */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 3rem" }}>
+        <section style={{ background: "white", padding: "6rem 3rem" }}>
           <div
             style={{
               maxWidth: 1100,
@@ -139,10 +138,10 @@ export default function ServicesPage() {
                   <div
                     aria-hidden="true"
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "3.5rem",
-                      fontWeight: 300,
-                      color: "rgba(184,151,106,0.12)",
+                      fontWeight: 700,
+                      color: "var(--border)",
                       lineHeight: 1,
                       marginBottom: "1rem",
                     }}
@@ -151,9 +150,9 @@ export default function ServicesPage() {
                   </div>
                   <h2
                     style={{
-                      fontFamily: "'Cormorant Garamond', Georgia, serif",
+                      fontFamily: "'Inter', system-ui, sans-serif",
                       fontSize: "1.5rem",
-                      color: "white",
+                      color: "var(--text)",
                       marginBottom: "0.75rem",
                       fontWeight: 400,
                     }}
@@ -175,7 +174,7 @@ export default function ServicesPage() {
                       fontSize: "0.72rem",
                       letterSpacing: "0.18em",
                       textTransform: "uppercase",
-                      color: "var(--gold)",
+                      color: "var(--blue)",
                       display: "flex",
                       alignItems: "center",
                       gap: "0.5rem",
@@ -192,10 +191,10 @@ export default function ServicesPage() {
         {/* CTA */}
         <section
           style={{
-            background: "var(--dark)",
+            background: "var(--bg-soft)",
             padding: "7rem 3rem",
             textAlign: "center",
-            borderTop: "1px solid rgba(184,151,106,0.12)",
+            borderTop: "1px solid var(--border)",
           }}
         >
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
@@ -204,7 +203,7 @@ export default function ServicesPage() {
                 fontSize: "0.72rem",
                 letterSpacing: "0.3em",
                 textTransform: "uppercase",
-                color: "var(--gold)",
+                color: "var(--blue)",
                 marginBottom: "1.5rem",
               }}
             >
@@ -212,10 +211,10 @@ export default function ServicesPage() {
             </p>
             <h2
               style={{
-                fontFamily: "'Cormorant Garamond', Georgia, serif",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "clamp(1.8rem, 4vw, 2.8rem)",
-                fontWeight: 300,
-                color: "white",
+                fontWeight: 700,
+                color: "var(--text)",
                 lineHeight: 1.2,
                 marginBottom: "1.5rem",
               }}
