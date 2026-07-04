@@ -11,9 +11,9 @@ export default function Stats() {
       role="region"
       aria-label="Key stats"
       style={{
-        background: "var(--dark2)",
-        borderTop: "1px solid rgba(184,151,106,0.12)",
-        borderBottom: "1px solid rgba(184,151,106,0.12)",
+        background: "white",
+        borderTop: "1px solid var(--border)",
+        borderBottom: "1px solid var(--border)",
         padding: "3.5rem 3rem",
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
@@ -25,10 +25,11 @@ export default function Stats() {
         <div key={s.label}>
           <div
             style={{
-              fontFamily: "'Cormorant Garamond', Georgia, serif",
-              fontSize: "3rem",
-              fontWeight: 300,
-              color: "var(--gold)",
+              fontFamily: "'Inter', system-ui, sans-serif",
+              fontSize: "2.25rem",
+              fontWeight: 800,
+              letterSpacing: "-0.02em",
+              color: "var(--blue)",
               lineHeight: 1,
             }}
           >
@@ -36,11 +37,10 @@ export default function Stats() {
           </div>
           <div
             style={{
-              fontSize: "0.7rem",
-              letterSpacing: "0.22em",
-              textTransform: "uppercase",
+              fontSize: "0.85rem",
+              fontWeight: 500,
               color: "var(--muted)",
-              marginTop: "0.5rem",
+              marginTop: "0.6rem",
             }}
           >
             {s.label}

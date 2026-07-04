@@ -13,18 +13,17 @@ export default function InternalLinks({ groups, title = "Explore More" }: Intern
     <aside
       aria-label="Related pages"
       style={{
-        background: "var(--dark)",
-        borderTop: "1px solid rgba(184,151,106,0.12)",
+        background: "var(--bg-soft)",
+        borderTop: "1px solid var(--border)",
         padding: "5rem 3rem",
       }}
     >
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <p
           style={{
-            fontSize: "0.68rem",
-            letterSpacing: "0.35em",
-            textTransform: "uppercase",
-            color: "var(--gold)",
+            fontSize: "0.85rem",
+            fontWeight: 700,
+            color: "var(--blue)",
             marginBottom: "3rem",
             textAlign: "center",
           }}
@@ -43,14 +42,13 @@ export default function InternalLinks({ groups, title = "Explore More" }: Intern
             <div key={group.heading}>
               <h3
                 style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
+                  fontFamily: "'Inter', system-ui, sans-serif",
                   fontSize: "1rem",
-                  fontWeight: 400,
-                  color: "white",
+                  fontWeight: 700,
+                  color: "var(--text)",
                   marginBottom: "1.25rem",
                   paddingBottom: "0.75rem",
-                  borderBottom: "1px solid rgba(184,151,106,0.2)",
-                  letterSpacing: "0.05em",
+                  borderBottom: "1px solid var(--border)",
                 }}
               >
                 {group.heading}
@@ -72,7 +70,7 @@ export default function InternalLinks({ groups, title = "Explore More" }: Intern
                       }}
                       className="internal-link"
                     >
-                      <span style={{ color: "var(--gold)", fontSize: "0.6rem", marginTop: "0.35rem", flexShrink: 0 }}>▶</span>
+                      <span style={{ color: "var(--blue)", fontSize: "0.6rem", marginTop: "0.35rem", flexShrink: 0 }}>▶</span>
                       <span>
                         {link.label}
                         {link.desc && (
@@ -91,7 +89,7 @@ export default function InternalLinks({ groups, title = "Explore More" }: Intern
       </div>
 
       <style>{`
-        .internal-link:hover { color: var(--gold) !important; }
+        .internal-link:hover { color: var(--blue) !important; }
         @media (max-width: 768px) {
           .internal-links-grid { grid-template-columns: 1fr !important; gap: 2rem !important; }
         }

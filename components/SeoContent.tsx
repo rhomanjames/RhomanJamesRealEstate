@@ -2,16 +2,17 @@ export default function SeoContent() {
   return (
     <section
       aria-labelledby="seo-heading"
-      style={{ padding: "7rem 3rem", background: "var(--dark3)" }}
+      style={{ padding: "7rem 3rem", background: "white" }}
     >
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <h2
           id="seo-heading"
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "2.2rem",
-            fontWeight: 300,
-            color: "white",
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: "2rem",
+            fontWeight: 800,
+            letterSpacing: "-0.02em",
+            color: "var(--text)",
             marginBottom: "1.5rem",
           }}
         >
@@ -29,7 +30,7 @@ export default function SeoContent() {
           Elizabethtown, Kentucky has become one of the most sought-after
           communities in the state — and for good reason. Located along I-65
           between Louisville and Nashville,{" "}
-          <strong style={{ color: "var(--off-white)", fontWeight: 400 }}>
+          <strong style={{ color: "var(--text)", fontWeight: 600 }}>
             Elizabethtown offers small-town warmth with remarkable convenience
           </strong>
           . The city&apos;s proximity to Fort Knox, its excellent Hardin County
@@ -46,7 +47,7 @@ export default function SeoContent() {
           }}
         >
           As your dedicated{" "}
-          <strong style={{ color: "var(--off-white)", fontWeight: 400 }}>
+          <strong style={{ color: "var(--text)", fontWeight: 600 }}>
             Elizabethtown KY real estate resource
           </strong>
           , Rhoman James understands the nuances of the local market — which
@@ -64,7 +65,7 @@ export default function SeoContent() {
           }}
         >
           Whether you&apos;re searching for{" "}
-          <strong style={{ color: "var(--off-white)", fontWeight: 400 }}>
+          <strong style={{ color: "var(--text)", fontWeight: 600 }}>
             homes for sale in Elizabethtown, Kentucky
           </strong>
           , exploring the Radcliff or Vine Grove markets, or considering
@@ -96,7 +97,7 @@ export default function SeoContent() {
             fontSize: "0.7rem",
             letterSpacing: "0.18em",
             textTransform: "uppercase",
-            color: "var(--gold)",
+            color: "var(--blue)",
             marginTop: "3rem",
           }}
         >

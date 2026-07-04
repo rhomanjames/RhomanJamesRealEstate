@@ -4,7 +4,7 @@ export default function Hero() {
       id="hero"
       aria-label="Hero"
       style={{
-        minHeight: "100vh",
+        minHeight: "92vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -12,70 +12,61 @@ export default function Hero() {
         padding: "8rem 2rem 5rem",
         position: "relative",
         overflow: "hidden",
-        background: "var(--dark)",
+        background: "linear-gradient(180deg, #FAFBFF 0%, #FFFFFF 60%)",
       }}
     >
-      {/* Radial glow */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(184,151,106,0.07) 0%, transparent 70%)",
+            "radial-gradient(ellipse 70% 55% at 50% 30%, rgba(79,95,240,0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
 
       <div style={{ position: "relative", zIndex: 1 }}>
-        {/* Top line accent */}
         <div
-          aria-hidden="true"
           style={{
-            width: 1,
-            height: "4rem",
-            background: "linear-gradient(to bottom, transparent, var(--gold))",
-            margin: "0 auto 2rem",
-          }}
-        />
-
-        <p
-          style={{
-            fontSize: "0.72rem",
-            letterSpacing: "0.3em",
-            textTransform: "uppercase",
-            color: "var(--gold)",
-            marginBottom: "1.5rem",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.4rem",
+            fontSize: "0.8rem",
+            fontWeight: 600,
+            color: "var(--blue)",
+            background: "var(--blue-pale)",
+            padding: "0.5rem 1.1rem",
+            borderRadius: "999px",
+            marginBottom: "1.75rem",
           }}
         >
           Elizabethtown, Kentucky
-        </p>
+        </div>
 
         <h1
           style={{
-            fontFamily: "'Cormorant Garamond', Georgia, serif",
-            fontSize: "clamp(3rem, 7vw, 5.5rem)",
-            fontWeight: 300,
-            lineHeight: 1.1,
-            color: "white",
-            marginBottom: "0.35em",
+            fontFamily: "'Inter', system-ui, sans-serif",
+            fontSize: "clamp(2.75rem, 6.5vw, 4.75rem)",
+            fontWeight: 800,
+            letterSpacing: "-0.03em",
+            lineHeight: 1.08,
+            color: "var(--text)",
+            marginBottom: "0.4em",
           }}
         >
-          Your{" "}
-          <em style={{ fontStyle: "italic", color: "var(--gold)" }}>home</em>{" "}
-          is
+          Your home is
           <br />
-          your legacy
+          your <span style={{ color: "var(--blue)" }}>legacy</span>
         </h1>
 
         <p
           style={{
-            fontSize: "1rem",
+            fontSize: "1.1rem",
             color: "var(--muted)",
-            letterSpacing: "0.08em",
             margin: "1.5rem auto 0",
             maxWidth: "38rem",
-            lineHeight: 1.8,
+            lineHeight: 1.75,
           }}
         >
           Expert real estate guidance for buyers and sellers across Hardin
@@ -85,9 +76,9 @@ export default function Hero() {
         <div
           style={{
             display: "flex",
-            gap: "1.25rem",
+            gap: "1rem",
             justifyContent: "center",
-            marginTop: "3rem",
+            marginTop: "2.75rem",
             flexWrap: "wrap",
           }}
         >
@@ -97,37 +88,6 @@ export default function Hero() {
           <a href="#about" className="btn-outline">
             Meet Rhoman
           </a>
-        </div>
-
-        {/* Scroll indicator */}
-        <div
-          aria-hidden="true"
-          style={{
-            marginTop: "5rem",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            gap: "0.5rem",
-          }}
-        >
-          <span
-            style={{
-              fontSize: "0.65rem",
-              letterSpacing: "0.3em",
-              textTransform: "uppercase",
-              color: "var(--muted2)",
-            }}
-          >
-            Scroll
-          </span>
-          <div
-            className="scroll-line"
-            style={{
-              width: 1,
-              height: "3rem",
-              background: "linear-gradient(to bottom, var(--gold), transparent)",
-            }}
-          />
         </div>
       </div>
     </section>

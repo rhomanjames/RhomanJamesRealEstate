@@ -22,7 +22,7 @@ export default function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      style={{ padding: "7rem 3rem", background: "var(--dark)" }}
+      style={{ padding: "7rem 3rem", background: "var(--bg-soft)" }}
     >
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <div
@@ -41,6 +41,8 @@ export default function About() {
                 aspectRatio: "3/4",
                 position: "relative",
                 overflow: "hidden",
+                borderRadius: "20px",
+                boxShadow: "0 20px 50px rgba(11,15,25,0.12)",
               }}
             >
               <img
@@ -55,31 +57,6 @@ export default function About() {
                 }}
               />
             </div>
-            {/* Corner accents */}
-            <div
-              aria-hidden="true"
-              style={{
-                position: "absolute",
-                bottom: "-1.5rem",
-                right: "-1.5rem",
-                width: "6rem",
-                height: "6rem",
-                borderRight: "1px solid var(--gold)",
-                borderBottom: "1px solid var(--gold)",
-              }}
-            />
-            <div
-              aria-hidden="true"
-              style={{
-                position: "absolute",
-                top: "-1.5rem",
-                left: "-1.5rem",
-                width: "6rem",
-                height: "6rem",
-                borderLeft: "1px solid rgba(184,151,106,0.4)",
-                borderTop: "1px solid rgba(184,151,106,0.4)",
-              }}
-            />
           </div>
 
           {/* Content */}
@@ -88,17 +65,17 @@ export default function About() {
             <h2
               id="about-heading"
               className="section-heading"
-              style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+              style={{ fontSize: "clamp(1.9rem, 4vw, 2.6rem)" }}
             >
               More than a transaction — a relationship built on trust
             </h2>
-            <div className="divider" aria-hidden="true" />
             <p
               style={{
                 color: "var(--muted)",
                 maxWidth: "42rem",
-                lineHeight: 1.9,
-                fontSize: "0.95rem",
+                lineHeight: 1.85,
+                fontSize: "1rem",
+                marginTop: "0.5rem",
               }}
             >
               Elizabethtown is more than a market to me — it&apos;s home. I&apos;m
@@ -110,8 +87,8 @@ export default function About() {
               style={{
                 color: "var(--muted)",
                 maxWidth: "42rem",
-                lineHeight: 1.9,
-                fontSize: "0.95rem",
+                lineHeight: 1.85,
+                fontSize: "1rem",
                 marginTop: "1rem",
               }}
             >
@@ -134,17 +111,19 @@ export default function About() {
                 <div
                   key={v.title}
                   style={{
-                    padding: "1rem 0",
-                    borderTop: "1px solid rgba(184,151,106,0.15)",
+                    padding: "1.25rem",
+                    background: "white",
+                    borderRadius: "14px",
+                    border: "1px solid var(--border)",
+                    boxShadow: "0 1px 3px rgba(11,15,25,0.04)",
                   }}
                 >
                   <div
                     style={{
-                      fontSize: "0.75rem",
-                      letterSpacing: "0.2em",
-                      textTransform: "uppercase",
-                      color: "var(--gold)",
-                      marginBottom: "0.35rem",
+                      fontSize: "0.85rem",
+                      fontWeight: 700,
+                      color: "var(--blue)",
+                      marginBottom: "0.4rem",
                     }}
                   >
                     {v.title}

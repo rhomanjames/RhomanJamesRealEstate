@@ -42,7 +42,7 @@ export default function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      style={{ padding: "7rem 3rem", background: "var(--dark2)" }}
+      style={{ padding: "7rem 3rem", background: "white" }}
     >
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <span className="section-tag">What I Offer</span>
@@ -70,15 +70,15 @@ export default function Services() {
             >
               <article
                 className="service-card"
-                style={{ padding: "2.5rem", height: "100%", cursor: "pointer" }}
+                style={{ padding: "2rem", height: "100%", cursor: "pointer", borderRadius: "16px" }}
               >
                 <div
                   aria-hidden="true"
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: "3.5rem",
-                    fontWeight: 300,
-                    color: "rgba(184,151,106,0.12)",
+                    fontFamily: "'Inter', system-ui, sans-serif",
+                    fontSize: "2.5rem",
+                    fontWeight: 800,
+                    color: "var(--blue-pale)",
                     lineHeight: 1,
                     marginBottom: "1rem",
                   }}
@@ -87,11 +87,12 @@ export default function Services() {
                 </div>
                 <h3
                   style={{
-                    fontFamily: "'Cormorant Garamond', Georgia, serif",
-                    fontSize: "1.4rem",
-                    color: "white",
+                    fontFamily: "'Inter', system-ui, sans-serif",
+                    fontSize: "1.25rem",
+                    color: "var(--text)",
                     marginBottom: "0.75rem",
-                    fontWeight: 400,
+                    fontWeight: 700,
+                    letterSpacing: "-0.01em",
                   }}
                 >
                   {s.title}
@@ -108,10 +109,9 @@ export default function Services() {
                 </p>
                 <div
                   style={{
-                    fontSize: "0.7rem",
-                    letterSpacing: "0.18em",
-                    textTransform: "uppercase",
-                    color: "var(--gold)",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                    color: "var(--blue)",
                     display: "flex",
                     alignItems: "center",
                     gap: "0.4rem",
