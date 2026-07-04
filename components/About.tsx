@@ -42,7 +42,7 @@ export default function About() {
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: "20px",
-                boxShadow: "0 20px 50px rgba(11,15,25,0.12)",
+                boxShadow: "0 8px 20px rgba(11,15,25,0.08)",
               }}
             >
               <img
