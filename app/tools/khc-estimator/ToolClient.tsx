@@ -56,7 +56,7 @@ export default function KHCEstimator() {
               <label style={labelStyle}>Loan Type</label>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginTop: "0.5rem" }}>
                 {(["fha", "conventional", "va", "usda"] as const).map((t) => (
-                  <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                  <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Inter', system-ui, sans-serif" }}>
                     {t.toUpperCase()}
                   </button>
                 ))}

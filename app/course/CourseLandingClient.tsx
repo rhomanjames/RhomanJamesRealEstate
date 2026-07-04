@@ -44,7 +44,7 @@ function ShareButton() {
     }
   };
   return (
-    <button onClick={share} style={{ display: "flex", alignItems: "center", gap: "0.6rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", cursor: "pointer", padding: "0.75rem 1.5rem", fontFamily: "'Jost', system-ui, sans-serif", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", transition: "all 0.2s" }}>
+    <button onClick={share} style={{ display: "flex", alignItems: "center", gap: "0.6rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", cursor: "pointer", padding: "0.75rem 1.5rem", fontFamily: "'Inter', system-ui, sans-serif", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", transition: "all 0.2s" }}>
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
       {copied ? "Link Copied!" : "Share This Course"}
     </button>

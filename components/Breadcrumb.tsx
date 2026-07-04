@@ -27,13 +27,13 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
-      <style>{`.bc-link:hover { color: var(--gold) !important; }`}</style>
+      <style>{`.bc-link:hover { color: var(--blue) !important; }`}</style>
       <nav
         aria-label="Breadcrumb"
         style={{
           padding: "0 3rem",
           paddingTop: "7rem",
-          background: "var(--dark)",
+          background: "var(--bg-soft)",
         }}
       >
         <ol
@@ -46,13 +46,13 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
             maxWidth: 1100,
             margin: "0 auto",
             padding: "1rem 0",
-            borderBottom: "1px solid rgba(184,151,106,0.1)",
+            borderBottom: "1px solid var(--border)",
           }}
         >
           {all.map((item, i) => (
             <li key={i} style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               {i > 0 && (
-                <span aria-hidden="true" style={{ fontSize: "0.55rem", color: "rgba(184,151,106,0.4)" }}>▶</span>
+                <span aria-hidden="true" style={{ fontSize: "0.55rem", color: "var(--muted2)" }}>▶</span>
               )}
               {item.href && i < all.length - 1 ? (
                 <a
@@ -76,7 +76,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                     fontSize: "0.65rem",
                     letterSpacing: "0.18em",
                     textTransform: "uppercase",
-                    color: i === all.length - 1 ? "var(--gold)" : "var(--muted2)",
+                    color: i === all.length - 1 ? "var(--blue)" : "var(--muted2)",
                   }}
                 >
                   {item.label}

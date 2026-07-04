@@ -60,7 +60,7 @@ export default function ClosingCostEstimator() {
           <div className="tool-inputs">
             <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1.5rem" }}>
               {(["buyer", "seller"] as const).map((r) => (
-                <button key={r} onClick={() => setRole(r)} style={{ flex: 1, padding: "0.75rem", border: `1px solid ${role === r ? "var(--blue)" : "var(--border)"}`, background: role === r ? "var(--border)" : "transparent", color: role === r ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <button key={r} onClick={() => setRole(r)} style={{ flex: 1, padding: "0.75rem", border: `1px solid ${role === r ? "var(--blue)" : "var(--border)"}`, background: role === r ? "var(--border)" : "transparent", color: role === r ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", letterSpacing: "0.12em", textTransform: "uppercase", fontFamily: "'Inter', system-ui, sans-serif" }}>
                   {r === "buyer" ? "Buyer" : "Seller"}
                 </button>
               ))}
@@ -72,7 +72,7 @@ export default function ClosingCostEstimator() {
                   <label style={labelStyle}>Loan Type</label>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem", marginTop: "0.5rem" }}>
                     {(["conventional", "fha", "va", "cash"] as const).map((t) => (
-                      <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                      <button key={t} onClick={() => setLoanType(t)} style={{ padding: "0.6rem", border: `1px solid ${loanType === t ? "var(--blue)" : "var(--border)"}`, background: loanType === t ? "var(--border)" : "transparent", color: loanType === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.72rem", textTransform: "uppercase", fontFamily: "'Inter', system-ui, sans-serif" }}>
                         {t === "conventional" ? "Conventional" : t === "fha" ? "FHA" : t === "va" ? "VA" : "Cash"}
                       </button>
                     ))}

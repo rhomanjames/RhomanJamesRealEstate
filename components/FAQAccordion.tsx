@@ -10,10 +10,10 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
     <div>
       <style>{`
         .faq-item {
-          border-top: 1px solid rgba(184,151,106,0.15);
+          border-top: 1px solid var(--border);
         }
         .faq-item:last-child {
-          border-bottom: 1px solid rgba(184,151,106,0.15);
+          border-bottom: 1px solid var(--border);
         }
         .faq-btn {
           width: 100%;
@@ -31,7 +31,7 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
           color: var(--gold-light);
         }
         .faq-question {
-          font-family: 'Cormorant Garamond', Georgia, serif;
+          font-family: 'Inter', system-ui, sans-serif;
           font-size: clamp(1.05rem, 2vw, 1.25rem);
           font-weight: 400;
           color: white;
@@ -42,19 +42,19 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
           flex-shrink: 0;
           width: 24px;
           height: 24px;
-          border: 1px solid rgba(184,151,106,0.4);
+          border: 1px solid var(--border-strong);
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--gold);
+          color: var(--blue);
           font-size: 1.1rem;
           line-height: 1;
           margin-top: 2px;
           transition: background 0.2s, border-color 0.2s;
         }
         .faq-icon.open {
-          background: rgba(184,151,106,0.12);
-          border-color: var(--gold);
+          background: var(--blue-pale);
+          border-color: var(--blue);
         }
         .faq-answer {
           overflow: hidden;

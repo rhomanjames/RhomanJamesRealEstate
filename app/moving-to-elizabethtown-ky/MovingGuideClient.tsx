@@ -304,7 +304,7 @@ export default function MovingGuideClient() {
           letter-spacing: 0.15em;
           text-transform: uppercase;
           cursor: pointer;
-          font-family: 'Jost', system-ui, sans-serif;
+          font-family: 'Inter', system-ui, sans-serif;
           box-shadow: 0 1px 2px rgba(11,15,25,0.03);
         }
         .mobile-toc-drawer {
@@ -658,7 +658,7 @@ export default function MovingGuideClient() {
               <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Free Tool</p>
               <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", color: "var(--text)", marginBottom: "0.75rem" }}>See what you can afford in Elizabethtown</p>
               <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "1.25rem" }}>Use the free mortgage calculator to estimate your monthly payment based on current rates.</p>
-              <a href="/tools/mortgage-calculator" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+              <a href="/tools/mortgage-calculator" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif" }}>
                 Open Calculator →
               </a>
             </div>
@@ -1025,7 +1025,7 @@ export default function MovingGuideClient() {
               <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "1.25rem" }}>
                 I specialize in military relocations — VA loans, compressed timelines, remote purchases. Call the moment your orders arrive.
               </p>
-              <a href="/services/relocation" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+              <a href="/services/relocation" style={{ display: "inline-block", padding: "0.75rem 2rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif" }}>
                 Relocation Services →
               </a>
             </div>
@@ -1211,10 +1211,10 @@ export default function MovingGuideClient() {
                 Free consultation — no pressure, no obligation. Call, text, or email and I will give you a straight answer about your specific situation.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                <a href="tel:+15022649376" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif", fontWeight: 500 }}>
+                <a href="tel:+15022649376" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", fontWeight: 500 }}>
                   Call (502) 264-9376
                 </a>
-                <a href="mailto:RhomanMJames@gmail.com" style={{ display: "inline-block", padding: "0.85rem 2.25rem", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <a href="mailto:RhomanMJames@gmail.com" style={{ display: "inline-block", padding: "0.85rem 2.25rem", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif" }}>
                   Send an Email
                 </a>
               </div>
@@ -1246,7 +1246,7 @@ export default function MovingGuideClient() {
               padding: "0.6rem 0", fontSize: "0.85rem",
               color: activeId === id ? "var(--blue)" : "var(--muted)",
               borderBottom: "1px solid var(--border)",
-              fontFamily: "'Jost', system-ui, sans-serif",
+              fontFamily: "'Inter', system-ui, sans-serif",
             }}
           >
             {label}

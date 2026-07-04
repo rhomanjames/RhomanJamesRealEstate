@@ -42,7 +42,7 @@ export default function AffordabilityCalculator() {
               <label style={labelStyle}>Loan Term</label>
               <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
                 {[15, 20, 30].map((t) => (
-                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`, background: term === t ? "var(--border)" : "transparent", color: term === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`, background: term === t ? "var(--border)" : "transparent", color: term === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Inter', system-ui, sans-serif" }}>
                     {t}yr
                   </button>
                 ))}

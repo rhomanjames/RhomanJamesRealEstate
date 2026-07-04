@@ -47,11 +47,11 @@ export default function MortgageCalculator() {
               <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
                 {[10, 15, 20, 30].map((t) => (
                   <button key={t} onClick={() => setTerm(t)} style={{
-                    flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--gold)" : "rgba(184,151,106,0.2)"}`,
-                    background: term === t ? "rgba(184,151,106,0.12)" : "transparent",
-                    color: term === t ? "var(--gold)" : "var(--muted)",
+                    flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`,
+                    background: term === t ? "var(--border)" : "transparent",
+                    color: term === t ? "var(--blue)" : "var(--muted)",
                     cursor: "pointer", fontSize: "0.8rem", letterSpacing: "0.1em",
-                    fontFamily: "'Jost', system-ui, sans-serif",
+                    fontFamily: "'Inter', system-ui, sans-serif",
                   }}>
                     {t}yr
                   </button>
@@ -72,7 +72,7 @@ export default function MortgageCalculator() {
               {pmi > 0 && <MiniResult label="PMI" value={fmt(pmi) + "/mo"} note="removed at 20% equity" />}
               <MiniResult label="Total Monthly" value={fmt(totalMonthly) + "/mo"} highlight />
             </div>
-            <div style={{ marginTop: "1.5rem", borderTop: "1px solid rgba(184,151,106,0.15)", paddingTop: "1.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+            <div style={{ marginTop: "1.5rem", borderTop: "1px solid var(--border)", paddingTop: "1.5rem", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
               <MiniResult label="Loan Amount" value={fmt(loan)} />
               <MiniResult label="Down Payment" value={fmt(downAmt)} />
               <MiniResult label="Total Interest" value={fmt(totalInterest)} />
@@ -94,7 +94,7 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
     <div style={{ marginTop: "1.5rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.5rem" }}>
         <label style={labelStyle}>{label}</label>
-        <span style={{ fontSize: "0.9rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
+        <span style={{ fontSize: "0.9rem", color: "var(--blue)", fontFamily: "'Inter', system-ui, sans-serif" }}>{display}</span>
       </div>
       <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={sliderStyle} />
     </div>
@@ -102,16 +102,16 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
 }
 function MiniResult({ label, value, note, highlight }: any) {
   return (
-    <div style={{ padding: "0.85rem", background: highlight ? "rgba(184,151,106,0.08)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "rgba(184,151,106,0.3)" : "rgba(184,151,106,0.1)"}` }}>
-      <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: highlight ? "var(--gold)" : "var(--muted2)", marginBottom: "0.25rem" }}>{label}</div>
-      <div style={{ fontSize: "0.95rem", color: highlight ? "var(--gold)" : "white", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{value}</div>
+    <div style={{ padding: "0.85rem", background: highlight ? "var(--border)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "var(--border)" : "var(--border)"}` }}>
+      <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: highlight ? "var(--blue)" : "var(--muted2)", marginBottom: "0.25rem" }}>{label}</div>
+      <div style={{ fontSize: "0.95rem", color: highlight ? "var(--blue)" : "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{value}</div>
       {note && <div style={{ fontSize: "0.62rem", color: "var(--muted2)", marginTop: "0.2rem" }}>{note}</div>}
     </div>
   );
 }
 const labelStyle: React.CSSProperties = { fontSize: "0.68rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)" };
-const sliderStyle: React.CSSProperties = { width: "100%", accentColor: "var(--gold)", cursor: "pointer" };
-const resultCard: React.CSSProperties = { padding: "2rem", background: "rgba(184,151,106,0.06)", border: "1px solid rgba(184,151,106,0.25)", textAlign: "center" };
-const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" };
-const resultBig: React.CSSProperties = { fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "3.5rem", fontWeight: 300, color: "white", lineHeight: 1 };
+const sliderStyle: React.CSSProperties = { width: "100%", accentColor: "var(--blue)", cursor: "pointer" };
+const resultCard: React.CSSProperties = { padding: "2rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center" };
+const resultLabel: React.CSSProperties = { fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" };
+const resultBig: React.CSSProperties = { fontFamily: "'Inter', system-ui, sans-serif", fontSize: "3.5rem", fontWeight: 700, color: "var(--text)", lineHeight: 1 };
 const resultSub: React.CSSProperties = { fontSize: "1.2rem", color: "var(--muted)" };

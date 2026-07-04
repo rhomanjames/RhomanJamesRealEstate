@@ -40,7 +40,7 @@ export default function VALoanCalculator() {
               <label style={labelStyle}>Loan Term</label>
               <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
                 {[15, 20, 30].map((t) => (
-                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`, background: term === t ? "var(--border)" : "transparent", color: term === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                  <button key={t} onClick={() => setTerm(t)} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${term === t ? "var(--blue)" : "var(--border)"}`, background: term === t ? "var(--border)" : "transparent", color: term === t ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.8rem", fontFamily: "'Inter', system-ui, sans-serif" }}>
                     {t}yr
                   </button>
                 ))}
@@ -49,10 +49,10 @@ export default function VALoanCalculator() {
             <div style={{ marginTop: "1.5rem" }}>
               <label style={labelStyle}>VA Loan Usage</label>
               <div style={{ display: "flex", gap: "0.75rem", marginTop: "0.5rem" }}>
-                <button onClick={() => setUsage("first")} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${usage === "first" ? "var(--blue)" : "var(--border)"}`, background: usage === "first" ? "var(--border)" : "transparent", color: usage === "first" ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.75rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <button onClick={() => setUsage("first")} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${usage === "first" ? "var(--blue)" : "var(--border)"}`, background: usage === "first" ? "var(--border)" : "transparent", color: usage === "first" ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.75rem", fontFamily: "'Inter', system-ui, sans-serif" }}>
                   First Use
                 </button>
-                <button onClick={() => setUsage("subsequent")} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${usage === "subsequent" ? "var(--blue)" : "var(--border)"}`, background: usage === "subsequent" ? "var(--border)" : "transparent", color: usage === "subsequent" ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.75rem", fontFamily: "'Jost', system-ui, sans-serif" }}>
+                <button onClick={() => setUsage("subsequent")} style={{ flex: 1, padding: "0.6rem", border: `1px solid ${usage === "subsequent" ? "var(--blue)" : "var(--border)"}`, background: usage === "subsequent" ? "var(--border)" : "transparent", color: usage === "subsequent" ? "var(--blue)" : "var(--muted)", cursor: "pointer", fontSize: "0.75rem", fontFamily: "'Inter', system-ui, sans-serif" }}>
                   Subsequent
                 </button>
               </div>

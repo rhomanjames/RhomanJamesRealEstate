@@ -266,7 +266,7 @@ export default function PCSToolClient() {
                   padding: "0.9rem 0.5rem", background: answers.rank === r ? "var(--border)" : "var(--text)",
                   border: `1px solid ${answers.rank === r ? "var(--blue)" : "var(--border)"}`,
                   color: answers.rank === r ? "var(--blue)" : "var(--muted)", cursor: "pointer",
-                  fontFamily: "'Jost', system-ui, sans-serif", fontSize: "0.85rem", letterSpacing: "0.08em",
+                  fontFamily: "'Inter', system-ui, sans-serif", fontSize: "0.85rem", letterSpacing: "0.08em",
                   transition: "all 0.15s",
                 }}>
                   {r}
