@@ -12,14 +12,16 @@ const links = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: "var(--dark)", borderTop: "1px solid rgba(184,151,106,0.12)", padding: "3rem", textAlign: "center" }}>
-      <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", letterSpacing: "0.15em", color: "var(--gold)", marginBottom: "0.5rem" }}>Rhoman James</div>
-      <div style={{ fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "2rem" }}>Real Estate Professional · Elizabethtown, Kentucky</div>
-      <div aria-hidden="true" style={{ width: "3rem", height: "1px", background: "var(--gold)", margin: "0 auto 2rem" }} />
+    <footer style={{ background: "var(--bg-soft)", borderTop: "1px solid var(--border)", padding: "3.5rem 2rem", textAlign: "center" }}>
+      <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: "0.5rem" }}>
+        Rhoman <span style={{ fontWeight: 500, color: "var(--blue)" }}>James</span>
+      </div>
+      <div style={{ fontSize: "0.85rem", fontWeight: 500, color: "var(--muted)", marginBottom: "2rem" }}>Real Estate Professional · Elizabethtown, Kentucky</div>
+      <div aria-hidden="true" style={{ width: "3rem", height: "2px", borderRadius: "2px", background: "var(--blue)", margin: "0 auto 2rem" }} />
       <ul style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", marginBottom: "2rem", listStyle: "none" }}>
-        {links.map(l => <li key={l.href}><a href={l.href} className="nav-link" style={{ fontSize: "0.7rem", letterSpacing: "0.15em" }}>{l.label}</a></li>)}
+        {links.map(l => <li key={l.href}><a href={l.href} className="nav-link" style={{ fontSize: "0.85rem" }}>{l.label}</a></li>)}
       </ul>
-      <p style={{ fontSize: "0.72rem", color: "var(--muted2)", lineHeight: 1.7 }}>
+      <p style={{ fontSize: "0.8rem", color: "var(--muted2)", lineHeight: 1.8 }}>
         &copy; {year} Rhoman James Real Estate. All rights reserved.<br />
         Elizabethtown, KY · Hardin County<br />
         <a href="/privacy" style={{ color: "var(--muted)", textDecoration: "none" }}>Privacy Policy</a>&nbsp;·&nbsp;
