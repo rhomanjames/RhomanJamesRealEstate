@@ -91,37 +91,37 @@ export default function CourseWatchClient() {
   return (
     <>
       <Navbar />
-      <main style={{ background: "var(--dark)", minHeight: "100vh", paddingTop: "5.5rem" }}>
+      <main style={{ background: "var(--bg-soft)", minHeight: "100vh", paddingTop: "5.5rem" }}>
         <style>{`
-          .module-card { background: var(--dark2); border: 1px solid rgba(184,151,106,0.15); margin-bottom: 1.25rem; transition: border-color 0.2s; }
-          .module-card:hover { border-color: rgba(184,151,106,0.3); }
+          .module-card { background: white; border: 1px solid var(--border); margin-bottom: 1.25rem; transition: border-color 0.2s; }
+          .module-card:hover { border-color: var(--border); }
           .module-header { display: flex; align-items: center; gap: 1.25rem; padding: 1.5rem 2rem; cursor: pointer; }
-          .lesson-row { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 2rem 0.85rem 4rem; border-top: 1px solid rgba(184,151,106,0.08); cursor: pointer; transition: background 0.15s; }
-          .lesson-row:hover { background: rgba(184,151,106,0.04); }
-          .check-box { width: 18px; height: 18px; border: 1px solid rgba(184,151,106,0.4); flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
-          .check-box.done { background: var(--gold); border-color: var(--gold); }
+          .lesson-row { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 2rem 0.85rem 4rem; border-top: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }
+          .lesson-row:hover { background: var(--border); }
+          .check-box { width: 18px; height: 18px; border: 1px solid var(--border); flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: background 0.2s, border-color 0.2s; }
+          .check-box.done { background: var(--blue); border-color: var(--blue); }
           .lesson-link { font-size: 0.88rem; color: var(--muted); text-decoration: none; flex: 1; line-height: 1.5; }
-          .lesson-link:hover { color: var(--off-white); }
+          .lesson-link:hover { color: var(--blue); }
           .lesson-link.done-text { color: var(--muted2); text-decoration: line-through; }
         `}</style>
 
         {/* Progress header */}
-        <div style={{ background: "var(--dark3)", borderBottom: "1px solid rgba(184,151,106,0.12)", padding: "1.25rem 3rem" }}>
+        <div style={{ background: "var(--bg-soft)", borderBottom: "1px solid var(--border)", padding: "1.25rem 3rem" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", alignItems: "center", gap: "2rem", flexWrap: "wrap" }}>
             <div>
-              <p style={{ fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.25rem" }}>Your Progress</p>
-              <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.5rem", fontWeight: 300, color: "white" }}>
+              <p style={{ fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.25rem" }}>Your Progress</p>
+              <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.5rem", fontWeight: 700, color: "var(--text)" }}>
                 {completed.length} of {totalLessons} lessons complete
               </p>
             </div>
             <div style={{ flex: 1, minWidth: 200 }}>
-              <div style={{ background: "var(--dark4)", height: 4, borderRadius: 2, overflow: "hidden" }}>
-                <div style={{ background: "var(--gold)", height: "100%", width: `${pct}%`, transition: "width 0.4s ease", borderRadius: 2 }} />
+              <div style={{ background: "var(--border)", height: 4, borderRadius: 2, overflow: "hidden" }}>
+                <div style={{ background: "var(--blue)", height: "100%", width: `${pct}%`, transition: "width 0.4s ease", borderRadius: 2 }} />
               </div>
               <p style={{ fontSize: "0.68rem", color: "var(--muted)", marginTop: "0.35rem" }}>{pct}% complete</p>
             </div>
             {pct === 100 && (
-              <div style={{ padding: "0.6rem 1.25rem", background: "rgba(184,151,106,0.12)", border: "1px solid rgba(184,151,106,0.3)", fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--gold)" }}>
+              <div style={{ padding: "0.6rem 1.25rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)" }}>
                 🎉 Course Complete!
               </div>
             )}
@@ -130,7 +130,7 @@ export default function CourseWatchClient() {
 
         {/* Course content */}
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "3rem 3rem 6rem" }}>
-          <h1 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "2rem", fontWeight: 300, color: "white", marginBottom: "0.5rem" }}>
+          <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.5rem" }}>
             Kentucky Home Buyers Course
           </h1>
           <p style={{ fontSize: "0.88rem", color: "var(--muted)", marginBottom: "2.5rem", lineHeight: 1.7 }}>
@@ -144,12 +144,12 @@ export default function CourseWatchClient() {
               <div key={mod.slug} className="module-card">
                 <Link href={`/course/watch/${mod.slug}`} style={{ textDecoration: "none" }}>
                   <div className="module-header">
-                    <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "2.5rem", fontWeight: 300, color: modDone ? "var(--gold)" : "rgba(184,151,106,0.2)", lineHeight: 1, minWidth: 52 }}>{mod.num}</div>
+                    <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2.5rem", fontWeight: 700, color: modDone ? "var(--blue)" : "var(--border)", lineHeight: 1, minWidth: 52 }}>{mod.num}</div>
                     <div style={{ flex: 1 }}>
-                      <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.2rem", fontWeight: 400, color: "white", marginBottom: "0.2rem" }}>{mod.title}</h2>
+                      <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.2rem", fontWeight: 400, color: "var(--text)", marginBottom: "0.2rem" }}>{mod.title}</h2>
                       <p style={{ fontSize: "0.72rem", color: "var(--muted)", letterSpacing: "0.1em" }}>{modCompleted}/{mod.lessons.length} lessons · {modDone ? "Complete ✓" : "In progress"}</p>
                     </div>
-                    <div style={{ fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)" }}>Start →</div>
+                    <div style={{ fontSize: "0.72rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--blue)" }}>Start →</div>
                   </div>
                 </Link>
                 {mod.lessons.map((lesson, i) => {
@@ -171,8 +171,8 @@ export default function CourseWatchClient() {
           })}
 
           {/* CTA at bottom */}
-          <div style={{ marginTop: "3rem", padding: "2rem", background: "var(--dark3)", border: "1px solid rgba(184,151,106,0.2)", textAlign: "center" }}>
-            <p style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", fontWeight: 300, color: "white", marginBottom: "0.5rem" }}>Questions as you go?</p>
+          <div style={{ marginTop: "3rem", padding: "2rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center" }}>
+            <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.5rem" }}>Questions as you go?</p>
             <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1.25rem" }}>I'm always available for a free, no-pressure conversation.</p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>

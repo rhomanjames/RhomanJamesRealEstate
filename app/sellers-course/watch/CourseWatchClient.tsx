@@ -80,31 +80,31 @@ export default function CourseWatchClient() {
   return (
     <>
       <Navbar />
-      <main style={{ background:"var(--dark)",minHeight:"100vh",paddingTop:"5.5rem" }}>
+      <main style={{ background:"var(--bg-soft)",minHeight:"100vh",paddingTop:"5.5rem" }}>
         <style>{`
-          .mc { background:var(--dark2);border:1px solid rgba(184,151,106,0.15);margin-bottom:1.25rem; }
+          .mc { background:white;border:1px solid var(--border);margin-bottom:1.25rem; }
           .mh { display:flex;align-items:center;gap:1.25rem;padding:1.5rem 2rem;cursor:pointer; }
-          .lr { display:flex;align-items:center;gap:1rem;padding:0.85rem 2rem 0.85rem 4rem;border-top:1px solid rgba(184,151,106,0.08);cursor:pointer;transition:background 0.15s; }
-          .lr:hover { background:rgba(184,151,106,0.04); }
-          .cb { width:18px;height:18px;border:1px solid rgba(184,151,106,0.4);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s; }
-          .cb.done { background:var(--gold);border-color:var(--gold); }
+          .lr { display:flex;align-items:center;gap:1rem;padding:0.85rem 2rem 0.85rem 4rem;border-top:1px solid var(--border);cursor:pointer;transition:background 0.15s; }
+          .lr:hover { background:var(--border); }
+          .cb { width:18px;height:18px;border:1px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.2s; }
+          .cb.done { background:var(--blue);border-color:var(--blue); }
         `}</style>
-        <div style={{ background:"var(--dark3)",borderBottom:"1px solid rgba(184,151,106,0.12)",padding:"1.25rem 2rem" }}>
+        <div style={{ background:"var(--bg-soft)",borderBottom:"1px solid var(--border)",padding:"1.25rem 2rem" }}>
           <div style={{ maxWidth:900,margin:"0 auto",display:"flex",alignItems:"center",gap:"2rem",flexWrap:"wrap" }}>
             <div>
-              <p style={{ fontSize:"0.65rem",letterSpacing:"0.25em",textTransform:"uppercase",color:"var(--gold)",marginBottom:"0.25rem" }}>Progress</p>
-              <p style={{ fontFamily:"'Cormorant Garamond', Georgia, serif",fontSize:"1.5rem",fontWeight:300,color:"white" }}>{completed.length} of {total} lessons complete</p>
+              <p style={{ fontSize:"0.65rem",letterSpacing:"0.25em",textTransform:"uppercase",color:"var(--blue)",marginBottom:"0.25rem" }}>Progress</p>
+              <p style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"1.5rem",fontWeight:700,color:"var(--text)" }}>{completed.length} of {total} lessons complete</p>
             </div>
             <div style={{ flex:1,minWidth:200 }}>
-              <div style={{ background:"var(--dark)",height:4,borderRadius:2,overflow:"hidden" }}>
-                <div style={{ background:"var(--gold)",height:"100%",width:`${pct}%`,transition:"width 0.4s" }} />
+              <div style={{ background:"var(--bg-soft)",height:4,borderRadius:2,overflow:"hidden" }}>
+                <div style={{ background:"var(--blue)",height:"100%",width:`${pct}%`,transition:"width 0.4s" }} />
               </div>
               <p style={{ fontSize:"0.68rem",color:"var(--muted)",marginTop:"0.35rem" }}>{pct}% complete</p>
             </div>
           </div>
         </div>
         <div style={{ maxWidth:900,margin:"0 auto",padding:"3rem 2rem 6rem" }}>
-          <h1 style={{ fontFamily:"'Cormorant Garamond', Georgia, serif",fontSize:"2rem",fontWeight:300,color:"white",marginBottom:"0.5rem" }}>Kentucky Home Sellers Course</h1>
+          <h1 style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"2rem",fontWeight:700,color:"var(--text)",marginBottom:"0.5rem" }}>Kentucky Home Sellers Course</h1>
           <p style={{ fontSize:"0.88rem",color:"var(--muted)",marginBottom:"2.5rem" }}>Work through each lesson at your own pace. Click any lesson to mark it complete.</p>
           {modules.map((mod) => {
             const done = mod.lessons.filter((_,i) => completed.includes(`${mod.slug}-${i}`)).length;
@@ -112,12 +112,12 @@ export default function CourseWatchClient() {
               <div key={mod.slug} className="mc">
                 <Link href={`/sellers-course/watch/${mod.slug}`} style={{ textDecoration:"none" }}>
                   <div className="mh">
-                    <div style={{ fontFamily:"'Cormorant Garamond', Georgia, serif",fontSize:"2.5rem",fontWeight:300,color:done===mod.lessons.length?"var(--gold)":"rgba(184,151,106,0.2)",lineHeight:1,minWidth:52 }}>{mod.num}</div>
+                    <div style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"2.5rem",fontWeight:700,color:done===mod.lessons.length?"var(--blue)":"var(--border)",lineHeight:1,minWidth:52 }}>{mod.num}</div>
                     <div style={{ flex:1 }}>
-                      <h2 style={{ fontFamily:"'Cormorant Garamond', Georgia, serif",fontSize:"1.2rem",fontWeight:400,color:"white",marginBottom:"0.2rem" }}>{mod.title}</h2>
+                      <h2 style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"1.2rem",fontWeight:400,color:"var(--text)",marginBottom:"0.2rem" }}>{mod.title}</h2>
                       <p style={{ fontSize:"0.72rem",color:"var(--muted)" }}>{done}/{mod.lessons.length} lessons</p>
                     </div>
-                    <div style={{ fontSize:"0.72rem",letterSpacing:"0.18em",textTransform:"uppercase",color:"var(--gold)" }}>Start →</div>
+                    <div style={{ fontSize:"0.72rem",letterSpacing:"0.18em",textTransform:"uppercase",color:"var(--blue)" }}>Start →</div>
                   </div>
                 </Link>
                 {mod.lessons.map((lesson,i) => {
@@ -134,8 +134,8 @@ export default function CourseWatchClient() {
               </div>
             );
           })}
-          <div style={{ marginTop:"3rem",padding:"2rem",background:"var(--dark3)",border:"1px solid rgba(184,151,106,0.2)",textAlign:"center" }}>
-            <p style={{ fontFamily:"'Cormorant Garamond', Georgia, serif",fontSize:"1.4rem",fontWeight:300,color:"white",marginBottom:"0.5rem" }}>Questions as you go?</p>
+          <div style={{ marginTop:"3rem",padding:"2rem",background:"var(--bg-soft)",border:"1px solid var(--border)",textAlign:"center" }}>
+            <p style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"1.4rem",fontWeight:700,color:"var(--text)",marginBottom:"0.5rem" }}>Questions as you go?</p>
             <p style={{ fontSize:"0.85rem",color:"var(--muted)",marginBottom:"1.25rem" }}>Free consultation, no pressure.</p>
             <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
               <a href="tel:+15022649376" className="btn-primary" style={{ fontSize:"0.75rem" }}>Call (502) 264-9376</a>
