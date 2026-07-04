@@ -80,13 +80,13 @@ export default function AboutPage() {
       <main>
 
         {/* Hero */}
-        <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--dark)", position: "relative" }}>
-          <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 30% 50%, rgba(184,151,106,0.07) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <section style={{ paddingTop: "8rem", paddingBottom: "5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", position: "relative" }}>
+          <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(ellipse 60% 60% at 30% 50%, var(--border) 0%, transparent 70%)", pointerEvents: "none" }} />
           <div style={{ maxWidth: 1000, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1.6fr", gap: "5rem", alignItems: "center" }}>
 
             {/* Photo */}
             <div style={{ position: "relative" }}>
-              <div style={{ border: "1px solid rgba(184,151,106,0.25)", padding: "0.75rem", background: "var(--dark2)" }}>
+              <div style={{ border: "1px solid var(--border)", borderRadius: "16px", padding: "0.75rem", background: "white" }}>
                 <img
                   src="https://res.cloudinary.com/usamobileappsllc/image/upload/v1782244414/Gemini_Generated_Image_iijo2biijo2biijo_1_mkv0mz.png"
                   alt="Rhoman James — Elizabethtown KY Real Estate Professional"
@@ -94,16 +94,16 @@ export default function AboutPage() {
                 />
               </div>
               {/* Corner accent */}
-              <div aria-hidden="true" style={{ position: "absolute", bottom: "-12px", right: "-12px", width: 80, height: 80, border: "1px solid rgba(184,151,106,0.2)", pointerEvents: "none" }} />
+              <div aria-hidden="true" style={{ position: "absolute", bottom: "-12px", right: "-12px", width: 80, height: 80, border: "1px solid var(--border)", borderRadius: "16px", pointerEvents: "none" }} />
             </div>
 
             {/* Text */}
             <div>
-              <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--gold))", marginBottom: "1.5rem" }} />
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>
+              <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--blue))", marginBottom: "1.5rem" }} />
+              <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>
                 Elizabethtown, Kentucky
               </p>
-              <h1 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 300, color: "white", lineHeight: 1.1, marginBottom: "1.5rem" }}>
+              <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.5rem" }}>
                 Rhoman<br />James
               </h1>
               <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "1.75rem" }}>
@@ -124,7 +124,7 @@ export default function AboutPage() {
         </section>
 
         {/* Values strip */}
-        <section style={{ background: "var(--dark3)", borderTop: "1px solid rgba(184,151,106,0.12)", borderBottom: "1px solid rgba(184,151,106,0.12)", padding: "2.5rem 1.5rem" }}>
+        <section style={{ background: "var(--bg-soft)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "2.5rem 1.5rem" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto", display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap" }}>
             {[
               { label: "Based In", value: "Elizabethtown, KY" },
@@ -134,18 +134,18 @@ export default function AboutPage() {
               { label: "Focus", value: "People First" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center", padding: "0 1.5rem" }}>
-                <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.4rem" }}>{item.label}</div>
-                <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.1rem", color: "white", fontWeight: 300 }}>{item.value}</div>
+                <div style={{ fontSize: "0.6rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.4rem" }}>{item.label}</div>
+                <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", fontWeight: 700 }}>{item.value}</div>
               </div>
             ))}
           </div>
         </section>
 
         {/* Story */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 1.5rem" }}>
+        <section style={{ background: "white", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem" }}>Background</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: "white", marginBottom: "2.5rem", lineHeight: 1.3 }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Background</p>
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", lineHeight: 1.3 }}>
               Kentucky educated. Community focused.
             </h2>
 
@@ -167,10 +167,10 @@ export default function AboutPage() {
         </section>
 
         {/* Who I serve */}
-        <section style={{ background: "var(--dark)", padding: "6rem 1.5rem", borderTop: "1px solid rgba(184,151,106,0.1)" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem", textAlign: "center" }}>Who I Work With</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: "white", marginBottom: "3rem", textAlign: "center" }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Who I Work With</p>
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>
               Families finding their place in Hardin County
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
@@ -200,11 +200,11 @@ export default function AboutPage() {
                   link: "Free Home Sellers Course",
                 },
               ].map((item) => (
-                <div key={item.title} style={{ padding: "2rem", background: "var(--dark2)", border: "1px solid rgba(184,151,106,0.12)" }}>
-                  <div style={{ width: 20, height: 1, background: "var(--gold)", marginBottom: "1rem" }} />
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.1rem", color: "white", marginBottom: "0.75rem", fontWeight: 400, lineHeight: 1.4 }}>{item.title}</h3>
+                <div key={item.title} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+                  <div style={{ width: 20, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
+                  <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400, lineHeight: 1.4 }}>{item.title}</h3>
                   <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.25rem" }}>{item.body}</p>
-                  <a href={item.href} style={{ fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--gold)", textDecoration: "none" }}>{item.link} →</a>
+                  <a href={item.href} style={{ fontSize: "0.68rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--blue)", textDecoration: "none" }}>{item.link} →</a>
                 </div>
               ))}
             </div>
@@ -212,10 +212,10 @@ export default function AboutPage() {
         </section>
 
         {/* Area coverage */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 1.5rem", borderTop: "1px solid rgba(184,151,106,0.1)" }}>
+        <section style={{ background: "white", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem", textAlign: "center" }}>Service Area</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: "white", marginBottom: "1rem", textAlign: "center" }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Service Area</p>
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", textAlign: "center" }}>
               Elizabethtown and Hardin County
             </h2>
             <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "52rem", margin: "0 auto 3rem", textAlign: "center" }}>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                 { name: "Fort Knox Area", href: "/neighborhoods/fort-knox" },
                 { name: "Hodgenville", href: "/neighborhoods/hodgenville" },
               ].map((area) => (
-                <a key={area.name} href={area.href} style={{ padding: "1.1rem", background: "var(--dark3)", border: "1px solid rgba(184,151,106,0.12)", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted)", textDecoration: "none", textAlign: "center", display: "block", transition: "color 0.2s, border-color 0.2s" }}>
+                <a key={area.name} href={area.href} style={{ padding: "1.1rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted)", textDecoration: "none", textAlign: "center", display: "block", transition: "color 0.2s, border-color 0.2s" }}>
                   {area.name}
                 </a>
               ))}
@@ -239,10 +239,10 @@ export default function AboutPage() {
         </section>
 
         {/* Education */}
-        <section style={{ background: "var(--dark)", padding: "6rem 1.5rem", borderTop: "1px solid rgba(184,151,106,0.1)" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem", textAlign: "center" }}>Education</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 300, color: "white", marginBottom: "3rem", textAlign: "center" }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Education</p>
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>
               Rooted in Kentucky
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.25rem" }}>
@@ -260,9 +260,9 @@ export default function AboutPage() {
                   detail: "A rigorous Kentucky liberal arts education that built the foundation for understanding people — how they think, what they value, and how they make decisions under pressure.",
                 },
               ].map((ed) => (
-                <div key={ed.school} style={{ padding: "2rem", background: "var(--dark2)", border: "1px solid rgba(184,151,106,0.15)" }}>
-                  <p style={{ fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.75rem" }}>{ed.degree}</p>
-                  <h3 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.3rem", color: "white", marginBottom: "0.25rem", fontWeight: 400 }}>{ed.school}</h3>
+                <div key={ed.school} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 3px rgba(11,15,25,0.04)" }}>
+                  <p style={{ fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>{ed.degree}</p>
+                  <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.3rem", color: "var(--text)", marginBottom: "0.25rem", fontWeight: 400 }}>{ed.school}</h3>
                   <p style={{ fontSize: "0.72rem", color: "var(--muted2)", marginBottom: "1rem", letterSpacing: "0.1em" }}>{ed.location}</p>
                   <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{ed.detail}</p>
                 </div>
@@ -272,10 +272,10 @@ export default function AboutPage() {
         </section>
 
         {/* Free Resources */}
-        <section style={{ background: "var(--dark3)", padding: "5rem 1.5rem", borderTop: "1px solid rgba(184,151,106,0.1)" }}>
+        <section style={{ background: "var(--bg-soft)", padding: "5rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
-            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "1rem" }}>Free Resources</p>
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 300, color: "white", marginBottom: "1rem" }}>
+            <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Free Resources</p>
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.6rem, 3vw, 2.2rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem" }}>
               Everything you need, whether we work together or not
             </h2>
             <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: "38rem", margin: "0 auto 2.5rem" }}>
@@ -292,7 +292,7 @@ export default function AboutPage() {
                 { href: "/neighborhoods", label: "Neighborhood Guides" },
                 { href: "/faq", label: "Home Buying FAQ" },
               ].map((r) => (
-                <a key={r.href} href={r.href} style={{ padding: "1rem", background: "var(--dark2)", border: "1px solid rgba(184,151,106,0.12)", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>
+                <a key={r.href} href={r.href} style={{ padding: "1rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>
                   {r.label}
                 </a>
               ))}
@@ -301,12 +301,12 @@ export default function AboutPage() {
         </section>
 
         {/* Contact CTA */}
-        <section style={{ background: "var(--dark2)", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid rgba(184,151,106,0.15)" }}>
+        <section style={{ background: "white", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 580, margin: "0 auto" }}>
-            <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--gold))", margin: "0 auto 2rem" }} />
-            <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 300, color: "white", marginBottom: "1rem", lineHeight: 1.2 }}>
+            <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "linear-gradient(to bottom, transparent, var(--blue))", margin: "0 auto 2rem" }} />
+            <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }}>
               Thinking about buying or selling<br />
-              <em style={{ fontStyle: "italic", color: "var(--gold)" }}>in Elizabethtown?</em>
+              <em style={{ fontStyle: "italic", color: "var(--blue)" }}>in Elizabethtown?</em>
             </h2>
             <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "2.5rem" }}>
               A free consultation costs nothing and commits you to nothing. If you have questions about the Elizabethtown market, a specific property, or just where to start — reach out.
