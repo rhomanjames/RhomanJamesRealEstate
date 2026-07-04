@@ -86,7 +86,7 @@ export default function Navbar() {
           color: var(--text); transition: opacity 0.2s; flex-shrink: 0;
         }
         .nav-logo-link:hover { opacity: 0.8; }
-        .nav-logo-link span { font-weight: 500; color: var(--blue); }
+        .nav-logo-link span { font-weight: 800; color: var(--blue); }
         .nav-desktop { display: flex; gap: 1.75rem; list-style: none; align-items: center; }
         .nav-mobile-btn { display: none; background: none; border: none; cursor: pointer; color: var(--text); font-size: 1.5rem; line-height: 1; }
         .drop-wrapper { position: relative; }
@@ -162,7 +162,7 @@ export default function Navbar() {
         <a href="/" className="nav-logo-link">Rhoman <span>James</span></a>
 
         <ul className="nav-desktop">
-          <li><a href="/about" className="nav-link" style={{ fontSize: "0.72rem" }}>About</a></li>
+          <li><a href="/about" className="nav-link">About</a></li>
           
 
           {/* Services */}
@@ -196,7 +196,7 @@ export default function Navbar() {
           {/* Free Courses */}
           <li className="drop-wrapper">
             <button className={`drop-btn${openDrop === "courses" ? " open" : ""}`} onClick={() => toggle("courses")} aria-expanded={openDrop === "courses"} aria-haspopup="true">
-              Free Courses <span className={`drop-chevron${openDrop === "courses" ? " open" : ""}`}>▼</span>
+              Courses <span className={`drop-chevron${openDrop === "courses" ? " open" : ""}`}>▼</span>
             </button>
             {openDrop === "courses" && (
               <div className="drop-menu" role="menu" style={{ minWidth: 260 }}>
@@ -225,14 +225,13 @@ export default function Navbar() {
             )}
           </li>
 
-          <li><a href="/moving-to-elizabethtown-ky" className="nav-link" style={{ fontSize: "0.72rem" }}>Moving Guide</a></li>
-          <li><a href="/faq" className="nav-link" style={{ fontSize: "0.72rem" }}>FAQ</a></li>
-          <li><a href="/home-value" className="nav-link" style={{ fontSize: "0.72rem", color: "var(--blue)" }}>Free Home Value</a></li>
-          <li><a href={sectionHref("#contact")} className="nav-link" style={{ fontSize: "0.72rem" }}>Contact</a></li>
+          <li><a href="/moving-to-elizabethtown-ky" className="nav-link">Moving Guide</a></li>
+          <li><a href="/faq" className="nav-link">FAQ</a></li>
+          <li><a href="/home-value" className="nav-link">Home Value</a></li>
         </ul>
 
         <a href={sectionHref("#contact")} className="btn-primary nav-cta-desktop" style={{ padding: "0.55rem 1.25rem", fontSize: "0.68rem" }}>
-          Free Consultation
+          Let's Talk
         </a>
 
         <button className="nav-mobile-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -251,7 +250,7 @@ export default function Navbar() {
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Guides →</a>
 
-            <div className="mobile-section-label">Free Courses</div>
+            <div className="mobile-section-label">Courses</div>
             {courseLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
 
             <div className="mobile-section-label">Free Tools</div>
@@ -260,9 +259,8 @@ export default function Navbar() {
 
             <a href="/moving-to-elizabethtown-ky" className="nav-link" onClick={() => setMenuOpen(false)} style={{ marginTop: "0.5rem" }}>Moving Guide</a>
             <a href="/faq" className="nav-link" onClick={() => setMenuOpen(false)}>FAQ</a>
-            <a href={sectionHref("#contact")} className="nav-link" onClick={() => setMenuOpen(false)}>Contact</a>
             <a href={sectionHref("#contact")} className="btn-primary" style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem", textAlign: "center", marginTop: "0.25rem" }} onClick={() => setMenuOpen(false)}>
-              Free Consultation
+              Let's Talk
             </a>
           </div>
         )}
