@@ -28,13 +28,13 @@ export default function FAQAccordion({ faqs }: { faqs: FAQ[] }) {
           text-align: left;
         }
         .faq-btn:hover .faq-question {
-          color: var(--gold-light);
+          color: var(--blue);
         }
         .faq-question {
           font-family: 'Inter', system-ui, sans-serif;
           font-size: clamp(1.05rem, 2vw, 1.25rem);
-          font-weight: 400;
-          color: white;
+          font-weight: 600;
+          color: var(--text);
           line-height: 1.35;
           transition: color 0.2s;
         }
