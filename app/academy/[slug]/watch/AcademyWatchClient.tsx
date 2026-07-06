@@ -10,6 +10,11 @@ import { biddingWarLessons } from "@/lib/academyCourseContent/biddingWarWithoutO
 import { inspectionDeepDiveLessons } from "@/lib/academyCourseContent/homeInspectionDeepDive";
 import { appraisalGapLessons } from "@/lib/academyCourseContent/appraisalGapsHandling";
 import { fixerUpperLessons } from "@/lib/academyCourseContent/buyingFixerUpper";
+import { newConstructionLessons } from "@/lib/academyCourseContent/buyingNewConstruction";
+import { cosignerJointBuyerLessons } from "@/lib/academyCourseContent/cosignerJointBuyer";
+import { kyAttorneyClosingLessons } from "@/lib/academyCourseContent/kyAttorneyClosingExplained";
+import { pricingToSellLessons } from "@/lib/academyCourseContent/pricingToSellFastAndHigh";
+import { preppingOnBudgetLessons } from "@/lib/academyCourseContent/preppingHomeOnBudget";
 
 const CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "credit-repair-before-you-buy": creditRepairLessons,
@@ -20,6 +25,11 @@ const CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "home-inspection-deep-dive": inspectionDeepDiveLessons,
   "appraisal-gaps-how-to-handle-them": appraisalGapLessons,
   "buying-a-fixer-upper": fixerUpperLessons,
+  "buying-new-construction-in-kentucky": newConstructionLessons,
+  "buying-with-a-cosigner-or-joint-buyer": cosignerJointBuyerLessons,
+  "the-kentucky-attorney-closing-explained": kyAttorneyClosingLessons,
+  "pricing-your-home-to-sell-fast-and-high": pricingToSellLessons,
+  "prepping-your-home-on-a-budget": preppingOnBudgetLessons,
 };
 
 export default function AcademyWatchClient({ slug, courseTitle }: { slug: string; courseTitle: string }) {

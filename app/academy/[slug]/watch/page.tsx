@@ -17,6 +17,11 @@ const AVAILABLE_CONTENT_SLUGS = [
   "home-inspection-deep-dive",
   "appraisal-gaps-how-to-handle-them",
   "buying-a-fixer-upper",
+  "buying-new-construction-in-kentucky",
+  "buying-with-a-cosigner-or-joint-buyer",
+  "the-kentucky-attorney-closing-explained",
+  "pricing-your-home-to-sell-fast-and-high",
+  "prepping-your-home-on-a-budget",
 ];
 
 export function generateStaticParams() {
