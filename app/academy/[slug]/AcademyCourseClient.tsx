@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useAcademyAuth, hasActiveSubscription, redeemPromoCode } from "@/lib/useAcademyAuth";
 import type { AcademyCourse } from "@/lib/academyCourses";
 
-const SUBSCRIPTION_PAYMENT_LINK = ""; // Set this once you create the Stripe recurring Payment Link
+const SUBSCRIPTION_PAYMENT_LINK = "https://buy.stripe.com/aFa3cu50m7ssa0x5VMgIo00"; // Set this once you create the Stripe recurring Payment Link
 
 export default function AcademyCourseClient({ course }: { course: AcademyCourse }) {
   const { user, loading } = useAcademyAuth();

@@ -3,7 +3,7 @@ import { useState } from "react";
 import { academyCourses, getAllCities } from "@/lib/academyCourses";
 import { useAcademyAuth } from "@/lib/useAcademyAuth";
 
-const SUBSCRIPTION_PAYMENT_LINK = ""; // Set this once you create the Stripe recurring Payment Link
+const SUBSCRIPTION_PAYMENT_LINK = "https://buy.stripe.com/aFa3cu50m7ssa0x5VMgIo00"; // Set this once you create the Stripe recurring Payment Link
 
 const faqs = [
   {
