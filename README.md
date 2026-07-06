@@ -1,4 +1,4 @@
-# Rhoman James Real Estate — Website
+# Rhoman James Real Estate — Website 
 
 A premium, SEO-optimized real estate website built with Next.js 14, TypeScript, and Tailwind CSS. Designed for Elizabethtown, KY.
 
