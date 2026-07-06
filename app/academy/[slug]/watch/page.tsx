@@ -12,6 +12,11 @@ const AVAILABLE_CONTENT_SLUGS = [
   "credit-repair-before-you-buy",
   "how-much-house-can-you-afford",
   "buying-with-bad-credit-or-thin-credit",
+  "every-kentucky-loan-program-explained",
+  "bidding-war-without-overpaying",
+  "home-inspection-deep-dive",
+  "appraisal-gaps-how-to-handle-them",
+  "buying-a-fixer-upper",
 ];
 
 export function generateStaticParams() {

@@ -5,11 +5,21 @@ import CourseLayout from "@/components/CourseLayout";
 import { creditRepairLessons } from "@/lib/academyCourseContent/creditRepairBeforeYouBuy";
 import { affordabilityLessons } from "@/lib/academyCourseContent/howMuchHouseCanYouAfford";
 import { badCreditLessons } from "@/lib/academyCourseContent/buyingBadCreditThinCredit";
+import { kyLoanProgramsLessons } from "@/lib/academyCourseContent/kyLoanProgramsExplained";
+import { biddingWarLessons } from "@/lib/academyCourseContent/biddingWarWithoutOverpaying";
+import { inspectionDeepDiveLessons } from "@/lib/academyCourseContent/homeInspectionDeepDive";
+import { appraisalGapLessons } from "@/lib/academyCourseContent/appraisalGapsHandling";
+import { fixerUpperLessons } from "@/lib/academyCourseContent/buyingFixerUpper";
 
 const CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "credit-repair-before-you-buy": creditRepairLessons,
   "how-much-house-can-you-afford": affordabilityLessons,
   "buying-with-bad-credit-or-thin-credit": badCreditLessons,
+  "every-kentucky-loan-program-explained": kyLoanProgramsLessons,
+  "bidding-war-without-overpaying": biddingWarLessons,
+  "home-inspection-deep-dive": inspectionDeepDiveLessons,
+  "appraisal-gaps-how-to-handle-them": appraisalGapLessons,
+  "buying-a-fixer-upper": fixerUpperLessons,
 };
 
 export default function AcademyWatchClient({ slug, courseTitle }: { slug: string; courseTitle: string }) {
