@@ -33,15 +33,7 @@ const toolLinks = [
   { href: "/tools/khc-estimator",           label: "KHC DPA Estimator" },
 ];
 
-const courseLinks = [
-  { href: "/course",              label: "Kentucky Home Buyers Course",      tag: "Buyers" },
-  { href: "/sellers-course",      label: "Kentucky Home Sellers Course",     tag: "Sellers" },
-  { href: "/fort-knox-course",    label: "Fort Knox PCS Bootcamp",           tag: "Military" },
-  { href: "/first-time-bootcamp", label: "First-Time Homebuyer Bootcamp",    tag: "First-Time" },
-  { href: "/investor-course",     label: "Kentucky Investor Course",         tag: "Investors" },
-];
-
-type DropKey = "services" | "neighborhoods" | "tools" | "courses" | null;
+type DropKey = "services" | "neighborhoods" | "tools" | null;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -193,23 +185,8 @@ export default function Navbar() {
             )}
           </li>
 
-          {/* Free Courses */}
-          <li className="drop-wrapper">
-            <button className={`drop-btn${openDrop === "courses" ? " open" : ""}`} onClick={() => toggle("courses")} aria-expanded={openDrop === "courses"} aria-haspopup="true">
-              Courses <span className={`drop-chevron${openDrop === "courses" ? " open" : ""}`}>▼</span>
-            </button>
-            {openDrop === "courses" && (
-              <div className="drop-menu" role="menu" style={{ minWidth: 260 }}>
-                <div className="drop-menu-header">Free Self-Paced Courses</div>
-                {courseLinks.map(l => (
-                  <a key={l.href} href={l.href} role="menuitem" onClick={() => setOpenDrop(null)}>
-                    {l.label}
-                    <span className="course-tag">{l.tag}</span>
-                  </a>
-                ))}
-              </div>
-            )}
-          </li>
+          {/* All Courses */}
+          <li><a href="/academy" className="nav-link">All Courses</a></li>
 
           {/* Tools */}
           <li className="drop-wrapper">
@@ -250,8 +227,7 @@ export default function Navbar() {
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Guides →</a>
 
-            <div className="mobile-section-label">Courses</div>
-            {courseLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
+            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>All Courses</a>
 
             <div className="mobile-section-label">Free Tools</div>
             {toolLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
