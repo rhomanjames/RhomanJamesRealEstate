@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { academyCourses, getAllCities } from "@/lib/academyCourses";
+import { academyCourses } from "@/lib/academyCourses";
 import { useAcademyAuth } from "@/lib/useAcademyAuth";
 
 const SUBSCRIPTION_PAYMENT_LINK = "https://buy.stripe.com/aFa3cu50m7ssa0x5VMgIo00"; // Set this once you create the Stripe recurring Payment Link
@@ -30,10 +30,10 @@ const faqs = [
 
 export default function AcademyCatalogClient() {
   const { user, loading } = useAcademyAuth();
-  const [cityFilter, setCityFilter] = useState<string | null>(null);
+  const [categoryFilter, setCategoryFilter] = useState<string | null>(null);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const cities = getAllCities();
-  const filteredCourses = cityFilter ? academyCourses.filter((c) => c.city === cityFilter) : academyCourses;
+  const categories = Array.from(new Set(academyCourses.map((c) => c.tag)));
+  const filteredCourses = categoryFilter ? academyCourses.filter((c) => c.tag === categoryFilter) : academyCourses;
 
   return (
     <main>
@@ -107,31 +107,31 @@ export default function AcademyCatalogClient() {
             <p style={{ fontSize: "0.95rem", color: "var(--muted)" }}>Browse the full library below.</p>
           </div>
 
-          {/* City filter pills */}
+          {/* Category filter pills */}
           <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap", justifyContent: "center", marginBottom: "3rem" }}>
             <button
-              onClick={() => setCityFilter(null)}
+              onClick={() => setCategoryFilter(null)}
               style={{
                 fontSize: "0.82rem", fontWeight: 600, padding: "0.5rem 1.1rem", borderRadius: "999px", cursor: "pointer",
-                border: cityFilter === null ? "1px solid var(--blue)" : "1px solid var(--border)",
-                background: cityFilter === null ? "var(--blue-pale)" : "white",
-                color: cityFilter === null ? "var(--blue)" : "var(--muted)",
+                border: categoryFilter === null ? "1px solid var(--blue)" : "1px solid var(--border)",
+                background: categoryFilter === null ? "var(--blue-pale)" : "white",
+                color: categoryFilter === null ? "var(--blue)" : "var(--muted)",
               }}
             >
-              All Cities
+              All Categories
             </button>
-            {cities.map((city) => (
+            {categories.map((category) => (
               <button
-                key={city}
-                onClick={() => setCityFilter(city)}
+                key={category}
+                onClick={() => setCategoryFilter(category)}
                 style={{
                   fontSize: "0.82rem", fontWeight: 600, padding: "0.5rem 1.1rem", borderRadius: "999px", cursor: "pointer",
-                  border: cityFilter === city ? "1px solid var(--blue)" : "1px solid var(--border)",
-                  background: cityFilter === city ? "var(--blue-pale)" : "white",
-                  color: cityFilter === city ? "var(--blue)" : "var(--muted)",
+                  border: categoryFilter === category ? "1px solid var(--blue)" : "1px solid var(--border)",
+                  background: categoryFilter === category ? "var(--blue-pale)" : "white",
+                  color: categoryFilter === category ? "var(--blue)" : "var(--muted)",
                 }}
               >
-                {city}
+                {category}
               </button>
             ))}
           </div>
@@ -144,7 +144,6 @@ export default function AcademyCatalogClient() {
                     <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--blue)", background: "var(--blue-pale)", padding: "0.3rem 0.75rem", borderRadius: "999px" }}>{course.tag}</span>
                     <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--muted)" }}>Included</span>
                   </div>
-                  <p style={{ fontSize: "0.72rem", fontWeight: 600, color: "var(--muted2)", marginBottom: "0.5rem" }}>{course.city}</p>
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.6rem", lineHeight: 1.35 }}>
                     {course.title}
                   </h3>
