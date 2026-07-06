@@ -40,7 +40,7 @@ export default function AcademyCatalogClient() {
       {/* ══════════ HERO ══════════ */}
       <section style={{ paddingTop: "8rem", paddingBottom: "4rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", textAlign: "center" }}>
         <div style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", fontSize: "0.8rem", fontWeight: 600, color: "var(--blue)", background: "var(--blue-pale)", padding: "0.5rem 1.1rem", borderRadius: "999px", marginBottom: "1.5rem" }}>
-          Rhoman James Academy
+          Kentucky Home Academy, by Rhoman James
         </div>
         <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem", maxWidth: "44rem", marginLeft: "auto", marginRight: "auto" }}>
           Every real estate course you&apos;ll ever need.<br /><span style={{ color: "var(--blue)" }}>One subscription.</span>

@@ -185,8 +185,8 @@ export default function Navbar() {
             )}
           </li>
 
-          {/* All Courses */}
-          <li><a href="/academy" className="nav-link">All Courses</a></li>
+          {/* Kentucky Home Academy */}
+          <li><a href="/academy" className="nav-link">Kentucky Home Academy</a></li>
 
           {/* Tools */}
           <li className="drop-wrapper">
@@ -198,11 +198,11 @@ export default function Navbar() {
                 <div className="drop-menu-header">Free Calculators</div>
                 {toolLinks.map(l => <a key={l.href} href={l.href} role="menuitem" onClick={() => setOpenDrop(null)}>{l.label}</a>)}
                 <div className="drop-divider" /><a href="/tools" role="menuitem" className="view-all" onClick={() => setOpenDrop(null)}>All Tools →</a>
+                <div className="drop-divider" /><a href="/moving-to-elizabethtown-ky" role="menuitem" onClick={() => setOpenDrop(null)}>Moving Guide</a>
               </div>
             )}
           </li>
 
-          <li><a href="/moving-to-elizabethtown-ky" className="nav-link">Moving Guide</a></li>
           <li><a href="/faq" className="nav-link">FAQ</a></li>
           <li><a href="/home-value" className="nav-link">Home Value</a></li>
         </ul>
@@ -227,13 +227,13 @@ export default function Navbar() {
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Guides →</a>
 
-            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>All Courses</a>
+            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>Kentucky Home Academy</a>
 
             <div className="mobile-section-label">Free Tools</div>
             {toolLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/tools" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Tools →</a>
+            <a href="/moving-to-elizabethtown-ky" className="mobile-sub-link" onClick={() => setMenuOpen(false)}>Moving Guide</a>
 
-            <a href="/moving-to-elizabethtown-ky" className="nav-link" onClick={() => setMenuOpen(false)} style={{ marginTop: "0.5rem" }}>Moving Guide</a>
             <a href="/faq" className="nav-link" onClick={() => setMenuOpen(false)}>FAQ</a>
             <a href={sectionHref("#contact")} className="btn-primary" style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem", textAlign: "center", marginTop: "0.25rem" }} onClick={() => setMenuOpen(false)}>
               Let's Talk
