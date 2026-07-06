@@ -22,6 +22,10 @@ const AVAILABLE_CONTENT_SLUGS = [
   "the-kentucky-attorney-closing-explained",
   "pricing-your-home-to-sell-fast-and-high",
   "prepping-your-home-on-a-budget",
+  "selling-an-inherited-home",
+  "selling-during-a-divorce",
+  "downsizing-a-sellers-guide",
+  "for-sale-by-owner-what-youre-signing-up-for",
 ];
 
 export function generateStaticParams() {

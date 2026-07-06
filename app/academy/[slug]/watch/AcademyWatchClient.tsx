@@ -15,6 +15,10 @@ import { cosignerJointBuyerLessons } from "@/lib/academyCourseContent/cosignerJo
 import { kyAttorneyClosingLessons } from "@/lib/academyCourseContent/kyAttorneyClosingExplained";
 import { pricingToSellLessons } from "@/lib/academyCourseContent/pricingToSellFastAndHigh";
 import { preppingOnBudgetLessons } from "@/lib/academyCourseContent/preppingHomeOnBudget";
+import { sellingInheritedHomeLessons } from "@/lib/academyCourseContent/sellingInheritedHome";
+import { sellingDuringDivorceLessons } from "@/lib/academyCourseContent/sellingDuringDivorce";
+import { downsizingSellersGuideLessons } from "@/lib/academyCourseContent/downsizingSellersGuide";
+import { fsboLessons } from "@/lib/academyCourseContent/fsboWhatYoureSigningUpFor";
 
 const CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "credit-repair-before-you-buy": creditRepairLessons,
@@ -30,6 +34,10 @@ const CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "the-kentucky-attorney-closing-explained": kyAttorneyClosingLessons,
   "pricing-your-home-to-sell-fast-and-high": pricingToSellLessons,
   "prepping-your-home-on-a-budget": preppingOnBudgetLessons,
+  "selling-an-inherited-home": sellingInheritedHomeLessons,
+  "selling-during-a-divorce": sellingDuringDivorceLessons,
+  "downsizing-a-sellers-guide": downsizingSellersGuideLessons,
+  "for-sale-by-owner-what-youre-signing-up-for": fsboLessons,
 };
 
 export default function AcademyWatchClient({ slug, courseTitle }: { slug: string; courseTitle: string }) {
