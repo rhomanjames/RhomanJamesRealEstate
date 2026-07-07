@@ -185,8 +185,8 @@ export default function Navbar() {
             )}
           </li>
 
-          {/* Kentucky Home Academy */}
-          <li><a href="/academy" className="nav-link">Kentucky Home Academy</a></li>
+          {/* Elizabethtown Home Academy */}
+          <li><a href="/academy" className="nav-link">Elizabethtown Home Academy</a></li>
 
           {/* Tools */}
           <li className="drop-wrapper">
@@ -227,7 +227,7 @@ export default function Navbar() {
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Guides →</a>
 
-            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>Kentucky Home Academy</a>
+            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>Elizabethtown Home Academy</a>
 
             <div className="mobile-section-label">Free Tools</div>
             {toolLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}

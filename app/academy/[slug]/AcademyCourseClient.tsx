@@ -51,7 +51,7 @@ export default function AcademyCourseClient({ course }: { course: AcademyCourse 
             <div style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2rem", textAlign: "center" }}>
               <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.75rem" }}>Create a free account to start this course</p>
               <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
-                Every course in the Kentucky Home Academy is completely free. Create an account to track your progress and pick up right where you left off.
+                Every course in the Elizabethtown Home Academy is completely free. Create an account to track your progress and pick up right where you left off.
               </p>
               <a href="/academy/signup" className="btn-primary">Create Free Account</a>
               <p style={{ fontSize: "0.8rem", color: "var(--muted2)", marginTop: "1rem" }}>
