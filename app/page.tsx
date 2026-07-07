@@ -9,9 +9,9 @@ import SeoContent from "@/components/SeoContent";
 import Contact from "@/components/Contact";
 import InternalLinks from "@/components/InternalLinks";
 import Footer from "@/components/Footer";
+import Community from "@/components/Community";
 
 export const dynamic = "force-static";
-
 
 const homeInternalLinks = [
   {
@@ -60,6 +60,7 @@ export default function Home() {
         <About />
         <Services />
         <Areas />
+        <Community />
         <SeoContent />
         <Contact />
       </main>

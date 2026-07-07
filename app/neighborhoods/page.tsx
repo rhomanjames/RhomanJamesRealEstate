@@ -135,8 +135,20 @@ export default function NeighborhoodsPage() {
               >
                 <article
                   className="service-card"
-                  style={{ padding: "2.5rem", height: "100%", cursor: "pointer" }}
+                  style={{ padding: 0, height: "100%", cursor: "pointer", overflow: "hidden" }}
                 >
+                  <div
+                    style={{
+                      height: "160px",
+                      backgroundImage:
+                        "url('https://images.unsplash.com/photo-1748396690721-cfd9b7a03a41?w=800&q=80&auto=format&fit=crop')",
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                    role="img"
+                    aria-label={`Representative home in ${n.name}, Kentucky`}
+                  />
+                  <div style={{ padding: "2rem 2.5rem 2.5rem" }}>
                   <div
                     style={{
                       fontSize: "0.65rem",
@@ -204,6 +216,7 @@ export default function NeighborhoodsPage() {
                   >
                     Read the guide
                     <span aria-hidden="true" style={{ fontSize: "0.9rem" }}>→</span>
+                  </div>
                   </div>
                 </article>
               </a>

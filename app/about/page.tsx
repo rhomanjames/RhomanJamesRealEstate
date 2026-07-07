@@ -270,6 +270,21 @@ export default function AboutPage() {
           </div>
         </section>
 
+        {/* Photo break */}
+        <section style={{ position: "relative", height: "360px", overflow: "hidden" }}>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              backgroundImage: "url('https://images.unsplash.com/photo-1754611331891-949e7838f199?w=1600&q=80&auto=format&fit=crop')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+            role="img"
+            aria-label="A warm, welcoming home interior — representative of the comfortable homes Rhoman James helps clients find in Elizabethtown"
+          />
+        </section>
+
         {/* Free Resources */}
         <section style={{ background: "var(--bg-soft)", padding: "5rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 900, margin: "0 auto", textAlign: "center" }}>
