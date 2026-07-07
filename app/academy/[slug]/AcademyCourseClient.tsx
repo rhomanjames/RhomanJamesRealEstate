@@ -1,37 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useAcademyAuth, hasActiveSubscription, redeemPromoCode } from "@/lib/useAcademyAuth";
+import { useAcademyAuth } from "@/lib/useAcademyAuth";
 import type { AcademyCourse } from "@/lib/academyCourses";
-
-const SUBSCRIPTION_PAYMENT_LINK = "https://buy.stripe.com/aFa3cu50m7ssa0x5VMgIo00"; // Set this once you create the Stripe recurring Payment Link
 
 export default function AcademyCourseClient({ course }: { course: AcademyCourse }) {
   const { user, loading } = useAcademyAuth();
-  const [hasAccess, setHasAccess] = useState(false);
-  const [checkingAccess, setCheckingAccess] = useState(true);
-  const [promoCode, setPromoCode] = useState("");
-  const [redeemStatus, setRedeemStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
-  const [redeemMessage, setRedeemMessage] = useState("");
-
-  useEffect(() => {
-    if (!user) { setCheckingAccess(false); return; }
-    hasActiveSubscription(user.id).then((access) => {
-      setHasAccess(access);
-      setCheckingAccess(false);
-    });
-  }, [user]);
-
-  const handleRedeemCode = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!user) return;
-    setRedeemStatus("loading");
-    const result = await redeemPromoCode(user.id, promoCode);
-    setRedeemMessage(result.message);
-    setRedeemStatus(result.success ? "success" : "error");
-    if (result.success) setHasAccess(true);
-  };
-
-  const showGate = !loading && !checkingAccess && !hasAccess;
 
   return (
     <main>
@@ -53,6 +25,8 @@ export default function AcademyCourseClient({ course }: { course: AcademyCourse 
             <span>~{course.estimatedHours} hours</span>
             <span>·</span>
             <span>{course.level}</span>
+            <span>·</span>
+            <span style={{ color: "var(--blue)", fontWeight: 700 }}>Free</span>
           </div>
         </div>
       </section>
@@ -72,61 +46,22 @@ export default function AcademyCourseClient({ course }: { course: AcademyCourse 
             ))}
           </div>
 
-          {/* ── ACCESS GATE ── */}
-          {loading || checkingAccess ? null : showGate ? (
-            <div style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2rem" }}>
-              {!user ? (
-                <>
-                  <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.75rem" }}>Create a free account to get started</p>
-                  <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1.5rem" }}>Subscribe or redeem a code to unlock this course and every other course in the Academy.</p>
-                  <a href="/academy/signup" className="btn-primary">Create Free Account</a>
-                </>
-              ) : (
-                <>
-                  <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--blue)", marginBottom: "0.5rem" }}>This course is part of the full Academy library</p>
-                  <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", marginBottom: "0.5rem" }}>
-                    <span style={{ fontSize: "2rem", fontWeight: 800, color: "var(--text)" }}>$24</span>
-                    <span style={{ fontSize: "1rem", color: "var(--muted)" }}>/ month</span>
-                  </div>
-                  <p style={{ fontSize: "0.85rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
-                    One subscription unlocks all {course.tag ? "" : ""}100+ courses in the Academy — including everything added going forward. Cancel anytime.
-                  </p>
-                  <a
-                    href={SUBSCRIPTION_PAYMENT_LINK || "#"}
-                    className="btn-primary"
-                    style={{ display: "inline-block", marginBottom: "2rem" }}
-                  >
-                    Subscribe for Full Access
-                  </a>
-
-                  <div style={{ borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>
-                    <p style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--muted)", marginBottom: "0.75rem" }}>Have a free access code?</p>
-                    <form onSubmit={handleRedeemCode} style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                      <input
-                        className="form-input"
-                        style={{ maxWidth: "220px" }}
-                        placeholder="Enter code"
-                        value={promoCode}
-                        onChange={(e) => setPromoCode(e.target.value)}
-                        required
-                      />
-                      <button type="submit" disabled={redeemStatus === "loading"} className="btn-outline" style={{ cursor: "pointer", border: "1px solid var(--border)" }}>
-                        {redeemStatus === "loading" ? "Checking..." : "Redeem Code"}
-                      </button>
-                    </form>
-                    {redeemMessage && (
-                      <p style={{ fontSize: "0.85rem", marginTop: "0.75rem", color: redeemStatus === "success" ? "#166534" : "#B91C1C" }}>
-                        {redeemMessage}
-                      </p>
-                    )}
-                  </div>
-                </>
-              )}
+          {/* ── ACCESS ── */}
+          {loading ? null : !user ? (
+            <div style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2rem", textAlign: "center" }}>
+              <p style={{ fontSize: "1.1rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.75rem" }}>Create a free account to start this course</p>
+              <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
+                Every course in the Kentucky Home Academy is completely free. Create an account to track your progress and pick up right where you left off.
+              </p>
+              <a href="/academy/signup" className="btn-primary">Create Free Account</a>
+              <p style={{ fontSize: "0.8rem", color: "var(--muted2)", marginTop: "1rem" }}>
+                Already have an account? <a href="/academy/login" style={{ color: "var(--blue)", fontWeight: 600, textDecoration: "none" }}>Log in</a>
+              </p>
             </div>
           ) : (
             <div style={{ background: "var(--blue-pale)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2rem", textAlign: "center" }}>
               <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text)", marginBottom: "1rem" }}>
-                You have full access to the Academy.
+                This course is free — jump right in.
               </p>
               <a href={course.legacyFreeHref || `/academy/${course.slug}/watch`} className="btn-primary">
                 Start Learning →

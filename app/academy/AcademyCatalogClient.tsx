@@ -3,20 +3,14 @@ import { useState } from "react";
 import { academyCourses } from "@/lib/academyCourses";
 import { useAcademyAuth } from "@/lib/useAcademyAuth";
 
-const SUBSCRIPTION_PAYMENT_LINK = "https://buy.stripe.com/aFa3cu50m7ssa0x5VMgIo00"; // Set this once you create the Stripe recurring Payment Link
-
 const faqs = [
   {
-    q: "What do I actually get for $24 a month?",
-    a: "Full access to every course in the Academy — all of them, right now, plus every new course added in the future at no extra cost. No per-course purchases, no upsells.",
+    q: "What does it actually cost?",
+    a: "Nothing. Every course in the Kentucky Home Academy is completely free — all of them, right now, plus every new course added going forward.",
   },
   {
-    q: "Can I cancel anytime?",
-    a: "Yes. There's no contract and no lock-in. Cancel whenever you want and you won't be billed again.",
-  },
-  {
-    q: "I'm working with Rhoman as my agent — do I still have to pay?",
-    a: "No. Every client working with Rhoman James gets a free access code that unlocks the entire library at no cost, permanently.",
+    q: "Why is a free account required?",
+    a: "Creating an account lets us save your progress across courses, so you can start, stop, and pick up exactly where you left off. No payment info required, ever.",
   },
   {
     q: "How many courses are there right now?",
@@ -25,6 +19,10 @@ const faqs = [
   {
     q: "Are these courses self-paced?",
     a: "Yes. Every course is self-paced — start, stop, and return anytime. Your progress is saved automatically.",
+  },
+  {
+    q: "Is this really free, no catch?",
+    a: "Really free. Rhoman James built this as a genuine resource for the community — if it helps you, a Google review or a referral is always appreciated, but never required.",
   },
 ];
 
@@ -43,22 +41,22 @@ export default function AcademyCatalogClient() {
           Kentucky Home Academy, by Rhoman James
         </div>
         <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.4rem, 6vw, 4rem)", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem", maxWidth: "44rem", marginLeft: "auto", marginRight: "auto" }}>
-          Every real estate course you&apos;ll ever need.<br /><span style={{ color: "var(--blue)" }}>One subscription.</span>
+          Every real estate course you&apos;ll ever need.<br /><span style={{ color: "var(--blue)" }}>Completely free.</span>
         </h1>
         <p style={{ fontSize: "1.1rem", color: "var(--muted)", lineHeight: 1.8, maxWidth: "38rem", margin: "0 auto 2.5rem" }}>
-          {academyCourses.length}+ courses covering buying, selling, Fort Knox military relocation, investing, and homeownership across Kentucky. $24/month unlocks all of it — including everything added next.
+          {academyCourses.length}+ courses covering buying, selling, Fort Knox military relocation, investing, and homeownership across Kentucky. No cost, no catch — just a free account to save your progress.
         </p>
         <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "1rem" }}>
           {loading ? null : user ? (
             <a href="/academy/dashboard" className="btn-primary">Go to My Dashboard</a>
           ) : (
             <>
-              <a href={SUBSCRIPTION_PAYMENT_LINK || "/academy/signup"} className="btn-primary">Subscribe for $24/mo</a>
-              <a href="/academy/signup" className="btn-outline">Create Free Account</a>
+              <a href="/academy/signup" className="btn-primary">Create Free Account</a>
+              <a href="/academy/login" className="btn-outline">Log In</a>
             </>
           )}
         </div>
-        <p style={{ fontSize: "0.8rem", color: "var(--muted2)" }}>Cancel anytime. No contracts.</p>
+        <p style={{ fontSize: "0.8rem", color: "var(--muted2)" }}>No payment info. No trial. Just free.</p>
       </section>
 
       {/* ══════════ TRUST / STATS STRIP ══════════ */}
@@ -66,9 +64,9 @@ export default function AcademyCatalogClient() {
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", justifyContent: "center", gap: "3rem", flexWrap: "wrap", textAlign: "center" }}>
           {[
             { num: `${academyCourses.length}+`, label: "Courses" },
-            { num: "$24/mo", label: "Full Access" },
-            { num: "Free", label: "For Clients" },
+            { num: "Free", label: "Every Course" },
             { num: "100%", label: "Self-Paced" },
+            { num: "0", label: "Cost, Ever" },
           ].map((s) => (
             <div key={s.label}>
               <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.8rem", fontWeight: 800, color: "var(--blue)", lineHeight: 1 }}>{s.num}</div>
@@ -84,7 +82,7 @@ export default function AcademyCatalogClient() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {[
               { title: "Built for Kentucky", body: "Not generic national content — every course is grounded in real Kentucky loan programs, Kentucky attorney closings, and local market realities." },
-              { title: "Growing Every Month", body: "Your subscription doesn't just unlock what exists today — every new course added to the library is included automatically." },
+              { title: "Growing Every Month", body: "New courses are added regularly, all free, all included the moment they're published." },
               { title: "Self-Paced, Always", body: "Start, stop, and pick up exactly where you left off. Nothing to schedule, nothing to miss." },
               { title: "From a Real Local Expert", body: "Written by a licensed Kentucky real estate professional who actually lives and works in this market." },
             ].map((v) => (
@@ -102,9 +100,9 @@ export default function AcademyCatalogClient() {
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.4rem)", fontWeight: 800, color: "var(--text)", marginBottom: "0.75rem" }}>
-              Everything included in your subscription
+              Browse every free course
             </h2>
-            <p style={{ fontSize: "0.95rem", color: "var(--muted)" }}>Browse the full library below.</p>
+            <p style={{ fontSize: "0.95rem", color: "var(--muted)" }}>All {academyCourses.length}+ courses, all free.</p>
           </div>
 
           {/* Category filter pills */}
@@ -142,7 +140,7 @@ export default function AcademyCatalogClient() {
                 <article className="service-card" style={{ padding: "2rem", height: "100%", display: "flex", flexDirection: "column", background: "white" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1rem" }}>
                     <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--blue)", background: "var(--blue-pale)", padding: "0.3rem 0.75rem", borderRadius: "999px" }}>{course.tag}</span>
-                    <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--muted)" }}>Included</span>
+                    <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--muted)" }}>Free</span>
                   </div>
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.6rem", lineHeight: 1.35 }}>
                     {course.title}
@@ -164,47 +162,15 @@ export default function AcademyCatalogClient() {
         </div>
       </section>
 
-      {/* ══════════ PRICING ══════════ */}
-      <section style={{ padding: "5rem 1.5rem", background: "white" }}>
-        <div style={{ maxWidth: 500, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.4rem)", fontWeight: 800, color: "var(--text)", marginBottom: "2rem" }}>
-            Simple, honest pricing
-          </h2>
-          <div style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem" }}>
-            <p style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--blue)", marginBottom: "0.5rem" }}>Full Library Access</p>
-            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "center", gap: "0.4rem", marginBottom: "1.5rem" }}>
-              <span style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "3rem", fontWeight: 800, color: "var(--text)" }}>$24</span>
-              <span style={{ fontSize: "1rem", color: "var(--muted)" }}>/ month</span>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem", marginBottom: "2rem", textAlign: "left" }}>
-              {[
-                `All ${academyCourses.length}+ courses, unlocked immediately`,
-                "Every new course added, at no extra cost",
-                "Cancel anytime, no contract",
-                "Free for anyone working with Rhoman as a client",
-              ].map((item) => (
-                <div key={item} style={{ display: "flex", gap: "0.6rem", alignItems: "flex-start" }}>
-                  <span style={{ color: "var(--blue)", fontWeight: 700 }}>✓</span>
-                  <p style={{ fontSize: "0.9rem", color: "var(--text)", margin: 0 }}>{item}</p>
-                </div>
-              ))}
-            </div>
-            <a href={SUBSCRIPTION_PAYMENT_LINK || "/academy/signup"} className="btn-primary" style={{ display: "block" }}>
-              Subscribe Now
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* ══════════ FAQ ══════════ */}
-      <section style={{ padding: "5rem 1.5rem", background: "var(--bg-soft)" }}>
+      <section style={{ padding: "5rem 1.5rem", background: "white" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.2rem)", fontWeight: 800, color: "var(--text)", marginBottom: "2rem", textAlign: "center" }}>
             Frequently asked questions
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             {faqs.map((faq, i) => (
-              <div key={i} style={{ background: "white", border: "1px solid var(--border)", borderRadius: "16px" }}>
+              <div key={i} style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px" }}>
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                   style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center", padding: "1.25rem 1.5rem", background: "none", border: "none", cursor: "pointer", textAlign: "left", gap: "1rem" }}
@@ -224,15 +190,15 @@ export default function AcademyCatalogClient() {
       </section>
 
       {/* ══════════ FINAL CTA ══════════ */}
-      <section style={{ padding: "6rem 1.5rem", background: "white", textAlign: "center" }}>
+      <section style={{ padding: "6rem 1.5rem", background: "var(--bg-soft)", textAlign: "center" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.6rem)", fontWeight: 800, color: "var(--text)", marginBottom: "1rem" }}>
             Start learning today
           </h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.8, marginBottom: "2rem" }}>
-            {academyCourses.length}+ courses, one subscription, cancel anytime.
+            {academyCourses.length}+ courses, completely free, forever.
           </p>
-          <a href={SUBSCRIPTION_PAYMENT_LINK || "/academy/signup"} className="btn-primary">Subscribe for $24/mo</a>
+          <a href="/academy/signup" className="btn-primary">Create Free Account</a>
         </div>
       </section>
     </main>

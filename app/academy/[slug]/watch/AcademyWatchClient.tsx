@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useAcademyAuth, hasActiveSubscription } from "@/lib/useAcademyAuth";
+import { useState } from "react";
+import { useAcademyAuth } from "@/lib/useAcademyAuth";
 import CourseLayout from "@/components/CourseLayout";
 
 // Flat single-module courses (5-9 lessons, no sub-modules)
@@ -65,32 +65,20 @@ const MODULE_CONTENT_MAP: Record<string, typeof multipleOffersModules> = {
 
 export default function AcademyWatchClient({ slug, courseTitle }: { slug: string; courseTitle: string }) {
   const { user, loading } = useAcademyAuth();
-  const [hasAccess, setHasAccess] = useState(false);
-  const [checking, setChecking] = useState(true);
   const [activeModuleIndex, setActiveModuleIndex] = useState(0);
 
-  useEffect(() => {
-    if (!user) { setChecking(false); return; }
-    hasActiveSubscription(user.id).then((access) => {
-      setHasAccess(access);
-      setChecking(false);
-    });
-  }, [user]);
+  if (loading) return null;
 
-  if (loading || checking) return null;
-
-  if (!user || !hasAccess) {
+  if (!user) {
     return (
       <main style={{ paddingTop: "8rem", paddingBottom: "6rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", textAlign: "center", background: "var(--bg-soft)", minHeight: "70vh" }}>
         <p style={{ fontSize: "1.05rem", fontWeight: 700, color: "var(--text)", marginBottom: "1rem" }}>
-          {!user ? "Log in to access this course" : "Subscribe to unlock this course"}
+          Log in to access this free course
         </p>
         <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1.5rem" }}>
-          {!user ? "Create a free account or log in to continue." : "This course is part of the full Academy subscription."}
+          Create a free account or log in to continue — every course in the Academy is free.
         </p>
-        <a href={!user ? "/academy/login" : `/academy/${slug}`} className="btn-primary">
-          {!user ? "Log In" : "View Subscription Options"}
-        </a>
+        <a href="/academy/login" className="btn-primary">Log In</a>
       </main>
     );
   }
