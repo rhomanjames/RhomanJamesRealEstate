@@ -30,6 +30,10 @@ const AVAILABLE_CONTENT_SLUGS = [
   "negotiating-repairs-after-inspection",
   "selling-while-you-still-owe-more-than-its-worth",
   "staging-on-zero-budget",
+  "va-loans-explained-front-to-back",
+  "on-post-vs-off-post-the-real-math",
+  "buying-a-home-remotely-before-you-arrive",
+  "selling-or-renting-when-you-pcs-out",
 ];
 
 export function generateStaticParams() {

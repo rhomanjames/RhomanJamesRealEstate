@@ -27,6 +27,10 @@ import { multipleOffersModules } from "@/lib/academyCourseContent/handlingMultip
 import { negotiatingRepairsModules } from "@/lib/academyCourseContent/negotiatingRepairsAfterInspection";
 import { underwaterSellingModules } from "@/lib/academyCourseContent/underwaterSelling";
 import { stagingZeroBudgetModules } from "@/lib/academyCourseContent/stagingOnZeroBudget";
+import { vaLoansModules } from "@/lib/academyCourseContent/vaLoansExplained";
+import { onPostOffPostModules } from "@/lib/academyCourseContent/onPostOffPostRealMath";
+import { remoteBuyingModules } from "@/lib/academyCourseContent/remoteBuyingBeforeYouArrive";
+import { sellOrRentPCSModules } from "@/lib/academyCourseContent/sellOrRentPCSOut";
 
 const FLAT_CONTENT_MAP: Record<string, typeof creditRepairLessons> = {
   "credit-repair-before-you-buy": creditRepairLessons,
@@ -53,6 +57,10 @@ const MODULE_CONTENT_MAP: Record<string, typeof multipleOffersModules> = {
   "negotiating-repairs-after-inspection": negotiatingRepairsModules,
   "selling-while-you-still-owe-more-than-its-worth": underwaterSellingModules,
   "staging-on-zero-budget": stagingZeroBudgetModules,
+  "va-loans-explained-front-to-back": vaLoansModules,
+  "on-post-vs-off-post-the-real-math": onPostOffPostModules,
+  "buying-a-home-remotely-before-you-arrive": remoteBuyingModules,
+  "selling-or-renting-when-you-pcs-out": sellOrRentPCSModules,
 };
 
 export default function AcademyWatchClient({ slug, courseTitle }: { slug: string; courseTitle: string }) {
