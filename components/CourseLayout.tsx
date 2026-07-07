@@ -1,6 +1,7 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { supabase } from "@/lib/supabase";
 
 interface Lesson {
   id: string;
@@ -17,6 +18,8 @@ interface CourseLayoutProps {
   prevModule: { slug: string; title: string } | null;
   nextModule: { slug: string; title: string } | null;
   lessons: Lesson[];
+  courseSlug: string;   // NEW — required to save progress per course
+  userId: string;       // NEW — required to save progress per user
 }
 
 function renderContent(text: string) {
@@ -40,15 +43,58 @@ function renderContent(text: string) {
   });
 }
 
-export default function CourseLayout({ moduleNum, moduleTitle, totalModules, prevModule, nextModule, lessons }: CourseLayoutProps) {
+export default function CourseLayout({ moduleNum, moduleTitle, totalModules, prevModule, nextModule, lessons, courseSlug, userId }: CourseLayoutProps) {
   const [activeLesson, setActiveLesson] = useState(0);
-  const [completed, setCompleted] = useState<number[]>([]);
+  const [completed, setCompleted] = useState<string[]>([]); // now stores lesson IDs, not indices
+  const [loadingProgress, setLoadingProgress] = useState(true);
 
-  const toggleComplete = (i: number) => {
-    setCompleted(prev => prev.includes(i) ? prev.filter(x => x !== i) : [...prev, i]);
+  // Load existing progress from Supabase on mount
+  useEffect(() => {
+    if (!userId || !courseSlug) { setLoadingProgress(false); return; }
+    supabase
+      .from("lesson_progress")
+      .select("lesson_id")
+      .eq("user_id", userId)
+      .eq("course_slug", courseSlug)
+      .then(({ data, error }) => {
+        if (!error && data) {
+          setCompleted(data.map((row) => row.lesson_id));
+        }
+        setLoadingProgress(false);
+      });
+  }, [userId, courseSlug]);
+
+  const toggleComplete = async (lessonIndex: number) => {
+    const lessonId = lessons[lessonIndex].id;
+    const isCurrentlyComplete = completed.includes(lessonId);
+
+    if (isCurrentlyComplete) {
+      // Remove from Supabase
+      setCompleted((prev) => prev.filter((id) => id !== lessonId));
+      if (userId && courseSlug) {
+        await supabase
+          .from("lesson_progress")
+          .delete()
+          .eq("user_id", userId)
+          .eq("course_slug", courseSlug)
+          .eq("lesson_id", lessonId);
+      }
+    } else {
+      // Save to Supabase
+      setCompleted((prev) => [...prev, lessonId]);
+      if (userId && courseSlug) {
+        await supabase
+          .from("lesson_progress")
+          .upsert(
+            { user_id: userId, course_slug: courseSlug, lesson_id: lessonId },
+            { onConflict: "user_id,course_slug,lesson_id" }
+          );
+      }
+    }
   };
 
   const lesson = lessons[activeLesson];
+  const isLessonComplete = (index: number) => completed.includes(lessons[index].id);
   const allDone = completed.length === lessons.length;
 
   return (
@@ -79,18 +125,18 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
       <div className="course-wrap">
         {/* Sidebar */}
         <aside className="course-sidebar" aria-label="Course navigation">
-          <Link href="/course/watch" style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.5rem 1.5rem 1rem", fontSize: "0.8rem", fontWeight: 500, color: "var(--muted2)", textDecoration: "none" }}>
-            ← All Modules
+          <Link href={`/academy/${courseSlug}`} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.5rem 1.5rem 1rem", fontSize: "0.8rem", fontWeight: 500, color: "var(--muted2)", textDecoration: "none" }}>
+            ← Course Overview
           </Link>
           <div style={{ padding: "0 1.5rem 1rem", borderBottom: "1px solid var(--border)", marginBottom: "0.75rem" }}>
             <p style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--blue)", marginBottom: "0.3rem" }}>Module {moduleNum}</p>
             <p style={{ fontSize: "0.9rem", color: "var(--text)", lineHeight: 1.4, fontFamily: "'Inter', system-ui, sans-serif", fontWeight: 700 }}>{moduleTitle}</p>
           </div>
           {lessons.map((l, i) => {
-            const done = completed.includes(i);
+            const done = isLessonComplete(i);
             const active = activeLesson === i;
             return (
-              <button key={i} className={`lesson-btn${active ? " active" : ""}${done ? " done-lesson" : ""}`} onClick={() => setActiveLesson(i)}>
+              <button key={l.id} className={`lesson-btn${active ? " active" : ""}${done ? " done-lesson" : ""}`} onClick={() => setActiveLesson(i)}>
                 <div className={`check-circle${done ? " filled" : ""}`} aria-hidden="true">
                   {done && <svg width="8" height="6" viewBox="0 0 8 6" fill="none"><path d="M1 3l2 2 4-4" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/></svg>}
                 </div>
@@ -107,7 +153,9 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
             <div style={{ background: "var(--border)", height: 4, borderRadius: 2, overflow: "hidden", marginBottom: "0.4rem" }}>
               <div style={{ background: "var(--blue)", height: "100%", width: `${(completed.length / lessons.length) * 100}%`, transition: "width 0.3s" }} />
             </div>
-            <p style={{ fontSize: "0.72rem", color: "var(--muted2)" }}>{completed.length}/{lessons.length} complete</p>
+            <p style={{ fontSize: "0.72rem", color: "var(--muted2)" }}>
+              {loadingProgress ? "Loading progress..." : `${completed.length}/${lessons.length} complete`}
+            </p>
           </div>
         </aside>
 
@@ -152,16 +200,16 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
               onClick={() => toggleComplete(activeLesson)}
               style={{
                 display: "flex", alignItems: "center", gap: "0.6rem",
-                background: completed.includes(activeLesson) ? "var(--blue-pale)" : "white",
-                border: `1px solid ${completed.includes(activeLesson) ? "var(--blue)" : "var(--border)"}`,
+                background: isLessonComplete(activeLesson) ? "var(--blue-pale)" : "white",
+                border: `1px solid ${isLessonComplete(activeLesson) ? "var(--blue)" : "var(--border)"}`,
                 borderRadius: "10px",
-                color: completed.includes(activeLesson) ? "var(--blue)" : "var(--muted)",
+                color: isLessonComplete(activeLesson) ? "var(--blue)" : "var(--muted)",
                 padding: "0.65rem 1.25rem", cursor: "pointer",
                 fontSize: "0.85rem", fontWeight: 600,
                 fontFamily: "'Inter', system-ui, sans-serif", transition: "all 0.2s",
               }}
             >
-              {completed.includes(activeLesson) ? "✓ Marked Complete" : "Mark as Complete"}
+              {isLessonComplete(activeLesson) ? "✓ Marked Complete" : "Mark as Complete"}
             </button>
 
             <div style={{ display: "flex", gap: "0.75rem" }}>
@@ -171,16 +219,16 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
                 </button>
               )}
               {activeLesson < lessons.length - 1 ? (
-                <button onClick={() => { toggleComplete(activeLesson); setActiveLesson(activeLesson + 1); }} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem", cursor: "pointer", border: "none" }}>
+                <button onClick={async () => { if (!isLessonComplete(activeLesson)) await toggleComplete(activeLesson); setActiveLesson(activeLesson + 1); }} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem", cursor: "pointer", border: "none" }}>
                   Next Lesson →
                 </button>
               ) : nextModule ? (
-                <Link href={`/course/watch/${nextModule.slug}`} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }} onClick={() => toggleComplete(activeLesson)}>
+                <Link href={`/academy/${courseSlug}/watch`} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }} onClick={() => toggleComplete(activeLesson)}>
                   Next Module →
                 </Link>
               ) : (
-                <Link href="/course/watch" className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }}>
-                  Complete Course ✓
+                <Link href="/academy/dashboard" className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }}>
+                  Back to Dashboard ✓
                 </Link>
               )}
             </div>
@@ -190,16 +238,8 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
           {allDone && (
             <div style={{ marginTop: "2rem", padding: "1.5rem 2rem", background: "var(--blue-pale)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center" }}>
               <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.5rem" }}>Module {moduleNum} Complete! 🎉</p>
-              {nextModule ? (
-                <Link href={`/course/watch/${nextModule.slug}`} className="btn-primary" style={{ fontSize: "0.85rem", display: "inline-block", marginTop: "0.75rem" }}>
-                  Start Module: {nextModule.title} →
-                </Link>
-              ) : (
-                <div>
-                  <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1rem" }}>You have completed the entire Kentucky Home Buyers Course.</p>
-                  <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.85rem", display: "inline-block" }}>Call Rhoman — (502) 264-9376</a>
-                </div>
-              )}
+              <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1rem" }}>Your progress is saved — come back anytime.</p>
+              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.85rem", display: "inline-block" }}>Call Rhoman — (502) 264-9376</a>
             </div>
           )}
 
