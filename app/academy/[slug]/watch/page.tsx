@@ -26,6 +26,10 @@ const AVAILABLE_CONTENT_SLUGS = [
   "selling-during-a-divorce",
   "downsizing-a-sellers-guide",
   "for-sale-by-owner-what-youre-signing-up-for",
+  "handling-multiple-offers-like-a-pro",
+  "negotiating-repairs-after-inspection",
+  "selling-while-you-still-owe-more-than-its-worth",
+  "staging-on-zero-budget",
 ];
 
 export function generateStaticParams() {
