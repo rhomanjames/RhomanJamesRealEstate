@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { supabase } from "@/lib/supabase";
 
 interface Lesson {
@@ -18,8 +19,8 @@ interface CourseLayoutProps {
   prevModule: { slug: string; title: string } | null;
   nextModule: { slug: string; title: string } | null;
   lessons: Lesson[];
-  courseSlug: string;   // NEW — required to save progress per course
-  userId: string;       // NEW — required to save progress per user
+  courseSlug?: string;   // optional — if provided along with userId, progress saves to Supabase
+  userId?: string;       // optional — legacy free course pages don't have auth, so this is skipped
 }
 
 function renderContent(text: string) {
@@ -44,9 +45,23 @@ function renderContent(text: string) {
 }
 
 export default function CourseLayout({ moduleNum, moduleTitle, totalModules, prevModule, nextModule, lessons, courseSlug, userId }: CourseLayoutProps) {
+  const pathname = usePathname();
   const [activeLesson, setActiveLesson] = useState(0);
   const [completed, setCompleted] = useState<string[]>([]); // now stores lesson IDs, not indices
   const [loadingProgress, setLoadingProgress] = useState(true);
+
+  // Works in two contexts:
+  //  - Academy pages (courseSlug provided): use /academy/{slug} URLs
+  //  - Legacy free-course module pages (no courseSlug): derive paths from the
+  //    current URL so nothing needs to change in the 30 existing page files.
+  const watchBase = pathname.replace(/\/[^/]+$/, ""); // strips the last path segment, e.g. "/course/watch/module-2" -> "/course/watch"
+  const overviewHref = courseSlug ? `/academy/${courseSlug}` : watchBase.replace(/\/watch$/, "");
+  const nextModuleHref = courseSlug
+    ? `/academy/${courseSlug}/watch`
+    : nextModule
+      ? `${watchBase}/${nextModule.slug}`
+      : "#";
+  const finalCompleteHref = courseSlug ? "/academy/dashboard" : overviewHref;
 
   // Load existing progress from Supabase on mount
   useEffect(() => {
@@ -125,7 +140,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
       <div className="course-wrap">
         {/* Sidebar */}
         <aside className="course-sidebar" aria-label="Course navigation">
-          <Link href={`/academy/${courseSlug}`} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.5rem 1.5rem 1rem", fontSize: "0.8rem", fontWeight: 500, color: "var(--muted2)", textDecoration: "none" }}>
+          <Link href={overviewHref} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.5rem 1.5rem 1rem", fontSize: "0.8rem", fontWeight: 500, color: "var(--muted2)", textDecoration: "none" }}>
             ← Course Overview
           </Link>
           <div style={{ padding: "0 1.5rem 1rem", borderBottom: "1px solid var(--border)", marginBottom: "0.75rem" }}>
@@ -223,12 +238,12 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
                   Next Lesson →
                 </button>
               ) : nextModule ? (
-                <Link href={`/academy/${courseSlug}/watch`} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }} onClick={() => toggleComplete(activeLesson)}>
+                <Link href={nextModuleHref} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }} onClick={() => toggleComplete(activeLesson)}>
                   Next Module →
                 </Link>
               ) : (
-                <Link href="/academy/dashboard" className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }}>
-                  Back to Dashboard ✓
+                <Link href={finalCompleteHref} className="btn-primary" style={{ fontSize: "0.85rem", padding: "0.65rem 1.25rem" }}>
+                  {courseSlug ? "Back to Dashboard ✓" : "Course Complete ✓"}
                 </Link>
               )}
             </div>
