@@ -26,9 +26,9 @@ export interface AcademyCourse {
 export const academyCourses: AcademyCourse[] = [
   {
     slug: "kentucky-home-buyers",
-    title: "The Kentucky Home Buyers Course",
+    title: "The Elizabethtown Home Buyers Course",
     city: "Elizabethtown",
-    tagline: "Everything you need to buy a home in Kentucky, from credit score to keys.",
+    tagline: "Everything you need to buy a home in Elizabethtown, from credit score to keys.",
     description: "Six modules, thirty lessons, written specifically for buyers in Elizabethtown and Hardin County. Covers KHC down payment assistance, every Kentucky loan type, Kentucky attorney closings, and real local market data.",
     price: 0,
     tag: "Buyers",
@@ -48,7 +48,7 @@ export const academyCourses: AcademyCourse[] = [
   },
   {
     slug: "kentucky-home-sellers",
-    title: "The Kentucky Home Sellers Course",
+    title: "The Elizabethtown Home Sellers Course",
     city: "Elizabethtown",
     tagline: "Price it right, prepare it well, and sell for more.",
     description: "A complete guide to selling your home in Hardin County — pricing strategy, preparation, disclosures, negotiating offers, and closing day.",
@@ -111,7 +111,7 @@ export const academyCourses: AcademyCourse[] = [
   },
   {
     slug: "kentucky-investor-course",
-    title: "The Kentucky Real Estate Investor Course",
+    title: "The Elizabethtown Real Estate Investor Course",
     city: "Elizabethtown",
     tagline: "Build a rental portfolio in Hardin County, the right way.",
     description: "Cash flow analysis, financing strategy, and how military rotation at Fort Knox creates a uniquely stable rental market.",
