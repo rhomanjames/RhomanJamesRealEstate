@@ -22,6 +22,8 @@ const chapters = [
   { id: "utilities", label: "Utilities & Setup" },
   { id: "pros-cons", label: "Pros & Cons" },
   { id: "next-steps", label: "Next Steps" },
+  { id: "history", label: "History of Elizabethtown" },
+  { id: "taxes", label: "Taxes" },
 ];
 
 export default function MovingGuideClient() {
@@ -1218,6 +1220,117 @@ export default function MovingGuideClient() {
                   Send an Email
                 </a>
               </div>
+            </div>
+          </section>
+
+          {/* HISTORY */}
+          <section id="history" className="chapter">
+            <span className="chapter-tag">Chapter 19</span>
+            <h2 className="chapter-title">The History of Elizabethtown</h2>
+            <div className="chapter-divider" />
+            <p className="guide-p">
+              Long before Elizabethtown had a name, this stretch of land along Severns Valley Creek was contested frontier — the edge of Kentucky's earliest white settlement, still very much Native American hunting ground, and dangerous enough that nobody built here alone. In 1779, three men — Captain Thomas Helm, Colonel Andrew Hynes, and Samuel Haycraft Sr. — each built a small log fort roughly a mile apart, forming a triangle close enough that settlers in any one fort could reasonably expect help from the other two. For a stretch of time, this triangle of forts was genuinely the edge of the known world for European settlers moving into Kentucky, in the area then known simply as Severns Valley.
+            </p>
+
+            <h3 className="guide-h3">The Founding: 1793 and 1797</h3>
+            <p className="guide-p">
+              Hardin County was established in 1792, carved out of Nelson County and named for Colonel John Hardin, a Revolutionary War veteran killed that same year while serving as a peace envoy to Ohio tribes — he never lived to see the county carrying his name. In 1793, Colonel Andrew Hynes surveyed and laid off 30 acres of his own land into lots and streets to create a permanent county seat. It wasn't until July 4, 1797 that the town was legally established and formally named — Hynes named it in honor of his wife, Elizabeth. The original thirty acres were divided into fifty-one lots, and it took nearly a decade for all of them to sell. The first courthouse, a modest log structure, went up in 1795; a proper brick courthouse followed in 1806, and the first brick residence in town was built in 1803 on the same public square that still anchors downtown today.
+            </p>
+
+            <h3 className="guide-h3">The Lincoln Connection</h3>
+            <p className="guide-p">
+              Thomas Lincoln, Abraham Lincoln's father, worked in Elizabethtown as a young man helping build a millrace, and after marrying Nancy Hanks in 1806, the couple actually lived in a log cabin in Elizabethtown itself — their daughter Sarah, Abraham's older sister, was born there in 1807. The family soon moved roughly 13 miles southeast to Sinking Spring Farm near what is now Hodgenville, where Abraham Lincoln was born in 1809. After Nancy Hanks Lincoln died in 1818, Thomas returned to Elizabethtown and remarried — to Sarah Bush Johnston, who became Abraham Lincoln's stepmother and, by most historical accounts, a genuinely formative presence in his childhood.
+            </p>
+
+            <h3 className="guide-h3">The Railroad Era and the Civil War</h3>
+            <p className="guide-p">
+              The Louisville & Nashville Railroad arrived in 1854, transforming Elizabethtown from a regional trading post into a genuine transportation hub. Local resident John L. Helm served as the railroad's first president and, according to local history, insisted the charter require every train to stop in Elizabethtown — a requirement that held for well over a century, until passenger service was discontinued in the 1960s.
+            </p>
+            <p className="guide-p">
+              Because that same railroad served as a critical Union supply line, Elizabethtown became a strategic Civil War target. On December 27, 1862, Confederate General John Hunt Morgan led roughly 3,000 cavalry troops in an attack on the town, occupying high ground in what is now the Elizabethtown City Cemetery and firing more than 100 cannonballs into downtown. One Confederate cannonball became lodged in a building on the public square; when that building later burned in 1887 and was rebuilt, the cannonball was recovered and reinstalled in the wall — where it remains embedded today. Look for it downtown, and you're looking at a genuine piece of that afternoon.
+            </p>
+
+            <h3 className="guide-h3">An Unusual Federal Presence</h3>
+            <p className="guide-p">
+              In one of the stranger footnotes in local history, the 7th Cavalry Regiment — the same unit that would later become infamous under Custer's command at the Battle of the Little Bighorn — was stationed in and around Elizabethtown from 1871 to 1873, commanded by George Armstrong Custer himself, tasked with suppressing local Ku Klux Klan activity and illegal distilling operations during Reconstruction.
+            </p>
+
+            <h3 className="guide-h3">Fort Knox Arrives: 1918</h3>
+            <p className="guide-p">
+              No single event changed Elizabethtown's trajectory more than the arrival of what became Fort Knox. In 1918, with the U.S. newly entered into World War I, the Army leased roughly 20,000 acres near the small farming community of Stithton and began construction on a training center, officially naming it Camp Knox that August after Major General Henry Knox, the Continental Army's Chief of Artillery and the nation's first Secretary of War. By November, the camp's population had already reached over 12,000 — an explosive rate of growth for what had been quiet farmland months earlier.
+            </p>
+            <p className="guide-p">
+              The post's early history was uneven — it was deactivated as a permanent installation in 1922 amid Army-wide budget cuts, and it wasn't until 1931, when the Army selected the site for its new Mechanized Cavalry headquarters, that its future was secured. On January 1, 1932, the post was made permanent and renamed Fort Knox. In 1937, the 1st Cavalry Regiment traded horses for armored vehicles here, and by 1940, Fort Knox was headquarters for the Army's new Armored Force — the beginning of a six-decade identity as the home of U.S. Army armor and cavalry training, through World War II, Korea, and Vietnam, until the Armor School relocated to Fort Benning in 2005. The post's mission shifted rather than diminished, bringing in the Army Human Resources Command, Army Accessions Command, and Army Cadet Command that remain central to Fort Knox today.
+            </p>
+
+            <h3 className="guide-h3">The Gold</h3>
+            <p className="guide-p">
+              The United States Bullion Depository — the fortified vault most people picture when they hear "Fort Knox" — was built in 1936 to securely house a significant portion of the nation's gold reserves amid Depression-era and prewar uncertainty. It's technically adjacent to, but administratively separate from, the military installation itself, operated by the U.S. Mint rather than the Army. During World War II, the vault held more than gold — the original Declaration of Independence, the U.S. Constitution, a copy of the Magna Carta, and the original draft of the Gettysburg Address were all moved there for safekeeping after Pearl Harbor, remaining until after the D-Day landings in 1944.
+            </p>
+
+            <h3 className="guide-h3">The Modern Era</h3>
+            <p className="guide-p">
+              The Kentucky Turnpike — later absorbed into I-65 — connected Elizabethtown directly to Louisville, and the Western Kentucky and Bluegrass Parkways followed, earning Elizabethtown the nickname the Hub City. The 1970s and 1980s brought a deliberate push toward industrial development, including the purchase of roughly 1,600 acres for a regional industrial park that remains part of the local economic base today. Downtown has its own story of decline and revival: the historic State Theatre, which opened in 1942, closed roughly forty years later, and a grassroots restoration effort in the 1990s brought it back to its original Art Deco character. It reopened in 2009 and remains an active downtown venue today.
+            </p>
+
+            <div className="callout">
+              <p>
+                <strong>The honest bottom line:</strong> From three forts built a mile apart for mutual protection, to a downtown theater rebuilt by hand rather than left to disappear, Elizabethtown's history isn't about any single moment — it's about the accumulated weight of two hundred and thirty years of people looking at this specific stretch of Kentucky ground and deciding it was worth staying for.
+              </p>
+            </div>
+          </section>
+
+          {/* TAXES */}
+          <section id="taxes" className="chapter">
+            <span className="chapter-tag">Chapter 20</span>
+            <h2 className="chapter-title">Taxes in Elizabethtown and Hardin County</h2>
+            <div className="chapter-divider" />
+            <p className="guide-p">
+              Taxes are the one category in this guide most likely to shift over time — rates get adjusted, exemption amounts get recalculated, local ordinances get updated. What follows reflects the most current information available as of this writing, sourced directly rather than estimated, but for any major financial decision, verify current rates directly with the Hardin County PVA office, the Hardin County Sheriff's Office, or the City of Elizabethtown Finance Department. The structure below is stable. The specific numbers are the part worth double-checking.
+            </p>
+
+            <h3 className="guide-h3">How Property Taxes Actually Work</h3>
+            <p className="guide-p">
+              Kentucky property is assessed at 100% of fair market value as of January 1 each year by the county Property Valuation Administrator, or PVA. Rather than one single rate, your bill stacks several separate rates set by different taxing authorities — the State of Kentucky, Hardin County, the City of Elizabethtown (if your property is inside city limits), your school district (Hardin County Schools or Elizabethtown Independent), and occasionally smaller special districts like fire protection or library districts. Two homes a few streets apart can carry genuinely different total rates depending on which combination of districts their address falls into.
+            </p>
+            <p className="guide-p">
+              Published effective rates for Hardin County generally fall somewhere between 0.7% and 0.9% of assessed value — below both the Kentucky and national averages either way you look at it. On a home assessed around $220,000 to $250,000, total annual property tax typically lands in the $1,500 to $2,200 range across every layer of the stack. For your exact number on a specific address, the Hardin County PVA office is the most reliable source.
+            </p>
+
+            <h3 className="guide-h3">The Payment Calendar</h3>
+            <p className="guide-p">
+              Rates are typically set over the summer, with bills mailed in the fall, commonly around October 1. Kentucky offers a real incentive to pay early: a 2% discount if paid by November 1. Payments made after that window through year-end are generally due at face value. Unpaid bills face a 5% penalty starting in January, and an additional 10% penalty plus a sheriff's collection fee after January 31 — meaning roughly 20% added on top of the original bill for a bill left unpaid into February. In Hardin County, the City of Elizabethtown has contracted with the Sheriff's Office to handle billing, so city residents receive one consolidated bill covering both city and county portions.
+            </p>
+
+            <h3 className="guide-h3">The Homestead Exemption</h3>
+            <p className="guide-p">
+              If you or a family member is 65 or older, or classified as totally disabled under a qualifying program, Kentucky's homestead exemption reduces your home's assessed value — the number your tax rate is applied to — before your bill is calculated. The specific exemption amount is recalculated by the state every two years for inflation, generally landing somewhere in the $46,000 to $49,000 range. This is not automatic — you have to file an application directly with the Hardin County PVA office, providing documentation of age or disability status.
+            </p>
+
+            <h3 className="guide-h3">Kentucky State Income Tax</h3>
+            <p className="guide-p">
+              Kentucky uses a flat income tax — everyone pays the same percentage regardless of income level, no brackets to climb through. The state has been on a deliberate, legislated path of reducing this rate over recent years through an automatic trigger tied to state revenue thresholds, with further reductions explicitly signaled as a long-term policy goal. Regardless of the specific current rate, several exemptions apply: Social Security benefits are completely exempt at every income level, Kentucky state and local government pensions are fully exempt, and — directly relevant given Fort Knox's presence — active-duty military pay is fully exempt from Kentucky state income tax.
+            </p>
+
+            <h3 className="guide-h3">The Local Occupational Tax</h3>
+            <p className="guide-p">
+              This is the detail that catches the most new residents by surprise. The City of Elizabethtown levies its own occupational license tax on wages earned within city limits — a flat percentage applied to both residents and non-residents working inside the city, meaning it can apply to you even if you live outside Elizabethtown but work at a job located within it. This rate was increased by city council action effective January 1, 2024, as part of a broader budget decision tied to funding growth and services — a good example of why local rates are worth verifying rather than assuming. Hardin County's fiscal court separately imposes its own occupational tax specifically in the unincorporated areas of the county, outside Elizabethtown, Radcliff, and Vine Grove's city limits. If you're comparing take-home pay to wherever you're relocating from, factor in this local layer specifically — it's easy to miss if you're only looking at the state's headline rate.
+            </p>
+
+            <h3 className="guide-h3">Sales Tax and Transfer Tax</h3>
+            <p className="guide-p">
+              Kentucky charges a single, uniform 6% sales tax statewide, and state law does not allow counties or cities to add their own local sales tax on top of it — unlike many states where combined local and state sales tax can push into double digits. Groceries intended for home consumption, and prescription drugs, are exempt entirely. When you buy or sell property, Kentucky's real estate transfer tax is set at $0.50 per $500 of the property's value — about one-tenth of one percent, or roughly $250 on a $250,000 home — typically paid by the seller, though this can be negotiated as part of the purchase agreement.
+            </p>
+
+            <h3 className="guide-h3">Estate and Inheritance Tax</h3>
+            <p className="guide-p">
+              Kentucky has no state estate tax. It does maintain an inheritance tax, but its reach is genuinely narrow — immediate family members, including children, spouses, and siblings, are fully exempt. For the overwhelming majority of typical family situations, this tax simply doesn't come into play.
+            </p>
+
+            <div className="callout">
+              <p>
+                <strong>The honest bottom line:</strong> property taxes here are genuinely favorable compared to most of the country, sales tax is simple and predictable, and the local occupational tax is the detail most newcomers don't expect and should specifically account for when comparing take-home pay to wherever they're coming from.
+              </p>
             </div>
           </section>
 
