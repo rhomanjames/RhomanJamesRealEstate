@@ -116,7 +116,7 @@ export default function HomeValueClient() {
               <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.75, margin: 0, fontStyle: "italic" }}>
                 "The single most common seller mistake in Elizabethtown is pricing based on what they need, not what the market supports. A CMA gives you both — what the market says, and what that means for your specific situation."
               </p>
-              <p style={{ fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", margin: "0.75rem 0 0" }}>— Rhoman James, Elizabethtown Real Estate Professional</p>
+              <p style={{ fontSize: "0.68rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", margin: "0.75rem 0 0" }}>— Rhoman James, Elizabethtown Real Estate Agent</p>
             </div>
           </div>
 
@@ -125,7 +125,7 @@ export default function HomeValueClient() {
             {submitted ? (
               <div style={{ textAlign: "center", padding: "2rem 0" }}>
                 <div style={{ width: 48, height: 48, border: "1px solid var(--blue)", margin: "0 auto 1.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none"><path d="M1 8l6 6L19 1" stroke="#B8976A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  <svg width="20" height="16" viewBox="0 0 20 16" fill="none"><path d="M1 8l6 6L19 1" stroke="var(--blue)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 700 }}>Request Received</p>
                 <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.75, marginBottom: "1.5rem" }}>I will reach out within 24 hours with your home value report. If you need to connect sooner, call or text directly.</p>
