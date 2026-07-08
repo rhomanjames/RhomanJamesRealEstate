@@ -118,6 +118,8 @@ export default function AcademyWatchClient({ slug, courseTitle }: { slug: string
           prevModule={null}
           nextModule={null}
           lessons={currentModule.lessons}
+          courseSlug={slug}
+          userId={user.id}
         />
 
         {/* Override default Link-based module nav with in-page state switching */}
@@ -159,6 +161,8 @@ export default function AcademyWatchClient({ slug, courseTitle }: { slug: string
       prevModule={null}
       nextModule={null}
       lessons={lessons}
+      courseSlug={slug}
+      userId={user.id}
     />
   );
 }
