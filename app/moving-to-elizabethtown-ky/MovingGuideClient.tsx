@@ -143,7 +143,7 @@ export default function MovingGuideClient() {
         }
         .guide-p {
           font-size: 0.97rem;
-          color: #C8C4BC;
+          color: var(--muted);
           line-height: 1.95;
           margin-bottom: 1.25rem;
         }
@@ -215,7 +215,7 @@ export default function MovingGuideClient() {
         }
         .compare-table td {
           padding: 0.85rem 1rem;
-          color: #C8C4BC;
+          color: var(--muted);
           border-bottom: 1px solid var(--border);
           vertical-align: top;
           line-height: 1.6;
@@ -248,7 +248,7 @@ export default function MovingGuideClient() {
         .pro-con-title.con { color: var(--muted); }
         .guide-li {
           font-size: 0.93rem;
-          color: #C8C4BC;
+          color: var(--muted);
           line-height: 1.85;
           margin-bottom: 0.5rem;
           padding-left: 1.25rem;
@@ -341,7 +341,7 @@ export default function MovingGuideClient() {
       }}>
                 <div style={{ maxWidth: 1200, margin: "0 auto", position: "relative" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>
-            The Complete Relocation Guide · Updated 2025
+            The Complete Relocation Guide · Updated July 2026
           </p>
           <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.2rem, 5vw, 4rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.25rem", maxWidth: 700 }}>
             Moving to Elizabethtown, Kentucky
@@ -351,7 +351,7 @@ export default function MovingGuideClient() {
           </p>
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
             <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted2)", display: "flex", alignItems: "center", gap: "0.4rem" }}>
-              <span style={{ color: "var(--blue)" }}>✍</span> Rhoman James, Elizabethtown Real Estate Professional
+              <span style={{ color: "var(--blue)" }}>✍</span> Rhoman James, Elizabethtown Real Estate Agent
             </div>
             <div style={{ fontSize: "0.7rem", color: "var(--muted2)" }}>·</div>
             <div style={{ fontSize: "0.7rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--muted2)" }}>
