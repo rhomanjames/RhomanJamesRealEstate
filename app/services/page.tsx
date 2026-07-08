@@ -60,15 +60,6 @@ export default function ServicesPage() {
           <div
             aria-hidden="true"
             style={{
-              position: "absolute",
-              inset: 0,
-              background: "var(--bg-soft)",
-              pointerEvents: "none",
-            }}
-          />
-          <div
-            aria-hidden="true"
-            style={{
               width: 1,
               height: "3rem",
               background: "var(--blue)",
