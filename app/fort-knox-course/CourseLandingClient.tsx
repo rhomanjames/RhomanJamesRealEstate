@@ -247,7 +247,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>Rhoman James is a real estate professional based in Elizabethtown, Kentucky, serving buyers and sellers throughout Hardin County including the Fort Knox military community. The Fort Knox PCS Bootcamp was built because military families navigating a PCS housing decision face a specific set of challenges — compressed timelines, remote buying, VA loan complexity, and the need to think about the exit strategy before they close — that generic home buying content never addresses. When your orders arrive and you need to move fast, this course gives you the framework to make a confident decision.</p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>
+            <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
             <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.75rem" }}>Send an Email</a>
           </div>
         </div>

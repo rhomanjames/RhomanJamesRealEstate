@@ -2,9 +2,9 @@ export default function Contact() {
   const details = [
     {
       label: "Phone",
-      value: "(502) 264-9376",
+      value: "(859) 536-6009",
       sub: "Available evenings and weekends",
-      href: "tel:+15022649376",
+      href: "tel:+18595366009",
       size: "1.6rem",
     },
     {

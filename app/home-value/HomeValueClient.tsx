@@ -129,7 +129,7 @@ export default function HomeValueClient() {
                 </div>
                 <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.4rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 700 }}>Request Received</p>
                 <p style={{ fontSize: "0.88rem", color: "var(--muted)", lineHeight: 1.75, marginBottom: "1.5rem" }}>I will reach out within 24 hours with your home value report. If you need to connect sooner, call or text directly.</p>
-                <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem", display: "inline-block" }}>Call (502) 264-9376</a>
+                <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem", display: "inline-block" }}>Call (859) 536-6009</a>
               </div>
             ) : (
               <>
@@ -365,7 +365,7 @@ export default function HomeValueClient() {
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "2.5rem" }}>Free. Local. Honest. No obligation, no pressure, and a response within 24 hours.</p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
             <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="btn-primary" style={{ fontSize: "0.78rem", letterSpacing: "0.2em" }}>Get My Free Home Value Report</a>
-            <a href="tel:+15022649376" className="btn-outline" style={{ fontSize: "0.78rem" }}>Call (502) 264-9376</a>
+            <a href="tel:+18595366009" className="btn-outline" style={{ fontSize: "0.78rem" }}>Call (859) 536-6009</a>
           </div>
         </div>
       </section>

@@ -233,7 +233,7 @@ export default function ServicesPage() {
               your situation.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="tel:+15022649376" className="btn-primary">Call (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary">Call (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline">Send an Email</a>
             </div>
           </div>

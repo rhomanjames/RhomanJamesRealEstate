@@ -138,7 +138,7 @@ export const faqData: FAQCategory[] = [
         question: "How do I get started with Rhoman James?",
         anchor: "get-started-rhoman-james",
         answer:
-          "The easiest way is to call or text (502) 264-9376, or send an email to RhomanMJames@gmail.com. We will schedule a free, no-pressure consultation — by phone, video, or in person — where I learn about your goals, timeline, and questions. There is no commitment required at that stage. My job at that first meeting is simply to make sure you have the information you need to make the best decision for your situation.",
+          "The easiest way is to call or text (859) 536-6009, or send an email to RhomanMJames@gmail.com. We will schedule a free, no-pressure consultation — by phone, video, or in person — where I learn about your goals, timeline, and questions. There is no commitment required at that stage. My job at that first meeting is simply to make sure you have the information you need to make the best decision for your situation.",
       },
       {
         question: "Does it cost anything to work with Rhoman James as a buyer?",

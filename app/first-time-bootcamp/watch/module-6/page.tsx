@@ -39,7 +39,7 @@ First-time buyers in Elizabethtown encounter setting up utilities in elizabethto
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding setting up utilities in elizabethtown — the complete list is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -62,7 +62,7 @@ First-time buyers in Elizabethtown encounter how to budget for home maintenance 
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding how to budget for home maintenance in your first year is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -85,7 +85,7 @@ First-time buyers in Elizabethtown encounter how to build equity faster in your 
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding how to build equity faster in your first kentucky home is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -108,7 +108,7 @@ First-time buyers in Elizabethtown encounter when to refinance, when to sell, an
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding when to refinance, when to sell, and when to stay put is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",

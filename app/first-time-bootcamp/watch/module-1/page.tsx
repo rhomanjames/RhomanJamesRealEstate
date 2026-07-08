@@ -39,7 +39,7 @@ First-time buyers in Elizabethtown encounter the rent vs. buy decision — runni
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding the rent vs. buy decision — running your real numbers in kentucky is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -62,7 +62,7 @@ First-time buyers in Elizabethtown encounter how much money do you actually need
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding how much money do you actually need to buy in elizabethtown is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -85,7 +85,7 @@ First-time buyers in Elizabethtown encounter credit score basics — what you ne
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding credit score basics — what you need and how to improve it fast is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -108,7 +108,7 @@ First-time buyers in Elizabethtown encounter your first-time buyer readiness che
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding your first-time buyer readiness checklist is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",

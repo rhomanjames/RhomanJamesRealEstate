@@ -27,7 +27,7 @@ const schema = {
       "@id": "https://rhomanjames.com/#rhomanjames",
       name: "Rhoman James",
       url: "https://rhomanjames.com",
-      telephone: "(502) 264-9376",
+      telephone: "(859) 536-6009",
       email: "RhomanMJames@gmail.com",
       jobTitle: "Real Estate Professional",
       description: "Elizabethtown, Kentucky real estate professional serving buyers and sellers throughout Hardin County.",
@@ -115,7 +115,7 @@ export default function AboutPage() {
                 I chose Elizabethtown because it's the kind of place where people put down roots. It's a community — not just a market. My goal is straightforward: help families find their place here, whether they're relocating to the area, buying their first home, or have been here for years and are ready for something new.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-                <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>
+                <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
                 <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.75rem" }}>Send an Email</a>
               </div>
             </div>
@@ -326,7 +326,7 @@ export default function AboutPage() {
               A free consultation costs nothing and commits you to nothing. If you have questions about the Elizabethtown market, a specific property, or just where to start — reach out.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.78rem" }}>Call (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.78rem" }}>Call (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.78rem" }}>RhomanMJames@gmail.com</a>
             </div>
           </div>

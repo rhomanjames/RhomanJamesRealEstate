@@ -23,7 +23,7 @@ export default function AccessibilityPage() {
             <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", color: "white", marginBottom: "1rem", marginTop: "2rem" }}>Known Limitations</h2>
             <p style={{ marginBottom: "1.5rem" }}>We are continuously improving accessibility. If you encounter a barrier, please contact us and we will address it promptly.</p>
             <h2 style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "1.4rem", color: "white", marginBottom: "1rem", marginTop: "2rem" }}>Contact</h2>
-            <p>Email <a href="mailto:RhomanMJames@gmail.com" style={{ color: "var(--gold)" }}>RhomanMJames@gmail.com</a> or call <a href="tel:+15022649376" style={{ color: "var(--gold)" }}>(502) 264-9376</a>.</p>
+            <p>Email <a href="mailto:RhomanMJames@gmail.com" style={{ color: "var(--gold)" }}>RhomanMJames@gmail.com</a> or call <a href="tel:+18595366009" style={{ color: "var(--gold)" }}>(859) 536-6009</a>.</p>
           </div>
         </div>
       </main>

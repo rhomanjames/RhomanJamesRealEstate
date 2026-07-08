@@ -39,7 +39,7 @@ First-time buyers in Elizabethtown encounter what first-time buyers get wrong ab
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding what first-time buyers get wrong about the home search is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -62,7 +62,7 @@ First-time buyers in Elizabethtown encounter elizabethtown neighborhoods that wo
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding elizabethtown neighborhoods that work for first-time buyer budgets is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -85,7 +85,7 @@ First-time buyers in Elizabethtown encounter your first home does not have to be
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding your first home does not have to be perfect — the starter home strategy is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -108,7 +108,7 @@ First-time buyers in Elizabethtown encounter red flags every first-time buyer sh
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding red flags every first-time buyer should know before they tour is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",

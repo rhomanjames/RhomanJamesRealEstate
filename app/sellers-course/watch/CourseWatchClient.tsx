@@ -138,7 +138,7 @@ export default function CourseWatchClient() {
             <p style={{ fontFamily:"'Inter', system-ui, sans-serif",fontSize:"1.4rem",fontWeight:700,color:"var(--text)",marginBottom:"0.5rem" }}>Questions as you go?</p>
             <p style={{ fontSize:"0.85rem",color:"var(--muted)",marginBottom:"1.25rem" }}>Free consultation, no pressure.</p>
             <div style={{ display:"flex",gap:"1rem",justifyContent:"center",flexWrap:"wrap" }}>
-              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize:"0.75rem" }}>Call (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary" style={{ fontSize:"0.75rem" }}>Call (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize:"0.75rem" }}>Email Rhoman</a>
             </div>
           </div>

@@ -1169,7 +1169,7 @@ export default function MovingGuideClient() {
 
             <h3 className="guide-h3">If You Are Ready to Buy</h3>
             <p className="guide-p">
-              The first step is a free buyer consultation — a 30-minute conversation where we align on your priorities, timeline, and budget, and I answer every question you still have about the market. From there, we connect you with a lender for pre-approval and begin the actual search. Call or text (502) 264-9376, or email RhomanMJames@gmail.com.
+              The first step is a free buyer consultation — a 30-minute conversation where we align on your priorities, timeline, and budget, and I answer every question you still have about the market. From there, we connect you with a lender for pre-approval and begin the actual search. Call or text (859) 536-6009, or email RhomanMJames@gmail.com.
             </p>
 
             <h3 className="guide-h3">If You Are Still Deciding</h3>
@@ -1211,8 +1211,8 @@ export default function MovingGuideClient() {
                 Free consultation — no pressure, no obligation. Call, text, or email and I will give you a straight answer about your specific situation.
               </p>
               <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-                <a href="tel:+15022649376" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", fontWeight: 500 }}>
-                  Call (502) 264-9376
+                <a href="tel:+18595366009" style={{ display: "inline-block", padding: "0.85rem 2.25rem", background: "var(--blue)", color: "var(--bg-soft)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif", fontWeight: 500 }}>
+                  Call (859) 536-6009
                 </a>
                 <a href="mailto:RhomanMJames@gmail.com" style={{ display: "inline-block", padding: "0.85rem 2.25rem", border: "1px solid var(--border)", borderRadius: "16px", color: "var(--blue)", fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", textDecoration: "none", fontFamily: "'Inter', system-ui, sans-serif" }}>
                   Send an Email

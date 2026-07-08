@@ -39,7 +39,7 @@ First-time buyers in Elizabethtown encounter how to make an offer as a first-tim
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding how to make an offer as a first-time buyer in a competitive market is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -62,7 +62,7 @@ First-time buyers in Elizabethtown encounter the contingencies that protect firs
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding the contingencies that protect first-time buyers in kentucky is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -85,7 +85,7 @@ First-time buyers in Elizabethtown encounter earnest money — how much and what
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding earnest money — how much and what happens to it is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -108,7 +108,7 @@ First-time buyers in Elizabethtown encounter what happens after your offer is ac
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding what happens after your offer is accepted is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",

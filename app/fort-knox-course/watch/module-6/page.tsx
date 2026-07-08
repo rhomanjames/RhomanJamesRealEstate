@@ -39,7 +39,7 @@ This is one of the most important decisions military homeowners face at PCS time
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding sell vs. rent when you pcs — the financial comparison is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -62,7 +62,7 @@ Managing a rental property from another duty station is entirely achievable with
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding how to manage a fort knox rental from your next duty station is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -85,7 +85,7 @@ VA loans are assumable — a buyer can take over your loan at your existing inte
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding the va loan assumption strategy for fort knox sellers is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",
@@ -108,7 +108,7 @@ The most financially successful military families use each duty station as an op
 
 **Your next step**
 
-After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (502) 264-9376 — free consultation, no obligation.`,
+After completing this lesson, check off the items in the checklist below and move to the next lesson. Questions? Call or text Rhoman James at (859) 536-6009 — free consultation, no obligation.`,
             callout: `Understanding building a real estate portfolio across multiple duty stations is a critical step in your journey. Take notes and check off each item when you feel confident.`,
             checklist: [
               "I understand the key concepts covered in this lesson",

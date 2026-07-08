@@ -96,7 +96,7 @@ export default function ToolsPage() {
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.8rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.2, marginBottom: "1.25rem" }}>Let's talk through your real situation</h2>
             <p style={{ color: "var(--muted)", fontSize: "0.92rem", lineHeight: 1.8, marginBottom: "2rem" }}>These calculators give you a strong starting point. A free conversation with me gives you a complete picture tailored to Elizabethtown's actual market.</p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-              <a href="tel:+15022649376" className="btn-primary">Call (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary">Call (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline">Send an Email</a>
             </div>
           </div>

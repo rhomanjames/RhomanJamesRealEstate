@@ -256,7 +256,7 @@ export default function CourseLandingClient() {
             Every lesson reflects the Elizabethtown and Hardin County market specifically — the KHC programs available here, the Fort Knox VA loan volume that shapes this market, the Kentucky attorney closing process, and the neighborhoods that work for different budgets and lifestyles. When you are ready to buy, that local knowledge is available to you in a free consultation.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>
+            <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
             <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.75rem" }}>Send an Email</a>
           </div>
         </div>

@@ -254,7 +254,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
             <div style={{ marginTop: "2rem", padding: "1.5rem 2rem", background: "var(--blue-pale)", border: "1px solid var(--border)", borderRadius: "16px", textAlign: "center" }}>
               <p style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.3rem", fontWeight: 700, color: "var(--text)", marginBottom: "0.5rem" }}>Module {moduleNum} Complete! 🎉</p>
               <p style={{ fontSize: "0.9rem", color: "var(--muted)", marginBottom: "1rem" }}>Your progress is saved — come back anytime.</p>
-              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.85rem", display: "inline-block" }}>Call Rhoman — (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.85rem", display: "inline-block" }}>Call Rhoman — (859) 536-6009</a>
             </div>
           )}
 
@@ -265,7 +265,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
               I'm always available for a free, no-pressure conversation about anything covered in this course.
             </p>
             <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.85rem" }}>Call (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.85rem" }}>Call (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.85rem" }}>Email Rhoman</a>
             </div>
           </div>

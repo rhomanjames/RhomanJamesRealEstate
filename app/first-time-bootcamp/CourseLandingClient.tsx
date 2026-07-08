@@ -246,7 +246,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>Rhoman James is a real estate professional based in Elizabethtown, Kentucky, serving buyers and sellers throughout Hardin County. The First-Time Homebuyer Bootcamp was built for the buyers who are ready to own but do not know where to start — and who deserve a clear, honest, Kentucky-specific roadmap rather than generic national content that does not reflect how real estate actually works here. When you finish this bootcamp and are ready to start your home search, a free consultation is available with no obligation.</p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>
+            <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
             <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.75rem" }}>Send an Email</a>
           </div>
         </div>

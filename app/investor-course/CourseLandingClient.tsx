@@ -243,7 +243,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1.5rem" }}>Rhoman James</h2>
           <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>Rhoman James is a real estate professional based in Elizabethtown, Kentucky, serving buyers, sellers, and investors throughout Hardin County. The Kentucky Real Estate Investor Course was built for the investors who recognize that Fort Knox creates a rental market unlike most others — consistent demand, reliable tenants, and price points that produce real cash flow. Whether you are a military family using your VA loan strategically across duty stations or an outside investor looking for a stable market, this course gives you the Hardin County-specific knowledge to make informed decisions.</p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (502) 264-9376</a>
+            <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
             <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.75rem" }}>Send an Email</a>
           </div>
         </div>

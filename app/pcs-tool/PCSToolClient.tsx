@@ -524,7 +524,7 @@ export default function PCSToolClient() {
               This tool gives you the framework. A conversation gives you the specifics — current listings in your range, gate-specific commute advice, and lender recommendations. Free, no pressure, built around your timeline.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "2rem" }}>
-              <a href="tel:+15022649376" className="btn-primary" style={{ fontSize: "0.78rem", letterSpacing: "0.15em" }}>Call or Text (502) 264-9376</a>
+              <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.78rem", letterSpacing: "0.15em" }}>Call or Text (859) 536-6009</a>
               <a href="mailto:RhomanMJames@gmail.com" className="btn-outline" style={{ fontSize: "0.78rem" }}>Email Rhoman</a>
             </div>
             <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap", borderTop: "1px solid var(--border)", paddingTop: "1.5rem" }}>

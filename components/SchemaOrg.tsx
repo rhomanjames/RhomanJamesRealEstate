@@ -8,7 +8,7 @@ export default function SchemaOrg() {
         name: "Rhoman James",
         description: "Real estate professional serving Elizabethtown, KY and Hardin County — specializing in buying, selling, relocation, and investment properties.",
         url: "https://rhomanjames.com",
-        telephone: "(502) 264-9376",
+        telephone: "(859) 536-6009",
         email: "RhomanMJames@gmail.com",
         image: "https://res.cloudinary.com/usamobileappsllc/image/upload/v1782244414/Gemini_Generated_Image_iijo2biijo2biijo_1_mkv0mz.png",
         address: {
