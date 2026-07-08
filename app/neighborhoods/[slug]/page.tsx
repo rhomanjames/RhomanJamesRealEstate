@@ -49,7 +49,7 @@ export default function NeighborhoodPage({
     author: {
       "@type": "Person",
       name: "Rhoman James",
-      jobTitle: "Real Estate Professional",
+      jobTitle: "Real Estate Agent",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Elizabethtown",
