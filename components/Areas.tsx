@@ -50,10 +50,10 @@ export default function Areas() {
               style={{
                 padding: "2rem 1.5rem",
                 textAlign: "center",
-                background: "white",
+                background: "var(--bg-card)",
                 borderRadius: "16px",
                 border: "1px solid var(--border)",
-                boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
+                boxShadow: "none",
               }}
             >
               <div

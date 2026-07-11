@@ -11,7 +11,7 @@ export default function Stats() {
       role="region"
       aria-label="Key stats"
       style={{
-        background: "white",
+        background: "var(--bg)",
         borderTop: "1px solid var(--border)",
         borderBottom: "1px solid var(--border)",
         padding: "3.5rem 3rem",

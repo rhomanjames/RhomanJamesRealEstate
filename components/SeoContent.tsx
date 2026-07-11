@@ -2,7 +2,7 @@ export default function SeoContent() {
   return (
     <section
       aria-labelledby="seo-heading"
-      style={{ padding: "7rem 3rem", background: "white" }}
+      style={{ padding: "7rem 3rem", background: "var(--bg)" }}
     >
       <div style={{ maxWidth: 900, margin: "0 auto" }}>
         <h2

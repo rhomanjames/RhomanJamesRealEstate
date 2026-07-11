@@ -42,7 +42,7 @@ export default function Services() {
     <section
       id="services"
       aria-labelledby="services-heading"
-      style={{ padding: "7rem 3rem", background: "white" }}
+      style={{ padding: "7rem 3rem", background: "var(--bg)" }}
     >
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <span className="section-tag">What I Offer</span>

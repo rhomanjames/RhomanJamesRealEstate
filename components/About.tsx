@@ -42,12 +42,12 @@ export default function About() {
                 position: "relative",
                 overflow: "hidden",
                 borderRadius: "20px",
-                boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.4)",
               }}
             >
               <img
                 src="https://res.cloudinary.com/usamobileappsllc/image/upload/v1782244414/Gemini_Generated_Image_iijo2biijo2biijo_1_mkv0mz.png"
-                alt="Rhoman James, Elizabethtown KY Real Estate Professional"
+                alt="Rhoman James, Elizabethtown KY Real Estate Agent"
                 style={{
                   width: "100%",
                   height: "100%",
@@ -112,10 +112,10 @@ export default function About() {
                   key={v.title}
                   style={{
                     padding: "1.25rem",
-                    background: "white",
+                    background: "var(--bg-card)",
                     borderRadius: "14px",
                     border: "1px solid var(--border)",
-                    boxShadow: "0 1px 2px rgba(11,15,25,0.03)",
+                    boxShadow: "none",
                   }}
                 >
                   <div

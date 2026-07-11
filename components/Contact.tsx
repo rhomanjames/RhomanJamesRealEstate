@@ -27,7 +27,7 @@ export default function Contact() {
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      style={{ padding: "7rem 3rem", background: "white", textAlign: "center" }}
+      style={{ padding: "7rem 3rem", background: "var(--bg)", textAlign: "center" }}
     >
       <style>{`
         .contact-link { color: var(--text); text-decoration: none; display: block; transition: color 0.2s; }
