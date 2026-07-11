@@ -117,7 +117,7 @@ export default function NeighborhoodsPage() {
         </section>
 
         {/* Grid */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div
             style={{
               maxWidth: 1100,

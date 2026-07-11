@@ -42,7 +42,7 @@ function Checklist() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
       {checklist.map((phase, i) => (
-        <div key={phase.phase} style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+        <div key={phase.phase} style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
           <button onClick={() => setOpenPhase(openPhase === i ? null : i)} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1.1rem 1.5rem", background: "none", border: "none", cursor: "pointer", textAlign: "left", gap: "1rem" }}>
             <span style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1rem", color: "var(--text)", fontWeight: 400 }}>{phase.phase}</span>
             <span style={{ color: "var(--blue)", fontSize: "1.1rem", flexShrink: 0, display: "inline-block", transform: openPhase === i ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
@@ -121,7 +121,7 @@ export default function HomeValueClient() {
           </div>
 
           {/* Right — form */}
-          <div style={{ background: "white", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem", position: "sticky", top: "6rem" }}>
+          <div style={{ background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem", position: "sticky", top: "6rem" }}>
             {submitted ? (
               <div style={{ textAlign: "center", padding: "2rem 0" }}>
                 <div style={{ width: 48, height: 48, border: "1px solid var(--blue)", margin: "0 auto 1.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -190,7 +190,7 @@ export default function HomeValueClient() {
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1rem" }}>
             {communities.map((c) => (
-              <a key={c.name} href={c.href} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", textDecoration: "none", display: "block", transition: "border-color 0.2s" }}>
+              <a key={c.name} href={c.href} style={{ padding: "1.75rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", textDecoration: "none", display: "block", transition: "border-color 0.2s" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "0.75rem" }}>
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.2rem", color: "var(--text)", fontWeight: 400, margin: 0 }}>{c.name}</h3>
                   <span style={{ fontSize: "0.68rem", letterSpacing: "0.1em", color: "var(--blue)", whiteSpace: "nowrap", marginLeft: "1rem" }}>{c.range}</span>
@@ -207,7 +207,7 @@ export default function HomeValueClient() {
       </section>
 
       {/* How it works */}
-      <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>The Process</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>How a home valuation works in Elizabethtown</h2>
@@ -218,7 +218,7 @@ export default function HomeValueClient() {
               { step: "03", title: "You Receive Your Report", body: "Within 24 hours you receive a written home value report with comparable sales, a price range, and honest guidance on what would maximize your sale price." },
               { step: "04", title: "We Talk — No Pressure", body: "If you have questions or want to discuss next steps, a free call is available. No obligation to list. No sales pressure. The information is yours regardless." },
             ].map((item) => (
-              <div key={item.step} style={{ padding: "2rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.step} style={{ padding: "2rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2.5rem", fontWeight: 700, color: "var(--border)", lineHeight: 1, marginBottom: "0.75rem" }}>{item.step}</div>
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", marginBottom: "0.65rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -243,7 +243,7 @@ export default function HomeValueClient() {
               { title: "Days on Market", body: "The longer a home has been listed, the more buyers expect a discount. Homes that sell in their first week rarely sell below list price. This is why correct initial pricing is more valuable than starting high and reducing later." },
               { title: "Current Inventory", body: "When fewer homes are available in your price range and neighborhood, buyers have less choice and move faster. When inventory is high, buyers negotiate harder. Knowing current inventory levels is essential context for any pricing decision." },
             ].map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ width: 20, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", marginBottom: "0.65rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -261,7 +261,7 @@ export default function HomeValueClient() {
           <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "44rem", margin: "0 auto 3rem", textAlign: "center" }}>These are the avoidable mistakes that show up repeatedly in the Elizabethtown market. Knowing them before you list is worth real money.</p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.25rem" }}>
             {mistakes.map((item) => (
-              <div key={item.title} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.title} style={{ padding: "2rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
                   <div style={{ width: 20, height: 20, border: "1px solid var(--border)", borderRadius: "16px", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
                     <span style={{ fontSize: "0.7rem", color: "var(--blue)" }}>✕</span>
@@ -276,7 +276,7 @@ export default function HomeValueClient() {
       </section>
 
       {/* Appraisal vs CMA */}
-      <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Common Question</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2rem", textAlign: "center" }}>Home appraisal vs. home valuation — what is the difference?</h2>
@@ -285,7 +285,7 @@ export default function HomeValueClient() {
               { label: "Home Appraisal", note: "An appraisal tells a lender how much they can safely loan — not necessarily what a motivated buyer will pay in today's market.", items: ["Performed by a licensed appraiser", "Required by lenders for purchases and refinances", "Costs $400 to $600", "Takes 1 to 2 weeks", "Produces a formal written report", "Not used as your list price strategy"] },
               { label: "Comparative Market Analysis", note: "A CMA reflects what the market is actually paying right now — which is what you need to price your home to sell.", items: ["Prepared by a local real estate professional", "Used to determine list price strategy", "Completely free", "Ready within 24 hours", "Based on recent comparable sales", "Reflects current buyer demand and competition"] },
             ].map((col) => (
-              <div key={col.label} style={{ padding: "2rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={col.label} style={{ padding: "2rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <p style={{ fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1.25rem" }}>{col.label}</p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", marginBottom: "1.25rem" }}>
                   {col.items.map((item) => (
@@ -313,13 +313,13 @@ export default function HomeValueClient() {
       </section>
 
       {/* FAQ */}
-      <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Frequently Asked Questions</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>Selling a home in Elizabethtown KY</h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
             {faqs.map((faq, i) => (
-              <div key={i} style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={i} style={{ background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "1.25rem 1.5rem", background: "none", border: "none", cursor: "pointer", textAlign: "left", gap: "1rem" }}>
                   <span style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.05rem", color: "var(--text)", fontWeight: 400, lineHeight: 1.4 }}>{faq.q}</span>
                   <span style={{ color: "var(--blue)", fontSize: "1.25rem", flexShrink: 0, display: "inline-block", transform: openFaq === i ? "rotate(45deg)" : "none", transition: "transform 0.2s" }}>+</span>
@@ -347,7 +347,7 @@ export default function HomeValueClient() {
               { href: "/tools/closing-cost-estimator", label: "Closing Cost Estimator", desc: "See every closing cost line item before you commit to anything." },
               { href: "/faq", label: "Home Selling FAQ", desc: "Answers to the most common questions from Elizabethtown sellers." },
             ].map((item) => (
-              <a key={item.href} href={item.href} style={{ padding: "1.5rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", textDecoration: "none", display: "block", textAlign: "left" }}>
+              <a key={item.href} href={item.href} style={{ padding: "1.5rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", textDecoration: "none", display: "block", textAlign: "left" }}>
                 <p style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" }}>{item.label}</p>
                 <p style={{ fontSize: "0.82rem", color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
               </a>
@@ -357,7 +357,7 @@ export default function HomeValueClient() {
       </section>
 
       {/* Bottom CTA */}
-      <section style={{ background: "white", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }}>
             Ready to find out what your<br /><em style={{ color: "var(--blue)", fontStyle: "italic" }}>Elizabethtown home is worth?</em>

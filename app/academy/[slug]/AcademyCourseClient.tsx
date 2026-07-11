@@ -32,7 +32,7 @@ export default function AcademyCourseClient({ course }: { course: AcademyCourse 
       </section>
 
       {/* Body */}
-      <section style={{ padding: "4rem 1.5rem", background: "white" }}>
+      <section style={{ padding: "4rem 1.5rem", background: "var(--bg-card)" }}>
         <div style={{ maxWidth: 800, margin: "0 auto" }}>
           <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.85, marginBottom: "2.5rem" }}>{course.description}</p>
 

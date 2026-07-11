@@ -123,7 +123,7 @@ export default function CourseWatchClient() {
                       <div className={`cb${d?" done":""}`}>
                         {d&&<svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>}
                       </div>
-                      <Link href={`/first-time-bootcamp/watch/${mod.slug}#lesson-${i}`} style={{ fontSize:"0.88rem",color:d?"var(--muted2)":"#C8C4BC",textDecoration:d?"line-through":"none",flex:1 }} onClick={(e)=>e.stopPropagation()}>{lesson}</Link>
+                      <Link href={`/first-time-bootcamp/watch/${mod.slug}#lesson-${i}`} style={{ fontSize:"0.88rem",color:d?"var(--muted2)":"var(--muted)",textDecoration:d?"line-through":"none",flex:1 }} onClick={(e)=>e.stopPropagation()}>{lesson}</Link>
                     </div>
                   );
                 })}

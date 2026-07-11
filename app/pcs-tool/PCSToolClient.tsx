@@ -229,7 +229,7 @@ export default function PCSToolClient() {
               { num: "03", title: "On-Post vs Off-Post Math", desc: "The 3-year equity comparison for your specific rank and BAH rate." },
               { num: "04", title: "Your Timeline Plan", desc: "Exactly what to do and when, based on your report date." },
             ].map((item) => (
-              <div key={item.num} style={{ padding: "1.5rem", background: "var(--text)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.num} style={{ padding: "1.5rem", background: "var(--text)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2rem", fontWeight: 700, color: "var(--border)", lineHeight: 1, marginBottom: "0.5rem" }}>{item.num}</div>
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.05rem", color: "var(--text)", marginBottom: "0.4rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.8rem", color: "var(--muted)", lineHeight: 1.7, margin: 0 }}>{item.desc}</p>
@@ -476,13 +476,13 @@ export default function PCSToolClient() {
           <div style={{ background: "var(--text)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem", marginBottom: "1.5rem" }}>
             <p style={{ fontSize: "0.65rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1.5rem" }}>03 · On-Post vs. Off-Post — Your 3-Year Math</p>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginBottom: "1.5rem" }}>
-              <div style={{ padding: "1.5rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div style={{ padding: "1.5rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <p style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "1rem" }}>On-Post (3 Years)</p>
                 <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2rem", fontWeight: 700, color: "var(--muted2)", lineHeight: 1, marginBottom: "0.4rem" }}>$0</div>
                 <p style={{ fontSize: "0.75rem", color: "var(--muted2)", margin: 0 }}>Equity accumulated</p>
                 <p style={{ fontSize: "0.78rem", color: "var(--muted)", marginTop: "0.75rem", lineHeight: 1.6 }}>${(bah * 36).toLocaleString()} of BAH goes to the housing office over 3 years. None of it comes back.</p>
               </div>
-              <div style={{ padding: "1.5rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div style={{ padding: "1.5rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <p style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Buying Off-Post (3 Years)</p>
                 <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2rem", fontWeight: 700, color: "var(--blue)", lineHeight: 1, marginBottom: "0.4rem" }}>${Math.round((comfortPrice * 0.045 + comfortPrice * 0.03 * 3) / 1000)}K+</div>
                 <p style={{ fontSize: "0.75rem", color: "var(--muted)", margin: 0 }}>Estimated equity built</p>

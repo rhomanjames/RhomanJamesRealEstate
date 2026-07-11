@@ -83,7 +83,7 @@ export default function ClosingCostEstimator() {
                 )}
               </>
             )}
-            <div style={{ marginTop: "2rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "2rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 Estimates based on typical Hardin County, KY closing costs. Actual costs vary by lender, title company, property, and negotiation. Always review your Loan Estimate and Closing Disclosure carefully.
               </p>

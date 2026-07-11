@@ -220,7 +220,7 @@ export default function NeighborhoodPage({
         </div>
 
         {/* Overview */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <span
               style={{
@@ -340,7 +340,7 @@ export default function NeighborhoodPage({
         </section>
 
         {/* Who it's for + Real Talk */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div
             style={{
               maxWidth: 1000,
@@ -564,7 +564,7 @@ export default function NeighborhoodPage({
         {/* CTA */}
         <section
           style={{
-            background: "white",
+            background: "var(--bg-card)",
             padding: "7rem 3rem",
             textAlign: "center",
             borderTop: "1px solid var(--border)",

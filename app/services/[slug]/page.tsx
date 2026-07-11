@@ -155,7 +155,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Intro */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem" }}>
               Overview
@@ -249,7 +249,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* Benefits */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
             <span style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", display: "block", marginBottom: "1rem", textAlign: "center" }}>
               Why it matters
@@ -355,7 +355,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
         </section>
 
         {/* CTA */}
-        <section style={{ background: "white", padding: "7rem 3rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
+        <section style={{ background: "var(--bg-card)", padding: "7rem 3rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 600, margin: "0 auto" }}>
             <p style={{ fontSize: "0.72rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1.5rem" }}>
               {s.cta}

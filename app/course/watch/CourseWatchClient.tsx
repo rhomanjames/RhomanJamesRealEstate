@@ -93,7 +93,7 @@ export default function CourseWatchClient() {
       <Navbar />
       <main style={{ background: "var(--bg-soft)", minHeight: "100vh", paddingTop: "5.5rem" }}>
         <style>{`
-          .module-card { background: white; border: 1px solid var(--border); margin-bottom: 1.25rem; transition: border-color 0.2s; }
+          .module-card { background: var(--bg-card); border: 1px solid var(--border); margin-bottom: 1.25rem; transition: border-color 0.2s; }
           .module-card:hover { border-color: var(--border); }
           .module-header { display: flex; align-items: center; gap: 1.25rem; padding: 1.5rem 2rem; cursor: pointer; }
           .lesson-row { display: flex; align-items: center; gap: 1rem; padding: 0.85rem 2rem 0.85rem 4rem; border-top: 1px solid var(--border); cursor: pointer; transition: background 0.15s; }

@@ -75,7 +75,7 @@ export default function ToolsPage() {
                     <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "2.5rem", fontWeight: 700, color: "var(--border)", lineHeight: 1 }} aria-hidden="true">{t.num}</div>
                     <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap", justifyContent: "flex-end" }}>
                       {t.tags.map((tag) => (
-                        <span key={tag} style={{ fontSize: "0.58rem", letterSpacing: "0.15em", textTransform: "uppercase", padding: "0.25rem 0.6rem", background: tagColors[tag] || "var(--border)", color: "var(--blue)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>{tag}</span>
+                        <span key={tag} style={{ fontSize: "0.58rem", letterSpacing: "0.15em", textTransform: "uppercase", padding: "0.25rem 0.6rem", background: tagColors[tag] || "var(--border)", color: "var(--blue)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>{tag}</span>
                       ))}
                     </div>
                   </div>

@@ -26,7 +26,7 @@ export default function AcademyLoginPage() {
     <>
       <Navbar />
       <main style={{ paddingTop: "8rem", paddingBottom: "6rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", background: "var(--bg-soft)", minHeight: "80vh" }}>
-        <div style={{ maxWidth: 420, margin: "0 auto", background: "white", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem" }}>
+        <div style={{ maxWidth: 420, margin: "0 auto", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem" }}>
           <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.6rem", fontWeight: 800, color: "var(--text)", marginBottom: "0.5rem", textAlign: "center" }}>
             Welcome back
           </h1>

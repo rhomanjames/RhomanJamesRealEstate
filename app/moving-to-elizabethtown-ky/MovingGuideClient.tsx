@@ -286,7 +286,7 @@ export default function MovingGuideClient() {
           margin-bottom: 0.85rem;
         }
         .cta-box {
-          background: white;
+          background: var(--bg-card);
           border: 1px solid var(--border);
           padding: 2.5rem;
           text-align: center;
@@ -307,14 +307,14 @@ export default function MovingGuideClient() {
           text-transform: uppercase;
           cursor: pointer;
           font-family: 'Inter', system-ui, sans-serif;
-          box-shadow: 0 1px 2px rgba(11,15,25,0.03);
+          box-shadow: none;
         }
         .mobile-toc-drawer {
           display: none;
           position: fixed;
           bottom: 0; left: 0; right: 0;
           z-index: 89;
-          background: white;
+          background: var(--bg-card);
           border-top: 2px solid var(--blue);
           padding: 1.5rem;
           max-height: 60vh;

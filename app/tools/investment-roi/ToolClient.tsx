@@ -88,7 +88,7 @@ export default function InvestmentROICalculator() {
               <MetricCard label="Gross Yield" value={fmtPct(grossYield)} />
             </div>
 
-            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", margin: "1.25rem 0 0.75rem" }}>{holdYears}-Year Total Return</div>
+            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", margin: "1.25rem 0 0.75rem" }}>{holdYears}-Year Total Return</div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem", marginBottom: "1rem" }}>
               <MiniResult label="Cash Flow Total" value={fmt(cashFlow * 12 * holdYears)} />
               <MiniResult label="Appreciation" value={fmt(appreciation$)} />
@@ -96,11 +96,11 @@ export default function InvestmentROICalculator() {
               <MiniResult label="Total Return" value={fmt(totalReturn)} highlight />
             </div>
             <div style={{ padding: "1.25rem", background: "rgba(184,151,106,0.06)", border: "1px solid rgba(184,151,106,0.25)", textAlign: "center" }}>
-              <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.4rem" }}>Total ROI on Investment</div>
+              <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.4rem" }}>Total ROI on Investment</div>
               <div style={{ fontFamily: "'Cormorant Garamond', Georgia, serif", fontSize: "2.5rem", fontWeight: 300, color: "white" }}>{fmtPct(totalROI)}</div>
               <div style={{ fontSize: "0.72rem", color: "var(--muted)", marginTop: "0.3rem" }}>on {fmt(totalInvested)} invested over {holdYears}yr</div>
             </div>
-            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--gold)", margin: "1.25rem 0 0.75rem" }}>Annual Income Statement</div>
+            <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", margin: "1.25rem 0 0.75rem" }}>Annual Income Statement</div>
             {[
               { label: "Gross Rental Income", value: fmt(grossRentAnnual) },
               { label: `Vacancy (${vacancy}%)`, value: `-${fmt(grossRentAnnual * vacancy / 100)}` },
@@ -110,7 +110,7 @@ export default function InvestmentROICalculator() {
               { label: "Property Tax", value: `-${fmt(taxes)}` },
               { label: "Net Operating Income", value: fmt(noi), bold: true },
               { label: "Mortgage (P&I)", value: `-${fmt(mortgage * 12)}` },
-              { label: "Annual Cash Flow", value: fmt(cashFlow * 12), bold: true, color: cashFlow > 0 ? "var(--gold)" : "#ff8080" },
+              { label: "Annual Cash Flow", value: fmt(cashFlow * 12), bold: true, color: cashFlow > 0 ? "var(--blue)" : "#ff8080" },
             ].map((item) => (
               <div key={item.label} style={{ display: "flex", justifyContent: "space-between", padding: "0.5rem 0", borderBottom: "1px solid rgba(184,151,106,0.08)" }}>
                 <span style={{ fontSize: "0.8rem", color: item.bold ? "var(--off-white)" : "var(--muted)", fontWeight: item.bold ? 500 : 300 }}>{item.label}</span>
@@ -130,9 +130,9 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
     <div style={{ marginTop: "1.1rem" }}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", marginBottom: "0.35rem" }}>
         <label style={{ fontSize: "0.65rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted2)" }}>{label}</label>
-        <span style={{ fontSize: "0.82rem", color: "var(--gold)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
+        <span style={{ fontSize: "0.82rem", color: "var(--blue)", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{display}</span>
       </div>
-      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--gold)", cursor: "pointer" }} />
+      <input type="range" min={min} max={max} step={step} value={value} onChange={e => onChange(Number(e.target.value))} style={{ width: "100%", accentColor: "var(--blue)", cursor: "pointer" }} />
     </div>
   );
 }
@@ -140,7 +140,7 @@ function MetricCard({ label, value, highlight, good }: any) {
   return (
     <div style={{ padding: "1rem", background: highlight ? "rgba(184,151,106,0.08)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "rgba(184,151,106,0.3)" : "rgba(184,151,106,0.1)"}`, textAlign: "center" }}>
       <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.4rem" }}>{label}</div>
-      <div style={{ fontSize: "1.3rem", fontFamily: "'Cormorant Garamond', Georgia, serif", color: good === false ? "#ff8080" : highlight ? "var(--gold)" : "white" }}>{value}</div>
+      <div style={{ fontSize: "1.3rem", fontFamily: "'Cormorant Garamond', Georgia, serif", color: good === false ? "#ff8080" : highlight ? "var(--blue)" : "white" }}>{value}</div>
     </div>
   );
 }
@@ -148,8 +148,8 @@ function MiniResult({ label, value, highlight }: any) {
   return (
     <div style={{ padding: "0.75rem", background: highlight ? "rgba(184,151,106,0.08)" : "rgba(255,255,255,0.03)", border: `1px solid ${highlight ? "rgba(184,151,106,0.3)" : "rgba(184,151,106,0.1)"}` }}>
       <div style={{ fontSize: "0.6rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.2rem" }}>{label}</div>
-      <div style={{ fontSize: "0.9rem", color: highlight ? "var(--gold)" : "white", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{value}</div>
+      <div style={{ fontSize: "0.9rem", color: highlight ? "var(--blue)" : "white", fontFamily: "'Cormorant Garamond', Georgia, serif" }}>{value}</div>
     </div>
   );
 }
-const sectionLabel: React.CSSProperties = { fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--gold)", marginTop: "1.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid rgba(184,151,106,0.15)" };
+const sectionLabel: React.CSSProperties = { fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginTop: "1.75rem", paddingBottom: "0.5rem", borderBottom: "1px solid rgba(184,151,106,0.15)" };

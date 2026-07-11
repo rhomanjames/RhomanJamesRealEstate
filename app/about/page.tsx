@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 export const dynamic = "force-static";
 
 export const metadata: Metadata = {
-  title: "About Rhoman James | Elizabethtown KY Real Estate Professional",
+  title: "About Rhoman James | Elizabethtown KY Real Estate Agent",
   description: "Rhoman James is an Elizabethtown, Kentucky real estate professional serving buyers and sellers throughout Hardin County. Grew up in Kentucky, Centre College and EKU educated, family oriented, and committed to helping people find their place in Elizabethtown.",
   keywords: "Rhoman James Elizabethtown KY, Elizabethtown Kentucky real estate professional, Hardin County real estate, buy home Elizabethtown KY, sell home Elizabethtown KY, Fort Knox real estate, first time home buyer Elizabethtown, move to Elizabethtown Kentucky",
   metadataBase: new URL("https://rhomanjames.com"),
@@ -29,7 +29,7 @@ const schema = {
       url: "https://rhomanjames.com",
       telephone: "(859) 536-6009",
       email: "RhomanMJames@gmail.com",
-      jobTitle: "Real Estate Professional",
+      jobTitle: "Real Estate Agent",
       description: "Elizabethtown, Kentucky real estate professional serving buyers and sellers throughout Hardin County.",
       alumniOf: [
         { "@type": "CollegeOrUniversity", name: "Centre College", address: { "@type": "PostalAddress", addressLocality: "Danville", addressRegion: "KY" } },
@@ -85,10 +85,10 @@ export default function AboutPage() {
 
             {/* Photo */}
             <div style={{ position: "relative" }}>
-              <div style={{ border: "1px solid var(--border)", borderRadius: "16px", padding: "0.75rem", background: "white" }}>
+              <div style={{ border: "1px solid var(--border)", borderRadius: "16px", padding: "0.75rem", background: "var(--bg-card)" }}>
                 <img
                   src="https://res.cloudinary.com/usamobileappsllc/image/upload/v1782244414/Gemini_Generated_Image_iijo2biijo2biijo_1_mkv0mz.png"
-                  alt="Rhoman James — Elizabethtown KY Real Estate Professional"
+                  alt="Rhoman James — Elizabethtown KY Real Estate Agent"
                   style={{ width: "100%", display: "block", objectFit: "cover", aspectRatio: "4/5" }}
                 />
               </div>
@@ -105,8 +105,11 @@ export default function AboutPage() {
               <h1 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2.5rem, 5vw, 4rem)", fontWeight: 700, color: "var(--text)", lineHeight: 1.1, marginBottom: "1.5rem" }}>
                 Rhoman<br />James
               </h1>
-              <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "1.75rem" }}>
-                Real Estate Professional · Hardin County, KY
+              <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.5rem" }}>
+                Real Estate Agent · Hardin County, KY
+              </p>
+              <p style={{ fontSize: "0.78rem", color: "var(--muted2)", marginBottom: "1.75rem" }}>
+                Real Broker, LLC · Kentucky License #310389
               </p>
               <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>
                 I grew up in Lexington, Kentucky, studied psychology at Centre College, and went on to earn a master's degree in psychology from Eastern Kentucky University. That background shapes how I work — understanding what people need, what they're worried about, and how to communicate clearly in high-stakes situations.
@@ -141,7 +144,7 @@ export default function AboutPage() {
         </section>
 
         {/* Story */}
-        <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Background</p>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", lineHeight: 1.3 }}>
@@ -199,7 +202,7 @@ export default function AboutPage() {
                   link: "Free Home Sellers Course",
                 },
               ].map((item) => (
-                <div key={item.title} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+                <div key={item.title} style={{ padding: "2rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                   <div style={{ width: 20, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.1rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400, lineHeight: 1.4 }}>{item.title}</h3>
                   <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, marginBottom: "1.25rem" }}>{item.body}</p>
@@ -211,7 +214,7 @@ export default function AboutPage() {
         </section>
 
         {/* Area coverage */}
-        <section style={{ background: "white", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Service Area</p>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", textAlign: "center" }}>
@@ -259,7 +262,7 @@ export default function AboutPage() {
                   detail: "A rigorous Kentucky liberal arts education that built the foundation for understanding people — how they think, what they value, and how they make decisions under pressure.",
                 },
               ].map((ed) => (
-                <div key={ed.school} style={{ padding: "2rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+                <div key={ed.school} style={{ padding: "2rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                   <p style={{ fontSize: "0.62rem", letterSpacing: "0.25em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>{ed.degree}</p>
                   <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.3rem", color: "var(--text)", marginBottom: "0.25rem", fontWeight: 400 }}>{ed.school}</h3>
                   <p style={{ fontSize: "0.72rem", color: "var(--muted2)", marginBottom: "1rem", letterSpacing: "0.1em" }}>{ed.location}</p>
@@ -306,7 +309,7 @@ export default function AboutPage() {
                 { href: "/neighborhoods", label: "Neighborhood Guides" },
                 { href: "/faq", label: "Home Buying FAQ" },
               ].map((r) => (
-                <a key={r.href} href={r.href} style={{ padding: "1rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>
+                <a key={r.href} href={r.href} style={{ padding: "1rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>
                   {r.label}
                 </a>
               ))}
@@ -315,7 +318,7 @@ export default function AboutPage() {
         </section>
 
         {/* Contact CTA */}
-        <section style={{ background: "white", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
           <div style={{ maxWidth: 580, margin: "0 auto" }}>
             <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }}>

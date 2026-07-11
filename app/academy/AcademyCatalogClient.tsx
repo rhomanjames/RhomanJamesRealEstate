@@ -60,7 +60,7 @@ export default function AcademyCatalogClient() {
       </section>
 
       {/* ══════════ TRUST / STATS STRIP ══════════ */}
-      <section style={{ background: "white", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "2.5rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", padding: "2.5rem 1.5rem" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", display: "flex", justifyContent: "center", gap: "3rem", flexWrap: "wrap", textAlign: "center" }}>
           {[
             { num: `${academyCourses.length}+`, label: "Courses" },
@@ -77,7 +77,7 @@ export default function AcademyCatalogClient() {
       </section>
 
       {/* ══════════ VALUE PROPS ══════════ */}
-      <section style={{ padding: "5rem 1.5rem", background: "white" }}>
+      <section style={{ padding: "5rem 1.5rem", background: "var(--bg-card)" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
             {[
@@ -112,7 +112,7 @@ export default function AcademyCatalogClient() {
               style={{
                 fontSize: "0.82rem", fontWeight: 600, padding: "0.5rem 1.1rem", borderRadius: "999px", cursor: "pointer",
                 border: categoryFilter === null ? "1px solid var(--blue)" : "1px solid var(--border)",
-                background: categoryFilter === null ? "var(--blue-pale)" : "white",
+                background: categoryFilter === null ? "var(--blue-pale)" : "var(--bg-card)",
                 color: categoryFilter === null ? "var(--blue)" : "var(--muted)",
               }}
             >
@@ -125,7 +125,7 @@ export default function AcademyCatalogClient() {
                 style={{
                   fontSize: "0.82rem", fontWeight: 600, padding: "0.5rem 1.1rem", borderRadius: "999px", cursor: "pointer",
                   border: categoryFilter === category ? "1px solid var(--blue)" : "1px solid var(--border)",
-                  background: categoryFilter === category ? "var(--blue-pale)" : "white",
+                  background: categoryFilter === category ? "var(--blue-pale)" : "var(--bg-card)",
                   color: categoryFilter === category ? "var(--blue)" : "var(--muted)",
                 }}
               >
@@ -137,7 +137,7 @@ export default function AcademyCatalogClient() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
             {filteredCourses.map((course) => (
               <a key={course.slug} href={`/academy/${course.slug}`} style={{ textDecoration: "none" }}>
-                <article className="service-card" style={{ padding: "2rem", height: "100%", display: "flex", flexDirection: "column", background: "white" }}>
+                <article className="service-card" style={{ padding: "2rem", height: "100%", display: "flex", flexDirection: "column", background: "var(--bg-card)" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "1rem" }}>
                     <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--blue)", background: "var(--blue-pale)", padding: "0.3rem 0.75rem", borderRadius: "999px" }}>{course.tag}</span>
                     <span style={{ fontSize: "0.72rem", fontWeight: 700, color: "var(--muted)" }}>Free</span>
@@ -163,7 +163,7 @@ export default function AcademyCatalogClient() {
       </section>
 
       {/* ══════════ FAQ ══════════ */}
-      <section style={{ padding: "5rem 1.5rem", background: "white" }}>
+      <section style={{ padding: "5rem 1.5rem", background: "var(--bg-card)" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 4vw, 2.2rem)", fontWeight: 800, color: "var(--text)", marginBottom: "2rem", textAlign: "center" }}>
             Frequently asked questions

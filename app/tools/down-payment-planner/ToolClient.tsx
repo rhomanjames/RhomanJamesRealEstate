@@ -43,7 +43,7 @@ export default function DownPaymentPlanner() {
             <SliderInput label="Monthly Savings Contribution" value={monthlySavings} min={100} max={5000} step={50} onChange={setMonthlySavings} display={fmt(monthlySavings) + "/mo"} />
             <SliderInput label="Annual Return on Savings" value={returns} min={0} max={8} step={0.25} onChange={setReturns} display={`${returns.toFixed(2)}%`} note="HYSA, money market, or CD rate" />
 
-            <div style={{ marginTop: "2rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "2rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <div style={{ fontSize: "0.68rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.75rem" }}>Zero Down Options</div>
               <p style={{ fontSize: "0.78rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 <strong style={{ color: "var(--text)" }}>VA Loan:</strong> Zero down for eligible veterans and active military near Fort Knox.<br />
@@ -80,7 +80,7 @@ export default function DownPaymentPlanner() {
                 </div>
               );
             })}
-            <div style={{ marginTop: "1rem", padding: "1rem", background: "rgba(255,255,255,0.02)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "1rem", padding: "1rem", background: "rgba(255,255,255,0.02)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.5rem" }}>Your Savings Summary</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.5rem" }}>
                 <div><div style={{ fontSize: "0.65rem", color: "var(--muted2)" }}>Currently saved</div><div style={{ fontSize: "0.95rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{fmt(saved)}</div></div>

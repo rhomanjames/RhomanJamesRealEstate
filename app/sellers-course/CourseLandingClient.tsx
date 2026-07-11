@@ -72,7 +72,7 @@ export default function CourseLandingClient() {
         <div style={{ display: "flex", justifyContent: "center", marginBottom: "2.5rem" }}>
           <ShareButton />
         </div>
-        <div style={{ maxWidth: 480, margin: "0 auto", background: "white", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem" }}>
+        <div style={{ maxWidth: 480, margin: "0 auto", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", padding: "2.5rem" }}>
           <p style={{ fontSize: "0.72rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" }}>Start Learning Free</p>
           <p style={{ fontSize: "0.82rem", color: "var(--muted)", marginBottom: "1.5rem", lineHeight: 1.6 }}>Enter your name and email to unlock all modules instantly. No waiting. No approval.</p>
           <form onSubmit={async (e) => { e.preventDefault(); const form = e.currentTarget; const data = new FormData(form); try { await fetch("https://formspree.io/f/xpqgrodo", { method: "POST", body: data, headers: { Accept: "application/json" } }); } catch(err) {} window.location.href = "/sellers-course/watch"; }} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
@@ -140,7 +140,7 @@ export default function CourseLandingClient() {
       { title: "Pricing That Actually Works", body: "Overpricing is the single most common seller mistake in Elizabethtown. Module 3 explains exactly why it backfires, how to price based on what comps actually support, and how to read the market when it tells you something." },
       { title: "VA Loan Offers Explained", body: "Fort Knox drives a significant portion of Elizabethtown buyer demand. Module 5 explains exactly what a VA loan offer means for you as a seller, why the concerns about VA loans are largely outdated, and how to evaluate VA offers against conventional ones." },
       { title: "Kentucky-Specific Disclosures", body: "Kentucky has specific seller disclosure requirements that differ from national standards. Module 2 walks through exactly what you are required to disclose, what happens if you do not, and how to protect yourself legally." }].map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ width: 24, height: 1, background: "var(--blue)", marginBottom: "1rem" }} />
                 <h3 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.15rem", color: "var(--text)", marginBottom: "0.75rem", fontWeight: 400 }}>{item.title}</h3>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.8, margin: 0 }}>{item.body}</p>
@@ -150,7 +150,7 @@ export default function CourseLandingClient() {
         </div>
       </section>
 
-      <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Course Curriculum</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "0.75rem", textAlign: "center" }}>{modules.length} modules. Everything you need.</h2>
@@ -174,7 +174,7 @@ export default function CourseLandingClient() {
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", textAlign: "center" }}>Built for you</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
             {audiences.map((item) => (
-              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div key={item.title} style={{ padding: "1.75rem", background: "var(--bg-soft)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ fontSize: "0.72rem", letterSpacing: "0.15em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.6rem" }}>{item.title}</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--muted)", lineHeight: 1.75, margin: 0 }}>{item.desc}</p>
               </div>
@@ -192,7 +192,7 @@ export default function CourseLandingClient() {
             { href: "/tools/mortgage-calculator", label: "Mortgage Calculator" },
             { href: "/tools/closing-cost-estimator", label: "Closing Cost Estimator" },
             { href: "/tools/affordability-calculator", label: "Affordability Calculator" }].map((tool) => (
-              <a key={tool.href} href={tool.href} style={{ padding: "1rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>{tool.label}</a>
+              <a key={tool.href} href={tool.href} style={{ padding: "1rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px", fontSize: "0.75rem", color: "var(--muted)", textDecoration: "none", letterSpacing: "0.1em", textTransform: "uppercase", display: "block" }}>{tool.label}</a>
             ))}
           </div>
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
@@ -205,7 +205,7 @@ export default function CourseLandingClient() {
         </div>
       </section>
 
-      <section style={{ background: "white", padding: "6rem 1.5rem" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem" }}>
         <div style={{ maxWidth: 780, margin: "0 auto" }}>
           <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Frequently Asked Questions</p>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3.5vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>Everything you want to know before you start</h2>
@@ -240,7 +240,7 @@ export default function CourseLandingClient() {
         </div>
       </section>
 
-      <section style={{ background: "white", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
+      <section style={{ background: "var(--bg-card)", padding: "6rem 1.5rem", textAlign: "center", borderTop: "1px solid var(--border)" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
           <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 3rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }} dangerouslySetInnerHTML={{ __html: `Ready to sell for<br /><em style="font-style:italic;color:var(--blue)">top dollar in Kentucky?</em>` }} />
           <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "2rem" }}>Free. Self-paced. Built specifically for Kentucky. Start in the next two minutes.</p>

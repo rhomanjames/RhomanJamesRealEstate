@@ -82,7 +82,7 @@ export default function VALoanCalculator() {
               <MiniResult label="Total Interest" value={fmt(totalInterest)} />
               <MiniResult label="Total Paid" value={fmt(payment * n)} />
             </div>
-            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <p style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 The VA funding fee is financed into the loan amount. Veterans with a service-connected disability rating of 10% or higher are exempt. Rates shown are for regular military — Reserves/National Guard rates differ slightly.
               </p>

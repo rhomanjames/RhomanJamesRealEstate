@@ -143,7 +143,7 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Categories */}
-        <section style={{ background: "white", padding: "6rem 3rem" }}>
+        <section style={{ background: "var(--bg-card)", padding: "6rem 3rem" }}>
           <div style={{ maxWidth: 860, margin: "0 auto" }}>
             {allFaqData.map((cat, i) => (
               <div

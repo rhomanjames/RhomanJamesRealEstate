@@ -90,7 +90,7 @@ export default function AcademyWatchClient({ slug, courseTitle }: { slug: string
     return (
       <>
         {/* Module switcher tabs */}
-        <div style={{ background: "white", borderBottom: "1px solid var(--border)", paddingTop: "5.5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", position: "sticky", top: 0, zIndex: 50 }}>
+        <div style={{ background: "var(--bg-card)", borderBottom: "1px solid var(--border)", paddingTop: "5.5rem", paddingLeft: "1.5rem", paddingRight: "1.5rem", position: "sticky", top: 0, zIndex: 50 }}>
           <div style={{ maxWidth: 1100, margin: "0 auto", display: "flex", gap: "0.5rem", overflowX: "auto", paddingBottom: "0.75rem" }}>
             {modules.map((mod, i) => (
               <button
@@ -99,7 +99,7 @@ export default function AcademyWatchClient({ slug, courseTitle }: { slug: string
                 style={{
                   flexShrink: 0, padding: "0.6rem 1.1rem", borderRadius: "10px", cursor: "pointer",
                   border: i === activeModuleIndex ? "1px solid var(--blue)" : "1px solid var(--border)",
-                  background: i === activeModuleIndex ? "var(--blue-pale)" : "white",
+                  background: i === activeModuleIndex ? "var(--blue-pale)" : "var(--bg-card)",
                   color: i === activeModuleIndex ? "var(--blue)" : "var(--muted)",
                   fontSize: "0.82rem", fontWeight: 600, whiteSpace: "nowrap",
                 }}

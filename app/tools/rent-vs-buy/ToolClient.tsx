@@ -78,12 +78,12 @@ export default function RentVsBuyCalculator() {
               {savings > 0 && <div style={{ fontSize: "0.85rem", color: "var(--muted)", marginTop: "0.5rem" }}>by <span style={{ color: "var(--blue)" }}>{fmt(savings)}</span> net</div>}
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-              <div style={{ padding: "1.25rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div style={{ padding: "1.25rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.75rem" }}>Renting {years}yr total</div>
                 <div style={{ fontSize: "1.6rem", fontFamily: "'Inter', system-ui, sans-serif", color: "var(--text)", marginBottom: "0.5rem" }}>{fmt(totalRent)}</div>
                 <div style={{ fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.6 }}>Equity at end: $0</div>
               </div>
-              <div style={{ padding: "1.25rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+              <div style={{ padding: "1.25rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
                 <div style={{ fontSize: "0.6rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.75rem" }}>Buying {years}yr net cost</div>
                 <div style={{ fontSize: "1.6rem", fontFamily: "'Inter', system-ui, sans-serif", color: "var(--text)", marginBottom: "0.5rem" }}>{fmt(netCostBuy)}</div>
                 <div style={{ fontSize: "0.72rem", color: "var(--muted)", lineHeight: 1.6 }}>After appreciation & equity</div>
@@ -119,7 +119,7 @@ function SliderInput({ label, value, min, max, step, onChange, display }: any) {
 }
 function MiniResult({ label, value }: any) {
   return (
-    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
       <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.25rem" }}>{label}</div>
       <div style={{ fontSize: "0.95rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{value}</div>
     </div>

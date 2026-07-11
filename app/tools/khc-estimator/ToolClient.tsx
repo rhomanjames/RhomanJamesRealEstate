@@ -68,7 +68,7 @@ export default function KHCEstimator() {
               <label htmlFor="firsttime" style={{ ...labelStyle, cursor: "pointer" }}>First-time homebuyer (haven't owned in 3+ years)</label>
             </div>
 
-            <div style={{ marginTop: "1.5rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "1.5rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <div style={{ fontSize: "0.65rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "0.5rem" }}>KHC Hardin County Limits</div>
               <div style={{ fontSize: "0.78rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 Income limit: {fmt(hardinIncomeLimit)}<br />

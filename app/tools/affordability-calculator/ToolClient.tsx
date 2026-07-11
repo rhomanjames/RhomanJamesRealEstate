@@ -67,7 +67,7 @@ export default function AffordabilityCalculator() {
               <MiniResult label="Max Loan Amount" value={fmt(maxLoan)} />
               <MiniResult label="Monthly Income" value={fmt(monthlyIncome) + "/mo"} />
             </div>
-            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+            <div style={{ marginTop: "1.25rem", padding: "1rem", background: "var(--border)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
               <p style={{ fontSize: "0.78rem", color: "var(--muted)", lineHeight: 1.7 }}>
                 <strong style={{ color: "var(--text)" }}>Note:</strong> This uses standard 28/43 DTI ratios. FHA loans allow up to 50% DTI in some cases. VA loans have flexible DTI limits. Your actual approval depends on credit score, loan type, and lender guidelines.
               </p>
@@ -94,7 +94,7 @@ function SliderInput({ label, value, min, max, step, onChange, display, note }: 
 }
 function MiniResult({ label, value }: any) {
   return (
-    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "0 1px 2px rgba(11,15,25,0.03)" }}>
+    <div style={{ padding: "0.85rem", background: "rgba(255,255,255,0.03)", border: "1px solid var(--border)", borderRadius: "16px", boxShadow: "none" }}>
       <div style={{ fontSize: "0.62rem", letterSpacing: "0.2em", textTransform: "uppercase", color: "var(--muted2)", marginBottom: "0.25rem" }}>{label}</div>
       <div style={{ fontSize: "0.95rem", color: "var(--text)", fontFamily: "'Inter', system-ui, sans-serif" }}>{value}</div>
     </div>
