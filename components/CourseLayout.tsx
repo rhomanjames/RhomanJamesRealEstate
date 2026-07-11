@@ -116,7 +116,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
     <main style={{ background: "var(--bg-soft)", minHeight: "100vh", paddingTop: "5.5rem" }}>
       <style>{`
         .course-wrap { display: grid; grid-template-columns: 260px 1fr; min-height: calc(100vh - 5.5rem); }
-        .course-sidebar { background: white; border-right: 1px solid var(--border); padding: 2rem 0; position: sticky; top: 5.5rem; height: calc(100vh - 5.5rem); overflow-y: auto; }
+        .course-sidebar { background: var(--bg-card); border-right: 1px solid var(--border); padding: 2rem 0; position: sticky; top: 5.5rem; height: calc(100vh - 5.5rem); overflow-y: auto; }
         .course-main { padding: 3rem 4rem 6rem; max-width: 780px; }
         .lesson-btn { display: flex; align-items: flex-start; gap: 0.75rem; width: 100%; background: none; border: none; padding: 0.85rem 1.5rem; cursor: pointer; text-align: left; border-left: 2px solid transparent; transition: all 0.15s; }
         .lesson-btn:hover { background: var(--blue-pale); }
@@ -215,7 +215,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
               onClick={() => toggleComplete(activeLesson)}
               style={{
                 display: "flex", alignItems: "center", gap: "0.6rem",
-                background: isLessonComplete(activeLesson) ? "var(--blue-pale)" : "white",
+                background: isLessonComplete(activeLesson) ? "var(--blue-pale)" : "var(--bg-card)",
                 border: `1px solid ${isLessonComplete(activeLesson) ? "var(--blue)" : "var(--border)"}`,
                 borderRadius: "10px",
                 color: isLessonComplete(activeLesson) ? "var(--blue)" : "var(--muted)",
@@ -259,7 +259,7 @@ export default function CourseLayout({ moduleNum, moduleTitle, totalModules, pre
           )}
 
           {/* CTA box */}
-          <div style={{ marginTop: "3rem", padding: "1.75rem", background: "white", border: "1px solid var(--border)", borderRadius: "16px" }}>
+          <div style={{ marginTop: "3rem", padding: "1.75rem", background: "var(--bg-card)", border: "1px solid var(--border)", borderRadius: "16px" }}>
             <p style={{ fontSize: "0.85rem", fontWeight: 700, color: "var(--blue)", marginBottom: "0.5rem" }}>Questions on this lesson?</p>
             <p style={{ fontSize: "0.9rem", color: "var(--muted)", lineHeight: 1.7, marginBottom: "1rem" }}>
               I'm always available for a free, no-pressure conversation about anything covered in this course.

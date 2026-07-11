@@ -95,12 +95,12 @@ export default function Navbar() {
         .drop-menu {
           position: absolute; top: calc(100% + 1.1rem); left: 50%;
           transform: translateX(-50%);
-          background: white;
+          background: var(--bg-card);
           border: 1px solid var(--border);
-          border-radius: 14px;
+          border-radius: 4px;
           min-width: 210px; padding: 0.6rem 0;
           display: flex; flex-direction: column;
-          box-shadow: 0 1px 2px rgba(11,15,25,0.03); z-index: 200;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.4); z-index: 200;
         }
         .drop-menu-header {
           padding: 0.5rem 1.25rem 0.6rem;
@@ -126,9 +126,9 @@ export default function Navbar() {
         }
         .nav-mobile-dropdown {
           position: absolute; top: 100%; left: 0; right: 0;
-          background: white;
+          background: var(--bg-card);
           border-bottom: 1px solid var(--border);
-          box-shadow: 0 1px 2px rgba(11,15,25,0.03);
+          box-shadow: 0 8px 24px rgba(0,0,0,0.4);
           padding: 1.25rem 1.75rem 1.75rem;
           display: flex; flex-direction: column; gap: 0.8rem;
           max-height: 80vh; overflow-y: auto;
@@ -150,7 +150,7 @@ export default function Navbar() {
         }
       `}</style>
 
-      <nav ref={navRef} className="nav-wrap" style={{ background: scrolled ? "rgba(255,255,255,0.98)" : "rgba(255,255,255,0.92)", boxShadow: scrolled ? "0 1px 0 rgba(11,15,25,0.04)" : "none" }}>
+      <nav ref={navRef} className="nav-wrap" style={{ background: scrolled ? "rgba(18,18,18,0.98)" : "rgba(18,18,18,0.85)", boxShadow: scrolled ? "0 1px 0 rgba(0,0,0,0.3)" : "none" }}>
         <a href="/" className="nav-logo-link">Rhoman <span>James</span></a>
 
         <ul className="nav-desktop">

@@ -12,11 +12,12 @@ const links = [
 export default function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer style={{ background: "var(--bg-soft)", borderTop: "1px solid var(--border)", padding: "3.5rem 2rem", textAlign: "center" }}>
+    <footer style={{ background: "var(--dark)", borderTop: "1px solid var(--border)", padding: "3.5rem 2rem", textAlign: "center" }}>
       <div style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em", color: "var(--text)", marginBottom: "0.5rem" }}>
         Rhoman <span style={{ fontWeight: 500, color: "var(--blue)" }}>James</span>
       </div>
-      <div style={{ fontSize: "0.85rem", fontWeight: 500, color: "var(--muted)", marginBottom: "2rem" }}>Real Estate Professional · Elizabethtown, Kentucky</div>
+      <div style={{ fontSize: "0.85rem", fontWeight: 500, color: "var(--muted)", marginBottom: "0.75rem" }}>Real Estate Agent · Elizabethtown, Kentucky</div>
+      <div style={{ fontSize: "0.75rem", color: "var(--muted2)", marginBottom: "2rem" }}>Real Broker, LLC · KY License #310389</div>
       <div aria-hidden="true" style={{ width: "3rem", height: "2px", borderRadius: "2px", background: "var(--blue)", margin: "0 auto 2rem" }} />
       <ul style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", marginBottom: "2rem", listStyle: "none" }}>
         {links.map(l => <li key={l.href}><a href={l.href} className="nav-link" style={{ fontSize: "0.85rem" }}>{l.label}</a></li>)}
@@ -24,6 +25,7 @@ export default function Footer() {
       <p style={{ fontSize: "0.8rem", color: "var(--muted2)", lineHeight: 1.8 }}>
         &copy; {year} Rhoman James Real Estate. All rights reserved.<br />
         Elizabethtown, KY · Hardin County<br />
+        Licensed Real Estate Agent, Real Broker LLC · KY License #310389<br />
         <a href="/privacy" style={{ color: "var(--muted)", textDecoration: "none" }}>Privacy Policy</a>&nbsp;·&nbsp;
         <a href="/accessibility" style={{ color: "var(--muted)", textDecoration: "none" }}>Accessibility</a>
       </p>
