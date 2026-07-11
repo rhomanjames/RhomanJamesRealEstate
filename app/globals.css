@@ -2,29 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&display=swap');
+
 :root {
-  /* New brand palette — modern startup, blue accent */
-  --blue: #4F5FF0;
-  --blue-light: #7B87F5;
-  --blue-dark: #3A47C4;
-  --blue-pale: #EEF0FE;
+  /* Brokerage-aligned palette — gold accent on dark background.
+     Variable NAMES are unchanged on purpose (still --blue, --blue-light,
+     etc.) so every existing var(--blue) reference across the site updates
+     automatically without needing to touch each component individually. */
+  --blue: #DBAE77;         /* primary gold accent */
+  --blue-light: #E8C79A;   /* lighter gold, hovers/highlights */
+  --blue-dark: #B8894F;    /* deeper bronze-gold, hover states on buttons */
+  --blue-pale: rgba(219, 174, 119, 0.12); /* subtle gold tint for badges/pills on dark bg */
 
-  --dark: #0B0F19;       /* now used sparingly for footer/dark sections only */
-  --dark2: #111827;
-  --dark3: #1A2333;
+  --dark: #060606;         /* near-black, footer / deepest sections */
+  --dark2: #0F0F0F;
+  --dark3: #1A1710;        /* warm-black, slightly gold-tinted for card surfaces */
 
-  --bg: #FFFFFF;
-  --bg-soft: #F7F8FC;
-  --bg-card: #FFFFFF;
+  --bg: #121212;           /* main page background — dark */
+  --bg-soft: #1A1A1A;      /* slightly-lifted section background */
+  --bg-card: #1E1C18;      /* card/panel surfaces, warm dark tone */
 
-  --border: #E5E7EB;
-  --border-strong: #D1D5DB;
+  --border: #2E2A22;       /* subtle warm-dark border */
+  --border-strong: #4A4232;
 
-  --text: #0B0F19;
-  --muted: #6B7280;
-  --muted2: #7D8592;
+  --text: #F5F1EA;         /* warm off-white, primary text on dark bg */
+  --muted: #B8AFA0;        /* secondary text on dark bg */
+  --muted2: #8A8275;       /* tertiary/faint text on dark bg */
 
-  --success: #16A34A;
+  --success: #4CAF7D;
   --amber: #D97706;
 }
 
@@ -51,28 +56,30 @@ body {
   .btn-primary {
     @apply inline-block px-7 py-3.5 text-sm font-semibold transition-all duration-200;
     background: var(--blue);
-    color: white;
-    border-radius: 10px;
+    color: var(--dark);
+    border-radius: 4px;
     box-shadow: none;
     font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.02em;
   }
   .btn-primary:hover {
-    background: var(--blue-dark);
+    background: var(--blue-light);
     transform: translateY(-1px);
-    box-shadow: none;
+    box-shadow: 0 4px 16px rgba(219, 174, 119, 0.25);
   }
 
   .btn-outline {
     @apply inline-block px-7 py-3.5 text-sm font-semibold transition-all duration-200;
-    border: 1px solid var(--border-strong);
-    background: white;
-    color: var(--text);
-    border-radius: 10px;
+    border: 1px solid var(--blue);
+    background: transparent;
+    color: var(--blue);
+    border-radius: 4px;
     font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.02em;
   }
   .btn-outline:hover {
-    border-color: var(--blue);
-    color: var(--blue);
+    background: var(--blue);
+    color: var(--dark);
   }
 
   .section-tag {
@@ -81,13 +88,15 @@ body {
     background: var(--blue-pale);
     padding: 6px 14px;
     border-radius: 999px;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid rgba(219, 174, 119, 0.25);
   }
 
   .section-heading {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     @apply font-bold leading-tight mb-6;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     color: var(--text);
   }
 
@@ -100,14 +109,14 @@ body {
   }
 
   .form-input {
-    background: white;
+    background: var(--bg-card);
     border: 1px solid var(--border);
     color: var(--text);
     @apply px-4 py-3 w-full outline-none transition-all duration-200;
     font-family: 'Inter', system-ui, sans-serif;
     font-size: 0.92rem;
     font-weight: 400;
-    border-radius: 10px;
+    border-radius: 4px;
   }
   .form-input:focus {
     border-color: var(--blue);
@@ -118,9 +127,11 @@ body {
   }
 
   .nav-link {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    color: var(--muted);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text);
     text-decoration: none;
     transition: color 0.2s;
   }
@@ -142,13 +153,13 @@ body {
   position: relative;
   overflow: hidden;
   border: 1px solid var(--border);
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 1px 2px rgba(11,15,25,0.03);
+  background: var(--bg-card);
+  border-radius: 4px;
+  box-shadow: none;
   transition: box-shadow 0.25s, border-color 0.25s, transform 0.25s;
 }
 .service-card:hover {
-  border-color: var(--border-strong);
-  box-shadow: none;
+  border-color: var(--blue);
+  box-shadow: 0 4px 20px rgba(219, 174, 119, 0.08);
   transform: translateY(-2px);
 }
