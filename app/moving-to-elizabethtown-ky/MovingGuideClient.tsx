@@ -363,6 +363,29 @@ export default function MovingGuideClient() {
         </div>
       </section>
 
+      {/* Podcast Episode */}
+      <section style={{ background: "var(--bg)", padding: "3rem 1.5rem", borderBottom: "1px solid var(--border)" }}>
+        <div style={{ maxWidth: 700, margin: "0 auto" }}>
+          <p style={{ fontSize: "0.68rem", letterSpacing: "0.3em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>
+            Prefer to Listen?
+          </p>
+          <div style={{ position: "relative", width: "100%", maxWidth: 624, margin: "0 auto", borderRadius: "12px", overflow: "hidden" }}>
+            <iframe
+              data-testid="embed-iframe"
+              style={{ borderRadius: "12px", width: "100%" }}
+              src="https://open.spotify.com/embed/episode/0OqQDljTJFz4UEbb0ppAiS/video?utm_source=generator&si=68d623e08b7f4128"
+              width="100%"
+              height="351"
+              frameBorder="0"
+              allowFullScreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+              title="The Complete Guide to Moving to Elizabethtown, KY — Podcast Episode"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Main layout */}
       <div className="guide-wrap">
 
