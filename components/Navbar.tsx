@@ -197,10 +197,10 @@ export default function Navbar() {
           </li>
 
           {/* Elizabethtown Home Academy */}
-          <li><a href="/academy" className="nav-link">Elizabethtown Home Academy</a></li>
+          <li><a href="/academy" className="nav-link" style={{ textTransform: "none" }}>Elizabethtown Home Academy</a></li>
 
           {/* Elizabethtown Moving Guide */}
-          <li><a href="/moving-to-elizabethtown-ky" className="nav-link">Elizabethtown Moving Guide</a></li>
+          <li><a href="/moving-to-elizabethtown-ky" className="nav-link" style={{ textTransform: "none" }}>Elizabethtown Moving Guide</a></li>
 
           {/* Tools */}
           <li className="drop-wrapper">
@@ -240,8 +240,8 @@ export default function Navbar() {
             {neighborhoodLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
             <a href="/neighborhoods" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Guides →</a>
 
-            <a href="/academy" className="nav-link" onClick={() => setMenuOpen(false)}>Elizabethtown Home Academy</a>
-            <a href="/moving-to-elizabethtown-ky" className="nav-link" onClick={() => setMenuOpen(false)}>Elizabethtown Moving Guide</a>
+            <a href="/academy" className="nav-link" style={{ textTransform: "none" }} onClick={() => setMenuOpen(false)}>Elizabethtown Home Academy</a>
+            <a href="/moving-to-elizabethtown-ky" className="nav-link" style={{ textTransform: "none" }} onClick={() => setMenuOpen(false)}>Elizabethtown Moving Guide</a>
 
             <div className="mobile-section-label">Free Tools</div>
             {toolLinks.map(l => <a key={l.href} href={l.href} className="mobile-sub-link" onClick={() => setMenuOpen(false)}>{l.label}</a>)}
