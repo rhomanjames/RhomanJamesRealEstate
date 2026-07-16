@@ -6,13 +6,13 @@ export const dynamic = "force-static";
 
 export const metadata: Metadata = {
   title: "About Rhoman James | Elizabethtown KY Real Estate Agent",
-  description: "Rhoman James is an Elizabethtown, Kentucky real estate professional serving buyers and sellers throughout Hardin County. Grew up in Kentucky, Centre College and EKU educated, family oriented, and committed to helping people find their place in Elizabethtown.",
-  keywords: "Rhoman James Elizabethtown KY, Elizabethtown Kentucky real estate professional, Hardin County real estate, buy home Elizabethtown KY, sell home Elizabethtown KY, Fort Knox real estate, first time home buyer Elizabethtown, move to Elizabethtown Kentucky",
+  description: "Rhoman James is a licensed real estate agent serving Elizabethtown, Kentucky and all of Hardin County. Kentucky-educated, family-oriented, and committed to helping buyers, sellers, and relocating families find their place in Elizabethtown.",
+  keywords: "Rhoman James Elizabethtown KY, Elizabethtown Kentucky real estate agent, Hardin County real estate agent, buy home Elizabethtown KY, sell home Elizabethtown KY, Fort Knox real estate agent, first time home buyer Elizabethtown, move to Elizabethtown Kentucky, Real Broker LLC Kentucky",
   metadataBase: new URL("https://rhomanjames.com"),
   alternates: { canonical: "/about" },
   openGraph: {
-    title: "About Rhoman James | Elizabethtown KY Real Estate",
-    description: "Elizabethtown real estate professional helping buyers, sellers, and families throughout Hardin County, Kentucky.",
+    title: "About Rhoman James | Elizabethtown KY Real Estate Agent",
+    description: "Licensed Elizabethtown, KY real estate agent helping buyers, sellers, and families throughout Hardin County, Kentucky.",
     url: "https://rhomanjames.com/about",
     siteName: "Rhoman James Real Estate",
     type: "profile",
@@ -112,10 +112,10 @@ export default function AboutPage() {
                 Real Broker, LLC · Kentucky License #310389
               </p>
               <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "1.25rem" }}>
-                I grew up in Lexington, Kentucky, studied psychology at Centre College, and went on to earn a master's degree in psychology from Eastern Kentucky University. That background shapes how I work — understanding what people need, what they're worried about, and how to communicate clearly in high-stakes situations.
+                I'm a licensed real estate agent serving Elizabethtown, Kentucky and all of Hardin County — including Radcliff, Vine Grove, Rineyville, Cecilia, Hodgenville, and the communities surrounding Fort Knox. I grew up in Lexington, Kentucky, studied psychology at Centre College, and earned a master's degree in psychology from Eastern Kentucky University. That background shapes how I work as a real estate agent — understanding what people need, what they're worried about, and how to communicate clearly during one of the biggest financial decisions of their life.
               </p>
               <p style={{ fontSize: "1rem", color: "var(--muted)", lineHeight: 1.9, marginBottom: "2rem" }}>
-                I chose Elizabethtown because it's the kind of place where people put down roots. It's a community — not just a market. My goal is straightforward: help families find their place here, whether they're relocating to the area, buying their first home, or have been here for years and are ready for something new.
+                I chose to build my real estate business in Elizabethtown because it's the kind of place where people put down roots — a real community, not just a market. As your local Elizabethtown real estate agent, my goal is simple: help families buy homes, sell homes, and relocate to Hardin County with real, honest guidance every step of the way.
               </p>
               <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
                 <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.75rem" }}>Call (859) 536-6009</a>
@@ -148,21 +148,21 @@ export default function AboutPage() {
           <div style={{ maxWidth: 780, margin: "0 auto" }}>
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem" }}>Background</p>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "2.5rem", lineHeight: 1.3 }}>
-              Kentucky educated. Community focused.
+              Kentucky-Educated. Hardin County-Focused.
             </h2>
 
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.95 }}>
-                I grew up in Lexington — so Kentucky is home in a real sense, not just a business decision. I came to Elizabethtown because of what this community is: a city with genuine character, a strong military presence through Fort Knox, good schools, and the kind of neighborhood feel that's getting harder to find.
+                I grew up in Lexington, Kentucky — so Kentucky is home in a real sense, not just a business decision. I became a real estate agent in Elizabethtown because of what this community actually is: a city with genuine character, a strong military presence through Fort Knox, good schools, and the kind of neighborhood feel that's increasingly rare.
               </p>
               <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.95 }}>
-                My undergraduate degree from Centre College and my master's from Eastern Kentucky University are both in psychology. That might seem like an unusual background for real estate, but it's actually the most relevant thing about how I work. Buying or selling a home is one of the most significant decisions a family makes. The paperwork is straightforward — the human side of it is not. Understanding what people need, how to listen well, and how to communicate clearly when the stakes are high is something I've spent years developing.
+                My undergraduate degree from Centre College and my master's degree from Eastern Kentucky University are both in psychology. That might seem like an unusual background for a real estate agent, but it's actually the most relevant thing about how I work. Buying a home or selling a home is one of the most significant financial decisions a family makes. The paperwork is straightforward. The human side of it is not. Understanding what people need, listening well, and communicating clearly when the stakes are high — that's what years of studying human behavior actually prepared me for.
               </p>
               <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.95 }}>
-                I'm family oriented. That's not a tagline — it describes the people I work with and what I care about. Most of my clients are families making a move that matters: a first home, a growing family needing more space, a military family PCS-ing to Fort Knox, or someone relocating to the area and trying to figure out where to put down roots. Those are real decisions with real consequences, and I take that seriously.
+                I'm family-oriented, and that's not a tagline — it describes the people I work with as a real estate agent in Elizabethtown. Most of my clients are families making a move that matters: a first-time home purchase, a growing family needing more space, a military family PCS-ing to Fort Knox, or someone relocating to Hardin County and figuring out where to put down roots.
               </p>
               <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.95 }}>
-                Elizabethtown is a genuinely good place to live — and I think the people who are considering moving here deserve honest, specific, local information rather than generic advice. That's why the free courses, neighborhood guides, and calculators on this site exist. Whether or not we ever work together, I want you to have what you need to make a good decision.
+                Elizabethtown is a genuinely good place to live, and I believe people considering a move here deserve honest, specific, local real estate information — not generic national advice. That's why the free courses, neighborhood guides, and calculators on this site exist. Whether or not we ever work together, I want you to have what you need to make a good decision.
               </p>
             </div>
           </div>
@@ -173,31 +173,31 @@ export default function AboutPage() {
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Who I Work With</p>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "3rem", textAlign: "center" }}>
-              Families finding their place in Hardin County
+              Who I Work With as Your Elizabethtown Real Estate Agent
             </h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.25rem" }}>
               {[
                 {
-                  title: "First-Time Buyers",
-                  body: "Buying your first home in Elizabethtown or anywhere in Hardin County is a significant milestone. I work through the process step by step — from understanding your credit and financing options to closing day.",
+                  title: "First-Time Homebuyers in Elizabethtown and Hardin County",
+                  body: "Buying your first home is a significant milestone. As your real estate agent, I walk through the entire process step by step — credit, financing options, home shopping, and closing day.",
                   href: "/first-time-bootcamp",
                   link: "Free First-Time Buyer Bootcamp",
                 },
                 {
-                  title: "Families Relocating to Elizabethtown",
-                  body: "Whether you're moving from across the state or across the country, Hardin County is worth knowing well before you commit to a neighborhood. I know this area specifically — the school zones, the commutes, the communities.",
+                  title: "Families Relocating to Elizabethtown, KY",
+                  body: "Whether you're moving from across Kentucky or across the country, Hardin County is worth knowing well before you commit to a neighborhood. As a local real estate agent, I know the school zones, the commutes, and the communities specifically.",
                   href: "/moving-to-elizabethtown-ky",
                   link: "Moving to Elizabethtown Guide",
                 },
                 {
-                  title: "Fort Knox Military Families",
-                  body: "PCS-ing to Fort Knox comes with a compressed timeline and specific needs — VA loans, BAH strategy, gate proximity, and the question of what to do with the property when orders come again.",
+                  title: "Fort Knox Military Families (PCS Relocation)",
+                  body: "PCS-ing to Fort Knox comes with a compressed timeline and specific needs — VA loans, BAH strategy, gate proximity, and what to do with the property when orders come again. I specialize in military relocation real estate.",
                   href: "/fort-knox-course",
                   link: "Free Fort Knox PCS Bootcamp",
                 },
                 {
                   title: "Sellers Ready to Move On",
-                  body: "Whether you're upgrading, downsizing, or relocating out of the area, selling a home in the Elizabethtown market requires the right preparation and pricing strategy from day one.",
+                  body: "Whether you're upgrading, downsizing, or relocating out of Hardin County, selling a home in the Elizabethtown real estate market requires the right preparation and pricing strategy from day one.",
                   href: "/sellers-course",
                   link: "Free Home Sellers Course",
                 },
@@ -218,10 +218,10 @@ export default function AboutPage() {
           <div style={{ maxWidth: 1000, margin: "0 auto" }}>
             <p style={{ fontSize: "0.68rem", letterSpacing: "0.35em", textTransform: "uppercase", color: "var(--blue)", marginBottom: "1rem", textAlign: "center" }}>Service Area</p>
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(1.8rem, 3vw, 2.5rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", textAlign: "center" }}>
-              Elizabethtown and Hardin County
+              Service Area: Elizabethtown and All of Hardin County, Kentucky
             </h2>
             <p style={{ fontSize: "0.95rem", color: "var(--muted)", lineHeight: 1.85, maxWidth: "52rem", margin: "0 auto 3rem", textAlign: "center" }}>
-              I work throughout Hardin County — including Elizabethtown, Radcliff, Vine Grove, Rineyville, Cecilia, and the communities surrounding Fort Knox. Each has its own character, price point, and school zone considerations worth knowing before you commit to a neighborhood.
+              As a real estate agent, I work throughout Hardin County, Kentucky — including Elizabethtown, Radcliff, Vine Grove, Rineyville, Cecilia, Hodgenville, and every community surrounding Fort Knox. Each area has its own character, price point, and school zone considerations worth understanding before you commit.
             </p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "0.75rem" }}>
               {[
@@ -323,10 +323,10 @@ export default function AboutPage() {
             <div aria-hidden="true" style={{ width: 1, height: "2.5rem", background: "var(--blue)", margin: "0 auto 2rem" }} />
             <h2 style={{ fontFamily: "'Inter', system-ui, sans-serif", fontSize: "clamp(2rem, 4vw, 2.8rem)", fontWeight: 700, color: "var(--text)", marginBottom: "1rem", lineHeight: 1.2 }}>
               Thinking about buying or selling<br />
-              <em style={{ fontStyle: "italic", color: "var(--blue)" }}>in Elizabethtown?</em>
+              <em style={{ fontStyle: "italic", color: "var(--blue)" }}>in Elizabethtown, KY?</em>
             </h2>
             <p style={{ color: "var(--muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "2.5rem" }}>
-              A free consultation costs nothing and commits you to nothing. If you have questions about the Elizabethtown market, a specific property, or just where to start — reach out.
+              A free consultation with your local Elizabethtown real estate agent costs nothing and commits you to nothing. If you have questions about the Hardin County market, a specific property, or just where to start — reach out.
             </p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <a href="tel:+18595366009" className="btn-primary" style={{ fontSize: "0.78rem" }}>Call (859) 536-6009</a>
