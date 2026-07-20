@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
 
 const serviceLinks = [
   { href: "/services/buying-a-home",         label: "Buying a Home" },
@@ -39,8 +38,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDrop, setOpenDrop] = useState<DropKey>(null);
-  const pathname = usePathname();
-  const isHome   = pathname === "/";
   const navRef   = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -57,7 +54,6 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const sectionHref = (anchor: string) => (isHome ? anchor : `/${anchor}`);
   const toggle = (key: DropKey) => setOpenDrop(openDrop === key ? null : key);
 
   return (
@@ -218,8 +214,8 @@ export default function Navbar() {
           </li>
         </ul>
 
-        <a href={sectionHref("#contact")} className="btn-primary nav-cta-desktop" style={{ padding: "0.55rem 1.25rem", fontSize: "0.68rem" }}>
-          Let's Talk
+        <a href="https://calendly.com/rhomanmjames/30min" target="_blank" rel="noopener noreferrer" className="btn-primary nav-cta-desktop" style={{ padding: "0.55rem 1.25rem", fontSize: "0.68rem" }}>
+          Free Consultation
         </a>
 
         <button className="nav-mobile-btn" onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
@@ -248,8 +244,8 @@ export default function Navbar() {
             <a href="/tools" className="mobile-sub-link" onClick={() => setMenuOpen(false)} style={{ color: "var(--blue)" }}>All Tools →</a>
             <a href="/home-value" className="mobile-sub-link" onClick={() => setMenuOpen(false)}>Home Value</a>
 
-            <a href={sectionHref("#contact")} className="btn-primary" style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem", textAlign: "center", marginTop: "0.25rem" }} onClick={() => setMenuOpen(false)}>
-              Let's Talk
+            <a href="https://calendly.com/rhomanmjames/30min" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem", textAlign: "center", marginTop: "0.25rem" }} onClick={() => setMenuOpen(false)}>
+              Free Consultation
             </a>
           </div>
         )}
